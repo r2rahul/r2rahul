@@ -1,0 +1,674 @@
+[
+  {
+    "objectID": "templates/template.html",
+    "href": "templates/template.html",
+    "title": "Publications",
+    "section": "",
+    "text": "{{#journal_publications}} - {{{.}}} {{/journal_publications}}"
+  },
+  {
+    "objectID": "templates/template.html#journal-publications",
+    "href": "templates/template.html#journal-publications",
+    "title": "Publications",
+    "section": "",
+    "text": "{{#journal_publications}} - {{{.}}} {{/journal_publications}}"
+  },
+  {
+    "objectID": "templates/template.html#presentations",
+    "href": "templates/template.html#presentations",
+    "title": "Publications",
+    "section": "Presentations",
+    "text": "Presentations\n{{#presentations}} - {{{.}}} {{/presentations}}"
+  },
+  {
+    "objectID": "templates/template.html#posters",
+    "href": "templates/template.html#posters",
+    "title": "Publications",
+    "section": "Posters",
+    "text": "Posters\n{{#posters}} - {{{.}}} {{/posters}}"
+  },
+  {
+    "objectID": "templates/template.html#teaching",
+    "href": "templates/template.html#teaching",
+    "title": "Publications",
+    "section": "Teaching",
+    "text": "Teaching\n{{#teaching}} - {{{.}}} {{/teaching}}"
+  },
+  {
+    "objectID": "stage/publications.html",
+    "href": "stage/publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Kavita Singh, Awantika Joshi, Nikhil, Srinivasapura Venkateshmurthy, Rahul Rahul, Mark D Huffman, Nikhil Tandon, Dorairaj Prabhakaran (2023). A Delphi Study to Prioritize Evidence-Based Strategies for Cardiovascular Disease Care in India. Global Implementation Research and Applications 2023 3:3, 3, 272-283.\nRahul Rahul, Adam R. Stinchcombe, Jamie W. Joseph, Brian Ingalls (2023). Kinetic modelling of β-cell metabolism reveals control points in the insulin-regulating pyruvate cycling pathways. IET systems biology, 17, 303-315.\nParimal Samir, Christopher M. Browne, Rahul, Ming Sun, Bingxin Shen, Wen Li, Joachim Frank, Andrew J. Link (2018). Identification of Changing Ribosome Protein Compositions using Mass Spectrometry. PROTEOMICS, 18, 1800217.\nParimal Samir, Rahul, James C. Slaughter, Andrew J. Link (2015). Environmental Interactions and Epistasis Are Revealed in the Proteomic Responses to Complex Stimuli. PLoS ONE, 10(8), e0134099."
+  },
+  {
+    "objectID": "stage/publications.html#journal-publications",
+    "href": "stage/publications.html#journal-publications",
+    "title": "Publications",
+    "section": "",
+    "text": "Kavita Singh, Awantika Joshi, Nikhil, Srinivasapura Venkateshmurthy, Rahul Rahul, Mark D Huffman, Nikhil Tandon, Dorairaj Prabhakaran (2023). A Delphi Study to Prioritize Evidence-Based Strategies for Cardiovascular Disease Care in India. Global Implementation Research and Applications 2023 3:3, 3, 272-283.\nRahul Rahul, Adam R. Stinchcombe, Jamie W. Joseph, Brian Ingalls (2023). Kinetic modelling of β-cell metabolism reveals control points in the insulin-regulating pyruvate cycling pathways. IET systems biology, 17, 303-315.\nParimal Samir, Christopher M. Browne, Rahul, Ming Sun, Bingxin Shen, Wen Li, Joachim Frank, Andrew J. Link (2018). Identification of Changing Ribosome Protein Compositions using Mass Spectrometry. PROTEOMICS, 18, 1800217.\nParimal Samir, Rahul, James C. Slaughter, Andrew J. Link (2015). Environmental Interactions and Epistasis Are Revealed in the Proteomic Responses to Complex Stimuli. PLoS ONE, 10(8), e0134099."
+  },
+  {
+    "objectID": "stage/publications.html#presentations",
+    "href": "stage/publications.html#presentations",
+    "title": "Publications",
+    "section": "Presentations",
+    "text": "Presentations\n\nParimal Samir, & Rahul, & Andrew Link (2015). Quantitative proteomic analysis reveals environmental interaction and epistasis in the responses to complex stimuli in Saccharomyces cerevisiae. [Paper presentation]. 63rd ASMS Conference on Mass Spectrometry and Allied Topics, St. Louis, Missouri, USA\nRahul, & Adam Stinchcombe, & Jamie Joseph, & Brian Ingalls (2012). Kinetic Modelling of Pyruvate Recycling Pathways in Pancreatic \\(\\beta\\)-Cells.. [Paper presentation]. The 8\\(^{\\text{th}}\\) International Conference on Differential Equations and Dynamical Systems, Waterloo, Canada\nRahul, & Adam Stinchcombe, & Jamie Joseph, & Brian Ingalls (2011). Dynamic Modelling of Metabolism in Pancreatic \\(\\beta\\)-Cells.. [Paper presentation]. The International Conference on Applied Mathematics, Modelling and Computational Science (AMMCS), Waterloo, Canada"
+  },
+  {
+    "objectID": "stage/publications.html#posters",
+    "href": "stage/publications.html#posters",
+    "title": "Publications",
+    "section": "Posters",
+    "text": "Posters\n\nRahul, & Fanny Dupuy, & Sébastien Tabariès, & Nicholas Bertos, & Daina Z. Avizonis, & Morag Park, & Peter Siegel, & Uri D. Akavia (2014). A computational method to integrate gene expression and metabolomics data to identify metabolic adaptations in cancer. [Poster presentation]. Mechanisms & Models of Cancer Conference, Cold Spring Harbor, USA\nRahul, & Brian Ingalls (2013). Optimal parameter estimation of kinetic models using the surrogate-modelling framework. [Poster presentation]. RECOMB/ISCB Conference, Toronto, Canada\nRahul, & Adam Stinchcombe, & Jamie Joseph, & Brian Ingalls (2012). Dynamic Modelling of Pyruvate Recycling Pathways in Pancreatic \\(\\beta\\)-cells. [Poster presentation]. 13\\(^{\\text{th}}\\) International Conference on System Biology, Toronto, Toronto, Canada\nRahul, & Adam Stinchcombe, & Jamie Joseph, & Brian Ingalls (2011). Dynamic Modelling of Metabolism in Pancreatic \\(\\beta\\)-Cells. [Poster presentation]. Graduate Student Conference, Waterloo, Canada\nRahul, & Adam Stinchcombe, & Jamie Joseph, & Brian Ingalls (2009). Dynamic Modelling of Metabolism in Pancreatic \\(\\beta\\)-Cells. [Poster presentation]. Chemical Biophysics Symposium, Toronto, Canada"
+  },
+  {
+    "objectID": "stage/publications.html#teaching",
+    "href": "stage/publications.html#teaching",
+    "title": "Publications",
+    "section": "Teaching",
+    "text": "Teaching\n\nRahul (2012). A Survey of Wiki Based Collaborative Learning Environments for the Interdisciplinary Training of the Students in Maths and Biology. [Poster presentation]. Opportunities and New Directions Conference, Centre of Teaching Excellence, University of Waterloo, Waterloo, Canada"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "My academic research centers on developing analytical models to understand and predict complex systems. The methodological thread across this work is the use of inverse problems, non-smooth optimization, network analysis, and computational science to determine which variables matter, how they interact, and how uncertainty should shape decisions. Earlier projects examined co-expression networks and interaction intracellular pathways in type 2 diabetes and cancer cells. The current work using same methods extends the same questions to quantitative finance, where new information must be evaluated within structured portfolio processes rather than in isolation.\nA full research statement is available here."
+  },
+  {
+    "objectID": "research.html#research-areas",
+    "href": "research.html#research-areas",
+    "title": "Research",
+    "section": "Research Areas",
+    "text": "Research Areas\n\n\n\n\n\n\n\n\nFigure 1: Skills and Application Map\n\n\n\n\nQuantitative Portfolio Research and Signal Additivity Evaluation\nSystematic investing increasingly depends on deciding whether new information changes decisions after interactions, constraints, and estimation uncertainty are taken seriously. I study this problem by treating the portfolio process as a sequential decision system rather than as a collection of isolated backtests. The aim is to determine when a candidate signal contributes durable information, when it merely duplicates existing exposures, and when its apparent value is an artifact of a particular evaluation window or implementation choice.\nThis research area combines uncertainty quantification, global sensitivity analysis, and scalable computing. Variance-based methods such as Sobol and eFAST make it possible to decompose both marginal and interaction effects across realistic market scenarios, while high-performance Python workflows allow large experiment sets to be executed reproducibly. The broader objective is to build evaluation frameworks that are rigorous enough for academic study and operational enough for portfolio practice.\n\nGraduate Thesis Topic: Uncertainty-Aware Signal Additivity in Quantitative Portfolio Research\nOne suitable graduate thesis in this area would investigate how the value of a candidate signal changes once portfolio constraints, estimation error, and cross-signal interactions are incorporated into the decision process. Rather than treating forecasting variables as stand-alone predictors, the thesis would frame signal evaluation as an inverse problem embedded within portfolio construction. The central research question would be whether a proposed source of information contributes robust decision value after accounting for the structural dependencies that arise in realistic allocation pipelines.\nMethodologically, the thesis could combine portfolio optimization, uncertainty quantification, and global sensitivity analysis to separate marginal effects from higher-order interactions across alternative market regimes and implementation assumptions. A strong project design would include replication of an existing empirical result, systematic stress testing under revised evaluation protocols, and a transparent computational workflow that documents how conclusions change under different modeling choices. The scholarly contribution would be a defensible framework for determining when an apparent predictive improvement reflects genuine incremental information and when it is primarily an artifact of specification, sampling, or portfolio architecture."
+  },
+  {
+    "objectID": "research.html#journal-publications",
+    "href": "research.html#journal-publications",
+    "title": "Research",
+    "section": "Journal Publications",
+    "text": "Journal Publications\n\nRahul Rahul, Adam R. Stinchcombe, Jamie W. Joseph, Brian Ingalls (2023). Kinetic modelling of β-cell metabolism reveals control points in the insulin-regulating pyruvate cycling pathways. IET systems biology, 17, 303-315.\nKavita Singh, Awantika Joshi, Nikhil, Srinivasapura Venkateshmurthy, Rahul Rahul, Mark D Huffman, Nikhil Tandon, Dorairaj Prabhakaran (2023). A Delphi Study to Prioritize Evidence-Based Strategies for Cardiovascular Disease Care in India. Global Implementation Research and Applications 2023 3:3, 3, 272-283.\nParimal Samir, Christopher M. Browne, Rahul, Ming Sun, Bingxin Shen, Wen Li, Joachim Frank, Andrew J. Link (2018). Identification of Changing Ribosome Protein Compositions using Mass Spectrometry. PROTEOMICS, 18, 1800217.\nParimal Samir, Rahul, James C. Slaughter, Andrew J. Link (2015). Environmental Interactions and Epistasis Are Revealed in the Proteomic Responses to Complex Stimuli. PLoS ONE, 10(8), e0134099."
+  },
+  {
+    "objectID": "research.html#teaching",
+    "href": "research.html#teaching",
+    "title": "Research",
+    "section": "Teaching",
+    "text": "Teaching\n\nRahul (2012). A Survey of Wiki Based Collaborative Learning Environments for the Interdisciplinary Training of the Students in Maths and Biology. [Poster presentation]. Opportunities and New Directions Conference, Centre of Teaching Excellence, University of Waterloo, Waterloo, Canada"
+  },
+  {
+    "objectID": "research.html#presentations",
+    "href": "research.html#presentations",
+    "title": "Research",
+    "section": "Presentations",
+    "text": "Presentations\n\nParimal Samir, Rahul, Andrew Link (2015). Quantitative proteomic analysis reveals environmental interaction and epistasis in the responses to complex stimuli in Saccharomyces cerevisiae. [Paper presentation]. 63rd ASMS Conference on Mass Spectrometry and Allied Topics, St. Louis, Missouri, USA\nRahul, Adam Stinchcombe, Jamie Joseph, Brian Ingalls (2012). Kinetic Modelling of Pyruvate Recycling Pathways in Pancreatic \\(\\beta\\)-Cells. [Paper presentation]. The 8\\(^{\\text{th}}\\) International Conference on Differential Equations and Dynamical Systems, Waterloo, Canada\nRahul, Adam Stinchcombe, Jamie Joseph, Brian Ingalls (2011). Dynamic Modelling of Metabolism in Pancreatic \\(\\beta\\)-Cells. [Paper presentation]. The International Conference on Applied Mathematics, Modelling and Computational Science (AMMCS), Waterloo, Canada"
+  },
+  {
+    "objectID": "research.html#posters",
+    "href": "research.html#posters",
+    "title": "Research",
+    "section": "Posters",
+    "text": "Posters\n\nRahul, Fanny Dupuy, Sébastien Tabariès, Nicholas Bertos, Daina Z. Avizonis, Morag Park, Peter Siegel, Uri D. Akavia (2014). A computational method to integrate gene expression and metabolomics data to identify metabolic adaptations in cancer. [Poster presentation]. Mechanisms Models of Cancer Conference, Cold Spring Harbor, USA\nRahul, Brian Ingalls (2013). Optimal parameter estimation of kinetic models using the surrogate-modelling framework. [Poster presentation]. RECOMB/ISCB Conference, Toronto, Canada\nRahul, Adam Stinchcombe, Jamie Joseph, Brian Ingalls (2012). Dynamic Modelling of Pyruvate Recycling Pathways in Pancreatic \\(\\beta\\)-cells. [Poster presentation]. 13\\(^{\\text{th}}\\) International Conference on System Biology, Toronto, Toronto, Canada\nRahul, Adam Stinchcombe, Jamie Joseph, Brian Ingalls (2011). Dynamic Modelling of Metabolism in Pancreatic \\(\\beta\\)-Cells. [Poster presentation]. Graduate Student Conference, Waterloo, Canada\nRahul, Adam Stinchcombe, Jamie Joseph, Brian Ingalls (2009). Dynamic Modelling of Metabolism in Pancreatic \\(\\beta\\)-Cells. [Poster presentation]. Chemical Biophysics Symposium, Toronto, Canada"
+  },
+  {
+    "objectID": "research.html#co-expression-network-reconstruction",
+    "href": "research.html#co-expression-network-reconstruction",
+    "title": "Research",
+    "section": "Co-Expression Network Reconstruction",
+    "text": "Co-Expression Network Reconstruction\nWhile working as a sessional instructor, I did a collaborative research on the construction of the co-expression network for the undetermined system. We constructed the model using SPACE method. Next, we validated the model by matching the network with BioGrid database and corroborating the network against the power law structure. Next, we identified the hub proteins using the degree centrality measure, for example RHR2, RPL5 proteins were ranked highest. The entire work is now published and readers can check Parimal et. al. (Samir et al., 2015) and the source codes are available on Sparse Correlation (accessed March 7, 2025).\n\nSamir, P., Rahul, Slaughter, J. C., and Link, A. J. (2015). Environmental interactions and epistasis are revealed in the proteomic responses to complex stimuli [Article]. PLoS ONE, 10(8), e0134099."
+  },
+  {
+    "objectID": "research.html#post-doctoral-research-work",
+    "href": "research.html#post-doctoral-research-work",
+    "title": "Research",
+    "section": "Post-Doctoral Research Work",
+    "text": "Post-Doctoral Research Work\n\n\nThe iMAT algorithm restricts the reaction fluxes according to the expression profile of genes, that is enzymes corresponding to high expressed genes will carry more flux compared to low expressed genes\nIn postdoctoral work, I developed the rigorous procedure for data aggregation (The figure illustrate one example of data quality check.) and built a model based on the constraint-based reconstruction and analysis (COBRA) method. The figure Figure 2 provides the overview of the steps involved in the construction of a model through COBRA method.\n\n\n\n\n\n\nFigure 2: COBRA Framework\n\n\n\nThere is growing evidence that the cancer cells metabolism is reprogrammed in many different ways compared to the healthy cell to meet the metabolic needs of cancerous cells. The constraint-based reconstruction and analysis (COBRA) methods integrate the biochemical, genetic, and metabolic knowledge into a mathematical framework that enables the systematic study of the metabolic phenotype of the cells\nThe crucial step in studying the cancer metabolism through COBRA methods is to obtain a generic GSM model, which can be fine-tuned to integrate gene expression and metabolomics data pertinent to cancer cells. We used modelBorgifier to integrate the three generic mouse Genome-scale model (GSM) into one aggregated mouse GSM model. Next, we computationally integrate the cancer cell-specific gene expression and metabolomics data into the model through iMAT algorithm. The figure Figure 3 provides the overview of methodology used to maintain data quality and integrate diverse data sets into COBRA analysis.\n\n\n\n\n\n\nFigure 3: Data Quality\n\n\n\nAfter, constraining the GSM model to tissue-specific expression and metabolomics data, we performed computer simulations to compare simulated model results with the NCI 60 cell lines such that the model reproduces the common metabolic dysregulation found across the cancer cell lines. Next, we performed the flux variability analysis, which showed interesting result about increased activity of Lactate Dehydrogenase enzyme. The computer simulation showed that the Pyruvate Dehydrogenase, which is the entry point for TCA cycle from glycolysis cannot carry all the flux from increased activity of glycolytic enzymes, which leads to flux redirecting towards pyruvate dehydrogenase."
+  },
+  {
+    "objectID": "research.html#doctoral-research-work",
+    "href": "research.html#doctoral-research-work",
+    "title": "Research",
+    "section": "Doctoral Research Work",
+    "text": "Doctoral Research Work\n\n\n\n\n\n\n\n\nFigure 4: Schematic Overview of Modeling Enzyme Kinetics\n\n\n\nIn my doctoral research work, I developed a model for the pyruvate recycling metabolic pathways to identify key regulatory components in the pathway, which influence pyruvate recycling and NADPH. Both, pyruvate recycling and NADPH has been shown to play a critical role in the insulin secretion. The malfunction of the key metabolic pathways such as pyruvate recycling pathway is shown to be correlated with the onset of Type 2 diabetes. Therefore, a better understanding of this pathway can suggest better targets for performing experiments and therapeutic intervention (Figure 4).\nThe model, which I developed for the pyruvate recycling pathways, describes the TCA cycle, the pyruvate/malate shuttle, the pyruvate/citrate shuttle, and the pyruvate/isocitrate shuttle. The model consists of 24 states, 31 reaction fluxes, and 129 parameters. The majority of the parameters are pulled from literature, and a subset of 34 parameters was optimized to validate the model against the experimental data of Ronnebaum et.al. (Ronnebaum et al. (2006)). After testing the model against various results related to properties of pyruvate recycling pathways, I analyzed the model using global sensitivity analysis methods of Partial Rank Correlation Coefficient and Extended Fourier Amplitude Sensitivity Test and local sensitivity analysis (Figure 5). The objective of sensitivity analysis was to identify the important control points in the pyruvate recycling pathways. The model predicts that the dicarboxylate carrier (DIC) and pyruvate transporter (PYC) are the most important regulators of pyruvate recycling and NADPH production. Our analysis showed that variation in the pyruvate carboxylase (PC) flux was compensated for by a response in the activity of mitochondrial isocitrate dehydrogenase (ICDm) resulting in the minimal changes in overall pyruvate recycling flux. The model predictions suggest points for further experimental investigation, as well as potential drug targets for the treatment of type 2 diabetes.\n\nRonnebaum, S. M., Ilkayeva, O., Burgess, S. C., Joseph, J. W., Lu, D., Stevens, R. D., Becker, T. C., Sherry, A. D., Newgard, C. B., Jensen, M. V., and Odegaard, M. (2006). A pyruvate cycling pathway involving cytosolic NADP-dependent isocitrate dehydrogenase regulates glucose-stimulated insulin secretion. The Journal of Biological Chemistry, 281(41), 30593–30602. https://doi.org/10.1074/jbc.M511908200\n\n\n\n\n\n\n\nFigure 5: Global Sensitivity"
+  },
+  {
+    "objectID": "research.html#master-research-projects",
+    "href": "research.html#master-research-projects",
+    "title": "Research",
+    "section": "Master Research Projects",
+    "text": "Master Research Projects\n\nHigh-Performance Computing based Monte Carlo Simulation Framework for Spatio-temporal Analysis of Protein Oscillations in E. Coli\nDeveloped a scalable and efficient simulation framework for spatio-temporal Monte Carlo simulations to solve partial differential equations (PDEs) on high-performance computing (HPC) infrastructure provided by BioGrid India (link).\nThe project emphasized automation, scalability, and reliability throughout the entire simulation lifecycle, incorporating the following key principles:\n\nOptimized Parallel Scheduling: Efficiently distributed computational tasks across HPC nodes to maximize resource utilization and accelerate simulation time.\n\nMonitoring, Traceability, and Reproducibility: Ensured all simulations were trackable and reproducible, enabling consistent and dependable outcomes.\n\nCheckpointing for Fault Tolerance: Implemented checkpointing mechanisms to resume simulations from the last successful state, significantly reducing computational overhead and preventing full restarts in case of interruptions.\n\n\n\nOptimizing Conducting Polymers for Next-Generation Solar Energy Harvesting\nThis project focused on the synthesis and characterization of novel conducting polymers for application in solar cells. We explored various polymerization techniques and doping strategies to optimize conductivity and bandgap alignment, enhancing light absorption and charge transport.\nWe successfully fabricated polymer-based solar cells and evaluated their power conversion efficiency and stability. The research demonstrated the potential of these cost-effective and flexible materials for efficient solar energy harvesting, contributing to the advancement of sustainable energy solutions."
+  },
+  {
+    "objectID": "research.html#summer-internship-project-temperature-and-pressure-based-humidity-prediction-with-carbon-hygristor-sensors",
+    "href": "research.html#summer-internship-project-temperature-and-pressure-based-humidity-prediction-with-carbon-hygristor-sensors",
+    "title": "Research",
+    "section": "Summer Internship Project: Temperature and Pressure-Based Humidity Prediction with Carbon Hygristor Sensors",
+    "text": "Summer Internship Project: Temperature and Pressure-Based Humidity Prediction with Carbon Hygristor Sensors\nWhile working as a Summer Research Assistant at the Indian Meteorological Department, New Delhi, India, under the supervision of Dr. K. C. Saikrishnan, I developed a multivariate linear regression model to analyze humidity sensor (Hygristor) data under controlled laboratory conditions using MATLAB Curve Fitting Toolbox.\nUsing this regression model, we examined the impact of temperature and pressure on the sensor’s humidity readings. Our analysis revealed that:\n\nAt low temperature and pressure, the sensor readings were more influenced by pressure.\n\nAt high temperature and pressure, temperature became the dominant factor.\n\nUnder standard room conditions, the sensor readings remained unaffected by temperature or pressure.\n\nThis study provided valuable insights into the sensor’s behavior under varying environmental conditions, contributing to improved calibration and accuracy in humidity measurement."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Rahul Katyayan, PhD",
+    "section": "",
+    "text": "Figure 1: I am an applied mathematician working at the intersection of mathematics, AI/ML, and quantitative finance. I hold a PhD in Applied Mathematics and a Certificate in University Teaching from the University of Waterloo, Canada.\n\n\n\nMy academic research centers on developing analytical models to understand and predict complex systems, with particular emphasis on Inverse Problems (Hyper-Parameter Optimization), non-smooth optimization, network analysis, and computational science. My previous work examined co-expression networks and the behavior of intracellular networks in type 2 diabetes and cancer cells. For details see my Research Page\nMy industry work focuses on developing trading & investment signals, risk models, and quantitative portfolio management across asset classes including equities, fixed income, foreign exchange (FX), and commodities. A central theme of this work is the translation of business problems into structured analytical frameworks that generate long-term value for the organization. This process incorporates domain expertise, enabling data, models, and analytical infrastructure to operate from a shared set of assumptions while being adapted into AI-agentic workflows. In practice, this approach produces reusable agent artifacts analogous to Visual Studio Code Agent Plugins, with the broader objective of generating organizational value more efficiently. For additional details, see the Professional section.\n\n\n\n\n\n\n\n\nFigure 2: Workflow schematic for the contextual engineering method. One method I use to structure complex work distinguishes among three components. The first is automation, which covers tasks that can be fully systematized. The second is the explicit structuring of manual knowledge through artifacts such as data contracts, configuration files, and standardized templates. The third is domain expertise, which remains necessary for interpreting uncertainty, handling exceptions, and responding to genuinely novel situations. Source: Author’s illustration.\n\n\n\n\\[\n\\mathrm{Contextual\\ Engineering\\ Workflow} = \\text{Automation} + \\text{Structured Manual Knowledge} + \\epsilon\n\\]\nIn this formulation, \\(\\epsilon\\) denotes the irreducible domain uncertainty that still requires expert interpretation. Figure Figure 2 summarizes the method schematically and highlights why resilient analytical processes must accommodate exceptional events, including systemic disruptions such as the COVID-19 pandemic."
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "Rahul Katyayan, PhD",
+    "section": "",
+    "text": "Figure 1: I am an applied mathematician working at the intersection of mathematics, AI/ML, and quantitative finance. I hold a PhD in Applied Mathematics and a Certificate in University Teaching from the University of Waterloo, Canada.\n\n\n\nMy academic research centers on developing analytical models to understand and predict complex systems, with particular emphasis on Inverse Problems (Hyper-Parameter Optimization), non-smooth optimization, network analysis, and computational science. My previous work examined co-expression networks and the behavior of intracellular networks in type 2 diabetes and cancer cells. For details see my Research Page\nMy industry work focuses on developing trading & investment signals, risk models, and quantitative portfolio management across asset classes including equities, fixed income, foreign exchange (FX), and commodities. A central theme of this work is the translation of business problems into structured analytical frameworks that generate long-term value for the organization. This process incorporates domain expertise, enabling data, models, and analytical infrastructure to operate from a shared set of assumptions while being adapted into AI-agentic workflows. In practice, this approach produces reusable agent artifacts analogous to Visual Studio Code Agent Plugins, with the broader objective of generating organizational value more efficiently. For additional details, see the Professional section.\n\n\n\n\n\n\n\n\nFigure 2: Workflow schematic for the contextual engineering method. One method I use to structure complex work distinguishes among three components. The first is automation, which covers tasks that can be fully systematized. The second is the explicit structuring of manual knowledge through artifacts such as data contracts, configuration files, and standardized templates. The third is domain expertise, which remains necessary for interpreting uncertainty, handling exceptions, and responding to genuinely novel situations. Source: Author’s illustration.\n\n\n\n\\[\n\\mathrm{Contextual\\ Engineering\\ Workflow} = \\text{Automation} + \\text{Structured Manual Knowledge} + \\epsilon\n\\]\nIn this formulation, \\(\\epsilon\\) denotes the irreducible domain uncertainty that still requires expert interpretation. Figure Figure 2 summarizes the method schematically and highlights why resilient analytical processes must accommodate exceptional events, including systemic disruptions such as the COVID-19 pandemic."
+  },
+  {
+    "objectID": "index.html#professional",
+    "href": "index.html#professional",
+    "title": "Rahul Katyayan, PhD",
+    "section": "Professional",
+    "text": "Professional\nI currently work at Commerzbank AG, Frankfurt, Germany as a Data Scientist with a forward development engineering mandate within the AI team in Sales Analytics. My work is organized around two related objectives:\n\nIdentifying information anomalies in market data for trading-signal development\nTranslating current trading processes, together with both legacy and newly developed models, into AI-agent-based workflows.\n\nCurrently, working with the commodities and FX desks, I focus on converting legacy analytical processes into reusable agent-based systems and on connecting trading-signal generation to in-house quantitative infrastructure. The role combines:\n\nBusiness-logic formalization with the translation of expert judgment into reusable context for AI agents.\nIt also involves integrating AI agent outputs into trading practices and aligning to institutional constraints to improve analytical efficiency and support higher-value decision-making.\n\nSome specific examples of my work include:\n\nTranslating legacy Excel based trading models (like natural gas forward curves) into LLM-understandable context files and validation-ready artifacts (Excel MCP).\n\nDeveloped Model Context Protocol (MCP) tooling so agent workflows can reason over structured business context rather than opaque spreadsheets to speed up the model conversion process (MCP blog).\nReducing conversion effort from many weeks to roughly one week by standardizing contextual mappings using MCP, review steps, and reusable prompts.\n\nDeveloping in-house AI agent skills for KDB+/q, semantic search, and proprietary-codebase MCP/search tooling supported by indexing and AST-based structure.\nBuilding the production infrastructure on a Google Cloud Platform for scalable internal deployment.\n\n\nPrevious Experience\nMy previous industry experience spans asset management, systematic equity investing, and commodity trading. At Finance in Motion, I worked as a quantitative analyst, where I developed risk-adjusted asset-allocation approaches for bond portfolios and built an internal credit-risk model based on the CreditMetrics methodology. At PineBridge Investments, I worked in systematic equity strategy, focusing on portfolio management, investment-platform development, and factor-based investment-signal generation using machine learning. At Trafigura, I worked with the liquefied natural gas (LNG) desk, developing hedging strategies and proprietary methods for identifying cointegrated time series. At BlackRock, I worked in systematic equity strategy with a focus on machine-learning-based factor signal generation and investment-platform development.\nMy earlier academic work spans systems and computational biology, electronic sciences, and applied environmental modeling. This portfolio includes research on conducting polymers for solar energy harvesting, as well as meteorological analysis conducted in collaboration with the Indian Meteorological Department, where I developed a regression framework to examine how temperature and pressure influence humidity-sensor response."
+  },
+  {
+    "objectID": "elements-of-forward-deployed-engineer.html",
+    "href": "elements-of-forward-deployed-engineer.html",
+    "title": "Elements of Forward-Deployed Engineer",
+    "section": "",
+    "text": "Course\nMeet Days\nMeet Time\nLocation\nInstructor(s)\n\n\n\n\nElements of Forward-Deployed Engineer\n\n\n\nRahul Katyayan"
+  },
+  {
+    "objectID": "elements-of-forward-deployed-engineer.html#class-schedule",
+    "href": "elements-of-forward-deployed-engineer.html#class-schedule",
+    "title": "Elements of Forward-Deployed Engineer",
+    "section": "",
+    "text": "Course\nMeet Days\nMeet Time\nLocation\nInstructor(s)\n\n\n\n\nElements of Forward-Deployed Engineer\n\n\n\nRahul Katyayan"
+  },
+  {
+    "objectID": "elements-of-forward-deployed-engineer.html#instructional-team",
+    "href": "elements-of-forward-deployed-engineer.html#instructional-team",
+    "title": "Elements of Forward-Deployed Engineer",
+    "section": "Instructional Team",
+    "text": "Instructional Team\nInstructor: Rahul Katyayan\nOffice: To be announced\nOffice Hours: To be announced\nGraduate Teaching Assistant: To be announced"
+  },
+  {
+    "objectID": "elements-of-forward-deployed-engineer.html#course-description",
+    "href": "elements-of-forward-deployed-engineer.html#course-description",
+    "title": "Elements of Forward-Deployed Engineer",
+    "section": "Course Description",
+    "text": "Course Description\nA capstone-style course designed to integrate design thinking, operational immersion, quantitative reasoning, and visual communication for the purpose of enabling learners to frame ambiguous problems and develop deployable solutions in real-world business and organizational settings."
+  },
+  {
+    "objectID": "elements-of-forward-deployed-engineer.html#learning-outcomes",
+    "href": "elements-of-forward-deployed-engineer.html#learning-outcomes",
+    "title": "Elements of Forward-Deployed Engineer",
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\nBy the end of this course students should be able to:\n\nFoundational Knowledge: explain the role of operational immersion, context engineering, and interdisciplinary reasoning in forward-deployed work.\nApplication: use design thinking, rough-order quantitative analysis, and rapid prototyping to structure and test solution ideas.\nIntegration: connect field observations, business constraints, data flows, and technical capabilities into a coherent deployment plan.\nHuman Dimension: collaborate with technical and non-technical stakeholders, translate across vocabularies, and lead conversations under ambiguity.\nCaring: value responsible deployment, evidence-based judgment, and clear communication as core parts of engineering practice.\nLearning How to Learn: build repeatable habits for framing unfamiliar problems, seeking feedback, and learning new tools quickly.\n\nTeaching and Learning Practices\nThis course is experiential in design. Students move between studio workshops, field observation, case discussions, quantitative drills, critique sessions, and presentation rehearsals. The teaching design emphasizes operational immersion, reflective practice, and iterative improvement so that learners develop transferable habits for real-world problem framing and deployment.\nThere is no required textbook. Optional readings and software resources are provided to deepen weekly work and support independent practice."
+  },
+  {
+    "objectID": "elements-of-forward-deployed-engineer.html#tentative-class-plan",
+    "href": "elements-of-forward-deployed-engineer.html#tentative-class-plan",
+    "title": "Elements of Forward-Deployed Engineer",
+    "section": "Tentative Class Plan",
+    "text": "Tentative Class Plan\nThis is a tentative course schedule. Minor changes may occur as the course evolves and will be communicated in advance.\n\n\n\n\n\n\n\n\n\nWeek #\nDates\nLecture/Activities PRA\nActivities/Assignments and Due Dates\n\n\n\n\n1\n\nLecture 1: What is forward-deployed engineering? Operational immersion and problem context. Technique: interactive lecture and reverse briefing\nActivity: stakeholder map and problem inventory. Optional reading: Dan Heath and Chip Heath, Made to Stick: Why some ideas take hold and others come unstuck\n\n\n1\n\nLecture 2: Observation, shadowing, and empathy interviews. Technique: paired interview lab\nActivity: field-note protocol and interview guide\n\n\n2\n\nLecture 1: Problem framing, job stories, and needs statements. Technique: guided design studio\nActivity: problem framing brief\n\n\n2\n\nLecture 2: Journey maps, service blueprints, and systems boundaries. Technique: collaborative mapping workshop\nActivity: system map critique\n\n\n3\n\nLecture 1: Divergent ideation and concept generation under constraints. Technique: timed design sprint\nActivity: idea portfolio and concept clustering\n\n\n3\n\nLecture 2: Rapid prototyping for workflows, agents, and decision support. Technique: critique-based studio\nActivity: low-fidelity prototype review\n\n\n4\n\nLecture 1: User testing, iteration loops, and evidence from feedback. Technique: structured peer testing\nActivity: test script and observation log\n\n\n4\n\nLecture 2: Design synthesis and handoff to quantitative reasoning. Technique: retrospective discussion\nActivity: design sprint reflection. Optional reading: Dan Heath and Chip Heath, Made to Stick: Why some ideas take hold and others come unstuck\n\n\n5\n\nLecture 1: Fermi estimates and back-of-the-envelope reasoning. Technique: blackboard walkthrough\nActivity: estimation drills. Optional reading: Sanjoy Mahajan, Street-Fighting Mathematics\n\n\n5\n\nLecture 2: Units, assumptions, and sanity checks. Technique: whiteboard clinic\nActivity: quantitative decision note 1\n\n\n6\n\nLecture 1: Capacity, throughput, and queueing in operational systems. Technique: case-based problem solving\nActivity: operations sketch and bottleneck analysis\n\n\n6\n\nLecture 2: Probability, uncertainty, and expected value in decisions. Technique: worked-example workshop\nActivity: scenario comparison worksheet\n\n\n7\n\nLecture 1: Optimization under business and technical constraints. Technique: paired modeling session\nActivity: tradeoff table and recommendation draft\n\n\n7\n\nLecture 2: Sensitivity analysis and model critique. Technique: debate and peer review\nActivity: quantitative decision note 2\n\n\n8\n\nLecture 1: Communicating numbers to decision-makers. Technique: executive briefing rehearsal\nActivity: briefing deck outline\n\n\n8\n\nLecture 2: From rough math to deployment choices. Technique: synthesis workshop\nActivity: problem-solving memo. Optional reading: Sanjoy Mahajan, selected chapters\n\n\n9\n\nLecture 1: Narrative arcs for technical and business audiences. Technique: storyboard workshop\nActivity: audience map and story outline. Optional reading: Edward Tufte, The Visual Display of Quantitative Information\n\n\n9\n\nLecture 2: Slide architecture, sequencing, and visual rhythm. Technique: live teardown and rebuild\nActivity: storyboard critique\n\n\n10\n\nLecture 1: Writing for decisions, not just documentation. Technique: writing workshop\nActivity: one-page decision brief draft\n\n\n10\n\nLecture 2: Revision, editing, and signaling uncertainty clearly. Technique: peer editing lab\nActivity: revision memo and line edit review\n\n\n11\n\nLecture 1: Visual hierarchy, annotation, and chart choice. Technique: critique-driven seminar\nActivity: visualization draft\n\n\n11\n\nLecture 2: Common visualization failures and ethical presentation. Technique: gallery walk\nActivity: visualization redesign\n\n\n12\n\nLecture 1: Vector graphics workflow with Inkscape or Adobe Illustrator. Technique: software demonstration studio\nActivity: visual explainer build\n\n\n12\n\nLecture 2: Integrating memo, figure, and verbal pitch. Technique: communication sprint\nActivity: visual story package. Optional reading: Tufte and selected Nature visualization essays\n\n\n13\n\nLecture 1: Capstone scoping and field study design. Technique: project clinic\nActivity: capstone proposal and stakeholder plan\n\n\n13\n\nLecture 2: Evidence collection, ethics, and risk logging. Technique: guided workshop\nActivity: field study checklist\n\n\n14\n\nLecture 1: Capstone studio: synthesis, prototype refinement, and decision logic. Technique: team coaching\nActivity: field study check-in\n\n\n14\n\nLecture 2: Executive narrative, evidence selection, and recommendation design. Technique: rehearsal and critique\nActivity: draft presentation deck\n\n\n15\n\nLecture 1: Final capstone presentations. Technique: presentation forum\nActivity: final presentation\n\n\n15\n\nLecture 2: Postmortem, transfer plan, and portfolio reflection. Technique: reflective dialogue\nActivity: capstone reflection and next-step plan"
+  },
+  {
+    "objectID": "elements-of-forward-deployed-engineer.html#required-materials-and-technology",
+    "href": "elements-of-forward-deployed-engineer.html#required-materials-and-technology",
+    "title": "Elements of Forward-Deployed Engineer",
+    "section": "Required Materials and Technology",
+    "text": "Required Materials and Technology\n\nReadings\n\nOptional reading for Weeks 1-4: Dan Heath and Chip Heath, Made to Stick: Why some ideas take hold and others come unstuck.\nOptional reading for Weeks 5-8: Sanjoy Mahajan, Street-Fighting Mathematics: The Art of Educated Guessing and Opportunistic Problem Solving.\nOptional reading for Weeks 9-12: Edward Tufte, The Visual Display of Quantitative Information and Envisioning Information; selected Nature visualization essays and points-of-visualization articles.\nSoftware: Inkscape or Adobe Illustrator for diagramming and visual storytelling.\n\n\n\nOther Materials\n\n\n\n\n\n\n\n\n\nItem\nNotes / Comments\nRequired\nTool\n\n\n\n\nLaptop\nUsed for workshop exercises, field notes, and presentation development\nRequired\n\n\n\nNotebook or sketchbook\nUseful for observation logs, system sketches, and storyboard drafts\nRecommended\nObsidian (Recommended)"
+  },
+  {
+    "objectID": "elements-of-forward-deployed-engineer.html#assessments-activities",
+    "href": "elements-of-forward-deployed-engineer.html#assessments-activities",
+    "title": "Elements of Forward-Deployed Engineer",
+    "section": "Assessments & Activities",
+    "text": "Assessments & Activities\n\n\n\n\n\n\n\n\n\nComponent / Activity\nDate or Due Date\nLocation / Submission Method\nWeight (%)\n\n\n\n\nProblem Framing Brief\n\n\n10\n\n\nDesign Sprint Reflection\n\n\n10\n\n\nQuantitative Decision Notes (2 x 10%)\n\n\n20\n\n\nExecutive Briefing\n\n\n10\n\n\nVisual Story Package\n\n\n15\n\n\nCapstone Proposal\n\n\n10\n\n\nCapstone Field Study and Prototype\n\n\n10\n\n\nFinal Presentation and Reflection\n\n\n15\n\n\n\nAssessment descriptions, due dates, and submission details will be announced.\nPosted assessment descriptions provide general guidelines rather than exhaustive rules. Lectures, critiques, workshops, and field activities will provide the fuller context for expectations.\nActive attendance and participation are strongly encouraged because much of the learning happens through studio discussion, peer feedback, and field-based observation.\nQuestions, clarification norms, revision opportunities, and any policy on AI-assisted work: to be announced."
+  },
+  {
+    "objectID": "elements-of-forward-deployed-engineer.html#administrative-policy",
+    "href": "elements-of-forward-deployed-engineer.html#administrative-policy",
+    "title": "Elements of Forward-Deployed Engineer",
+    "section": "Administrative Policy",
+    "text": "Administrative Policy\nAdministrative policy details, including late work, revision process, attendance expectations, permitted use of AI tools, accessibility, and use of course materials: to be announced."
+  },
+  {
+    "objectID": "posts/2026-05-03-mcp-context-management/index.html",
+    "href": "posts/2026-05-03-mcp-context-management/index.html",
+    "title": "A Practical Guide to Context Management in LLM Systems",
+    "section": "",
+    "text": "When an LLM answers a question, quality depends on what context it receives and when it receives it. Too little context leads to weak answers. Too much context leads to noisy reasoning. Model Context Protocol (MCP) provides a clean way to manage this tradeoff by exposing external capabilities as tools that the model can discover and call on demand."
+  },
+  {
+    "objectID": "posts/2026-05-03-mcp-context-management/index.html#information-flow-with-mcp",
+    "href": "posts/2026-05-03-mcp-context-management/index.html#information-flow-with-mcp",
+    "title": "A Practical Guide to Context Management in LLM Systems",
+    "section": "Information Flow with MCP",
+    "text": "Information Flow with MCP\n\n\n\n\n\nsequenceDiagram\n    participant User\n    participant AppServer as App Server\n    participant MCPClient as MCP Client\n    participant MCPServer as MCP Server\n    participant LLM\n    participant DataSystem as Data System\n\n    Note over User,DataSystem: Context should be delivered only when needed\n    User-&gt;&gt;AppServer: \"What repositories do I have?\"\n    AppServer-&gt;&gt;MCPClient: Request available tools\n    MCPClient-&gt;&gt;MCPServer: ListToolsRequest\n    MCPServer-&gt;&gt;MCPClient: ListToolsResult\n    MCPClient-&gt;&gt;AppServer: Tool list\n    AppServer-&gt;&gt;LLM: Query + tool schemas\n    LLM-&gt;&gt;AppServer: ToolUse request\n    AppServer-&gt;&gt;MCPClient: Execute selected tool\n    MCPClient-&gt;&gt;MCPServer: CallToolRequest\n    MCPServer-&gt;&gt;DataSystem: Fetch data\n    DataSystem-&gt;&gt;MCPServer: Response\n    MCPServer-&gt;&gt;MCPClient: CallToolResult\n    MCPClient-&gt;&gt;AppServer: Tool result\n    AppServer-&gt;&gt;LLM: toolResult\n    LLM-&gt;&gt;User: Final answer"
+  },
+  {
+    "objectID": "posts/2026-05-03-mcp-context-management/index.html#why-this-matters",
+    "href": "posts/2026-05-03-mcp-context-management/index.html#why-this-matters",
+    "title": "A Practical Guide to Context Management in LLM Systems",
+    "section": "Why This Matters",
+    "text": "Why This Matters\nMCP improves reliability because the model does not need every document upfront. It can ask for exactly what it needs at the moment it needs it.\nKey idea: context should be staged, not dumped.\n\nStage 1: user intent and minimal prompt instructions.\nStage 2: tool discovery and capability selection.\nStage 3: focused tool execution with scoped inputs.\nStage 4: response synthesis from verified outputs.\n\nThis is often more controllable than building a broad retrieval layer that pushes large context windows into every request."
+  },
+  {
+    "objectID": "posts/2026-05-03-mcp-context-management/index.html#step-by-step-reading-of-the-diagram",
+    "href": "posts/2026-05-03-mcp-context-management/index.html#step-by-step-reading-of-the-diagram",
+    "title": "A Practical Guide to Context Management in LLM Systems",
+    "section": "Step-by-Step Reading of the Diagram",
+    "text": "Step-by-Step Reading of the Diagram\n\nA user asks a question through an application server.\nThe server asks the MCP layer what tools are available.\nThe model receives the user query and tool schemas, then decides whether to call a tool.\nThe selected tool is executed through MCP against an external data system.\nThe tool result returns to the model.\nThe model produces a grounded final answer for the user."
+  },
+  {
+    "objectID": "posts/2026-05-03-mcp-context-management/index.html#link-to-a-concrete-example",
+    "href": "posts/2026-05-03-mcp-context-management/index.html#link-to-a-concrete-example",
+    "title": "A Practical Guide to Context Management in LLM Systems",
+    "section": "Link to a Concrete Example",
+    "text": "Link to a Concrete Example\nFor a production-style implementation of this workflow, see my post on Excel model analysis with MCP:\nTurning Excel Workbooks into AI-Readable Data with an MCP Server\nThat article shows how MCP tools can expose formula structure, dependencies, and named ranges so an LLM can migrate legacy spreadsheet logic into maintainable Python code."
+  },
+  {
+    "objectID": "posts/2026-05-03-mcp-context-management/index.html#practical-takeaway",
+    "href": "posts/2026-05-03-mcp-context-management/index.html#practical-takeaway",
+    "title": "A Practical Guide to Context Management in LLM Systems",
+    "section": "Practical Takeaway",
+    "text": "Practical Takeaway\nIf you are building LLM applications, treat MCP as your context routing layer:\n\nkeep tool inputs narrow,\nreturn structured outputs,\nand only provide supplemental information when a tool call proves it is necessary.\n\nThis approach yields better answers, lower token waste, and more predictable behavior."
+  },
+  {
+    "objectID": "posts/2025-03-26-merger/index.html",
+    "href": "posts/2025-03-26-merger/index.html",
+    "title": "Simple Julia Code To Understand Merger Arbitrage Payoff",
+    "section": "",
+    "text": "A simple model to calculate merger arbitrage payoff. By varying the input parameters like offer ratio will help students understand the payoff structure.\n\n```{julia}\n# Define a struct for Merger Arbitrage parameters\nstruct MergerArbitrage\n    target_shares::Int       # Number of target shares purchased\n    acquirer_shares_short::Int # Number of acquirer shares shorted\n    target_price::Float64    # Current price of target shares\n    acquirer_price::Float64  # Current price of acquirer shares\n    offer_ratio::Float64     # Exchange ratio (e.g., 1:1, 2:1, etc.)\n    target_price_failure::Float64 # Expected price of target shares if merger fails\nend\n\n# Function to calculate payoff when merger succeeds\nfunction calculate_success_payoff(params::MergerArbitrage)\n    # Calculate cost of buying target shares\n    cost_of_target = params.target_shares * params.target_price\n    \n    # Calculate proceeds from short selling acquirer shares\n    proceeds_from_short = params.acquirer_shares_short * params.acquirer_price\n    \n    # Calculate value of converted acquirer shares from target shares (post-merger)\n    converted_acquirer_shares = params.target_shares / params.offer_ratio\n    value_of_converted_acquirer_shares = converted_acquirer_shares * params.acquirer_price\n    \n    # Use converted shares to cover short position (proceeds already received)\n    payoff = value_of_converted_acquirer_shares - cost_of_target + proceeds_from_short\n    \n    return payoff\nend\n\n# Function to calculate payoff when merger fails\nfunction calculate_failure_payoff(params::MergerArbitrage)\n    # Calculate cost of buying target shares\n    cost_of_target = params.target_shares * params.target_price\n    \n    # Calculate proceeds from short selling acquirer shares\n    proceeds_from_short = params.acquirer_shares_short * params.acquirer_price\n    \n    # Calculate value of target shares after failure (expected drop in price)\n    value_of_target_after_failure = params.target_shares * params.target_price_failure\n    \n    # Calculate cost to cover short position (repurchase acquirer shares)\n    cost_to_cover_short = params.acquirer_shares_short * params.acquirer_price\n    \n    # Net payoff in case of failure\n    payoff = value_of_target_after_failure - cost_to_cover_short + proceeds_from_short - cost_of_target\n    \n    return payoff\nend\n\n# Example Usage\n\n# Define parameters for the merger arbitrage scenario\nparams = MergerArbitrage(\n    20000,          # target_shares\n    10000,          # acquirer_shares_short\n    19.0,           # target_price\n    42.0,           # acquirer_price\n    2.0,            # offer_ratio\n    15.0            # target_price_failure\n)\n# Calculate payoffs for both scenarios\nsuccess_payoff = calculate_success_payoff(params)\nfailure_payoff = calculate_failure_payoff(params)\n\n# Print results\nprintln(\"Payoff if merger succeeds: \\$$(success_payoff)\")\nprintln(\"Payoff if merger fails: \\$$(failure_payoff)\")\n\n```\n\nPayoff if merger succeeds: $460000.0\nPayoff if merger fails: $-80000.0"
+  },
+  {
+    "objectID": "posts/2025-01-14-buffon/index.html",
+    "href": "posts/2025-01-14-buffon/index.html",
+    "title": "Estimating Pi through Monte Carlo Simualtion",
+    "section": "",
+    "text": "The report also available at: estimating pi through monte carlo simualtion"
+  },
+  {
+    "objectID": "posts/2025-01-14-buffon/index.html#problem-statement",
+    "href": "posts/2025-01-14-buffon/index.html#problem-statement",
+    "title": "Estimating Pi through Monte Carlo Simualtion",
+    "section": "Problem Statement",
+    "text": "Problem Statement\nImplement a Monte Carlo simulation based on Buffon’s needle problem to estimate the value of \\(\\pi\\). Buffon’s needle is a classic problem in probability theory that relates the probability of a needle crossing parallel lines on a plane to the value of \\(\\pi\\)."
+  },
+  {
+    "objectID": "posts/2025-01-14-buffon/index.html#solution-plan-for-the-problem",
+    "href": "posts/2025-01-14-buffon/index.html#solution-plan-for-the-problem",
+    "title": "Estimating Pi through Monte Carlo Simualtion",
+    "section": "Solution Plan for the Problem",
+    "text": "Solution Plan for the Problem\n\nUnderstanding the problem (Polya 2014):\n\nWhat is given?\n\nBuffon’s needle problem: A method to estimate \\(\\pi\\) using Monte Carlo simulation.\nWe need to simulate dropping needles on a lined surface.\n\nWhat is required?\n\nTo estimate the value of \\(\\pi\\) using this method.\n\nWhat are the key components?\n\nA surface with parallel lines\nNeedles of a specific length\nRandom tosses of needles\nCounting needle crossings with lines\n\nHow does it relate to \\(\\pi\\)?\n\nThe probability of a needle crossing a line is related to \\(\\pi\\).\n\nCan we break it down?\n\nDefine the surface and needle parameters\nImplement a function to toss a needle\nImplement a function to check if a needle crosses a line\nPerform many tosses and count crossings\nUse the count to estimate \\(\\pi\\)\n\n\n\n\nPolya, G. 2014. How to Solve It: A New Aspect of Mathematical Method. Princeton Science Library. Princeton University Press.\n\nSimulation Steps Breakdown\n\nDefine Parameters\n\nSet floor width and line spacing\nSet needle length\nSet number of tosses\n\n\n\nImplement Needle Toss Function\n\nGenerate random x-coordinate\nGenerate random angle\n\n\n\nImplement Line Crossing Check Function\n\nCalculate needle endpoints\nCheck if endpoints are on different sides of a line\n\n\n\nPerform Monte Carlo Simulation\n\nFor each toss:\n\nToss a needle\nCheck if it crosses a line\nCount total crosses\n\n\n\n\nEstimate \\(\\pi\\)\n\nUse the formula:\n\n\\[\n\\pi \\approx \\frac{2 * needle\\_length * number\\_of\\_tosses}{line\\_spacing * number\\_of\\_crosses}\n\\]"
+  },
+  {
+    "objectID": "posts/2025-01-14-buffon/index.html#solution",
+    "href": "posts/2025-01-14-buffon/index.html#solution",
+    "title": "Estimating Pi through Monte Carlo Simualtion",
+    "section": "Solution",
+    "text": "Solution\nStepwise implementation of the Problem in Julia code.\n\n```{julia}\n1using Random\n2using Distributed\n3Random.seed!(1275)\n```\n\n\n1\n\nImport the Random module for generating random numbers\n\n2\n\nImport the Distributed module for parallel computing capabilities\n\n3\n\nSet a specific random seed for reproducibility\n\n\n\n\nTaskLocalRNG()\n\n\n\n```{julia}\n\"\"\"\n    toss_needle(d::Float64)\n\nGenerate a random point inside a semicircle with radius `d/2`.\n\nReturns:\n- A tuple `(x, θ)` where `x` is the distance from the center of the needle to the nearest line,\n  and `θ` is the angle of the needle with the horizontal.\n\"\"\"\nfunction toss_needle(d::Float64)\n1    x = rand() * d / 2\n2    θ = rand() * π\n    return x, θ\nend\n```\n\n\n1\n\nGenerate a random distance from the nearest line, uniformly distributed between 0 and d/2\n\n2\n\nGenerate a random angle, uniformly distributed between 0 and \\(\\pi\\) radians\n\n\n\n\nMain.Notebook.toss_needle\n\n\n\n```{julia}\n\"\"\"\n    cross_line(x::Float64, θ::Float64, L::Float64)\n\nCheck if a point `(x, θ)` crosses a line parallel to the x-axis with a distance `L/2` from the center.\n\nReturns:\n- `true` if the needle crosses the line, otherwise `false`.\n\"\"\"\nfunction cross_line(x::Float64, θ::Float64, L::Float64)\n1    return x &lt;= (L / 2) * sin(θ)\nend\n```\n\n\n1\n\nCheck if the needle crosses a line by comparing its x-coordinate to half its length times the sine of its angle\n\n\n\n\nMain.Notebook.cross_line\n\n\n\n```{julia}\n\"\"\"\n    estimate_pi_par(nb_tosses::Int64, L::Float64, d::Float64)\n\nEstimate π using Buffon's Needle method.\n\nArgs:\n- `nb_tosses`: The number of random tosses to perform.\n- `L`: The length of the needle.\n- `d`: The distance between the lines.\n\nReturns:\n- An estimate of π based on the number of times the needle crosses a line.\n\"\"\"\nfunction estimate_pi_par(nb_tosses::Int64, L::Float64, d::Float64)\n1    nb_crosses = @distributed (+) for _ in 1:nb_tosses\n2        x, θ = toss_needle(d)\n3        cross_line(x, θ, L) ? 1 : 0\n    end\n4    return (2 * L * nb_tosses) / (d * nb_crosses)\nend\n```\n\n\n1\n\nUse distributed computing to parallelize the Monte Carlo simulation\n\n2\n\nToss a needle, getting its position (x) and angle (\\(\\theta\\))\n\n3\n\nCheck if the needle crosses a line, returning 1 if true, 0 if false\n\n4\n\nCalculate the estimate of \\(\\pi\\) using the formula derived from Buffon’s needle problem\n\n\n\n\nMain.Notebook.estimate_pi_par\n\n\n\n```{julia}\n# Parameters\nL = 1.0  # Length of the needle\nd = 2.0  # Distance between the lines\nnb_tosses = 1_000_000  # Number of tosses\n\n```\n\n1000000\n\n\n\n```{julia}\n# Estimate π\nπ_estimate = estimate_pi_par(nb_tosses, L, d)\nprintln(\"Estimated π: $π_estimate\")\n```\n\nEstimated π: 3.1456828648362984"
+  },
+  {
+    "objectID": "posts/2026-05-03-gabillon-model-note/index.html",
+    "href": "posts/2026-05-03-gabillon-model-note/index.html",
+    "title": "Reproducing Gabillon (1991): Model-Implied Term Structures",
+    "section": "",
+    "text": "The paper by Gabillon (1991) (Gabillon 1991) presents a structural model of commodity futures prices that generates a rich variety of term-structure shapes and dynamics. A practical application of this model is critical for a Risk desk, much like the implementation I developed for the Trafigura Oil Trading desk while working under the Chief Risk Officer. Risk management teams require these models to accurately value complex volatile commodity derivatives, stress-test portfolios against term-structure deformations (like backwardation and contango shifts), and calculate reliable Value-at-Risk (VaR) metrics by capturing the distinct behaviors of short- and long-term price dynamics.\nBecause I am intimately familiar with the model and the code required to reproduce it, I designed this project as a practical exercise in AI-assisted coding. My focus was on building the implementation plan and guiding the agent if it deviated from the set path. With minimal assistance, GitHub Copilot successfully reproduced the complex model figures purely from the analytical equations and parameter values reported in the paper.\nIt took me roughly 2-3 hours to plan the architecture and guide Copilot to produce the complete pipeline and report. Without an AI assistant, writing the boilerplate, pipeline orchestration, and analytical code manually would likely have taken 10-12 hours. This serves as a strong example of how AI can save substantial time and effort, acting as a powerful force multiplier that makes domain experts significantly more efficient in their work."
+  },
+  {
+    "objectID": "posts/2026-05-03-gabillon-model-note/index.html#motivation",
+    "href": "posts/2026-05-03-gabillon-model-note/index.html#motivation",
+    "title": "Reproducing Gabillon (1991): Model-Implied Term Structures",
+    "section": "",
+    "text": "The paper by Gabillon (1991) (Gabillon 1991) presents a structural model of commodity futures prices that generates a rich variety of term-structure shapes and dynamics. A practical application of this model is critical for a Risk desk, much like the implementation I developed for the Trafigura Oil Trading desk while working under the Chief Risk Officer. Risk management teams require these models to accurately value complex volatile commodity derivatives, stress-test portfolios against term-structure deformations (like backwardation and contango shifts), and calculate reliable Value-at-Risk (VaR) metrics by capturing the distinct behaviors of short- and long-term price dynamics.\nBecause I am intimately familiar with the model and the code required to reproduce it, I designed this project as a practical exercise in AI-assisted coding. My focus was on building the implementation plan and guiding the agent if it deviated from the set path. With minimal assistance, GitHub Copilot successfully reproduced the complex model figures purely from the analytical equations and parameter values reported in the paper.\nIt took me roughly 2-3 hours to plan the architecture and guide Copilot to produce the complete pipeline and report. Without an AI assistant, writing the boilerplate, pipeline orchestration, and analytical code manually would likely have taken 10-12 hours. This serves as a strong example of how AI can save substantial time and effort, acting as a powerful force multiplier that makes domain experts significantly more efficient in their work."
+  },
+  {
+    "objectID": "posts/2026-05-03-gabillon-model-note/index.html#study-objective-and-reconstruction-scope",
+    "href": "posts/2026-05-03-gabillon-model-note/index.html#study-objective-and-reconstruction-scope",
+    "title": "Reproducing Gabillon (1991): Model-Implied Term Structures",
+    "section": "Study Objective and Reconstruction Scope",
+    "text": "Study Objective and Reconstruction Scope\nIn this note, I reproduce the model-implied term-structure figures that can be generated directly from the analytical system and the fixed parameter values reported by Gabillon (1991) (Gabillon 1991). The scope is intentionally restricted to Figures 5-9, because these panels are determined by structural equations and parameterized scenarios rather than by historical market reconstruction.\n\nGabillon, Jacques. 1991. “The Term Structure of Oil Futures Prices.” Oxford Institute for Energy Studies Working Paper.\nTaken together, the figures provide a compact visual summary of the model’s main economic behaviors: Figures 5 and 6 isolate the baseline contango and backwardation regimes, Figures 7 and 8 show how short-term effects deform the front end of the curve, and Figure 9 shifts attention to the maturity profile of volatility. In practice, such figure-based intuition is useful in commodity derivatives work, including calendar-spread option analysis.\nThe reconstruction therefore emphasizes comparative statics and the geometric properties of the futures curves rather than empirical fit to dated contracts. That boundary is deliberate for a personal technical blog: the objective is to preserve an academic style of exposition while keeping the exercise fully reproducible from deterministic inputs stored in the project configuration files."
+  },
+  {
+    "objectID": "posts/2026-05-03-gabillon-model-note/index.html#model-specification-summary",
+    "href": "posts/2026-05-03-gabillon-model-note/index.html#model-specification-summary",
+    "title": "Reproducing Gabillon (1991): Model-Implied Term Structures",
+    "section": "Model Specification Summary",
+    "text": "Model Specification Summary\nLet \\(\\tau = T - t\\) denote time to maturity. The constant-parameter representation (Equation 26) is implemented as:\n\\[\nF_{26}(t, T) = A(\\tau) S^{B(\\tau)} L^{1 - B(\\tau)},\n\\]\nwith\n\\[\nB(\\tau) = e^{-\\beta \\tau},\n\\quad\nA(\\tau) = \\exp\\left(\\frac{v}{4\\beta}\\left(e^{-\\beta \\tau} - e^{-2\\beta \\tau}\\right)\\right).\n\\]\nThe short-term effect specification (Equation 28) is implemented as:\n\\[\nF_{28}(t, T) = \\exp\\left(\\frac{v}{4\\beta}\\left(e^{-\\beta \\tau} - e^{-2\\beta \\tau}\\right) - \\frac{\\theta}{\\beta - q} e^{-qT}\\left(1 - e^{-(\\beta - q)\\tau}\\right)\\right) S^{B(\\tau)} L^{1 - B(\\tau)}.\n\\]\nFor volatility term structures (Equation 23-consistent form), the instantaneous futures volatility is\n\\[\n\\sigma_F(\\tau) = \\sqrt{(\\sigma_s B(\\tau))^2 + (\\sigma_l(1-B(\\tau)))^2 + 2\\rho\\sigma_s\\sigma_l B(\\tau)(1-B(\\tau)) }.\n\\]\n\n\nParameter roles: \\(S\\) and \\(L\\) govern short- and long-run price anchors, \\(\\beta\\) controls mean-reversion speed, \\(v\\) scales convexity, while \\((\\theta, q)\\) govern local short-term deformation in Equation 28.\n\n```{r setup}\nlibrary(tidyverse)\nlibrary(scales)\n\ncandidate_paths &lt;- c(\n  params$report_data_path,\n  file.path(\"output\", \"model_only_report_inputs.rds\")\n)\n\nresolved_path &lt;- candidate_paths[file.exists(candidate_paths)][1]\nif (is.na(resolved_path)) {\n  stop(\"Could not locate model_only_report_inputs.rds for report rendering.\")\n}\n\nreport_inputs &lt;- readRDS(resolved_path)\nfig5_df &lt;- report_inputs$fig5_df\nfig6_df &lt;- report_inputs$fig6_df\nfig7_df &lt;- report_inputs$fig7_df\nfig8_df &lt;- report_inputs$fig8_df\nfig9_df &lt;- report_inputs$fig9_df\ncfg &lt;- report_inputs$cfg\n\nbase_theme &lt;- theme_minimal(base_size = 12) +\n  theme(\n    panel.grid.minor = element_blank(),\n    plot.title.position = \"plot\"\n  )\n```"
+  },
+  {
+    "objectID": "posts/2026-05-03-gabillon-model-note/index.html#figure-by-figure-interpretation",
+    "href": "posts/2026-05-03-gabillon-model-note/index.html#figure-by-figure-interpretation",
+    "title": "Reproducing Gabillon (1991): Model-Implied Term Structures",
+    "section": "Figure-by-Figure Interpretation",
+    "text": "Figure-by-Figure Interpretation\n\nFigure 5 and Figure 6: No Short-Term Effect\n\n```{r figure-5}\nggplot(fig5_df, aes(x = tau_years, y = futures_price)) +\n  geom_line(linewidth = 1.1, color = \"#1B4965\") +\n  labs(\n    title = \"Figure 5: Backwardation without short-term effect\",\n    x = \"Time to maturity (years)\",\n    y = \"Futures price\"\n  ) +\n  base_theme\n```\n\n\n\n\n\n\n\n\n\n```{r figure-6}\nggplot(fig6_df, aes(x = tau_years, y = futures_price)) +\n  geom_line(linewidth = 1.1, color = \"#5A7D7C\") +\n  labs(\n    title = \"Figure 6: Contango without short-term effect\",\n    x = \"Time to maturity (years)\",\n    y = \"Futures price\"\n  ) +\n  base_theme\n```\n\n\n\n\n\n\n\n\nUnder Equation 26, the sign of \\((S-L)\\) determines the global slope family. When \\(S &gt; L\\) (Figure 5), the curve declines toward the long-run anchor, producing classical backwardation. When \\(S &lt; L\\) (Figure 6), the curve increases toward \\(L\\), yielding contango. In both cases, convexity reflects finite \\(v\\) and exponential loading through \\(\\beta\\).\n\n\nFigure 7 and Figure 8: Non-Zero \\(\\theta\\) and \\(q\\)\n\n```{r figure-7}\nggplot(fig7_df, aes(x = tau_years, y = futures_price)) +\n  geom_line(linewidth = 1.1, color = \"#A44A3F\") +\n  labs(\n    title = \"Figure 7: Backwardation with short-term effect\",\n    x = \"Time to maturity (years)\",\n    y = \"Futures price\"\n  ) +\n  base_theme\n```\n\n\n\n\n\n\n\n\n\n```{r figure-8}\nggplot(fig8_df, aes(x = tau_years, y = futures_price)) +\n  geom_line(linewidth = 1.1, color = \"#B07D3C\") +\n  labs(\n    title = \"Figure 8: Contango with short-term effect\",\n    x = \"Time to maturity (years)\",\n    y = \"Futures price\"\n  ) +\n  base_theme\n```\n\n\n\n\n\n\n\n\nAllowing non-zero \\((\\theta, q)\\) introduces localized near-maturity deformation relative to the baseline Equation 26 shape. Figure 7 shows this perturbation within a backwardated regime, while Figure 8 shows the corresponding effect under contango-type parameters. The primary qualitative effect is curvature adjustment close to the short end, while long-end anchoring remains governed by \\(L\\) and \\(\\beta\\).\n\n\nFigure 9: Volatility Term Structures by Correlation \\(\\rho\\)\n\n```{r figure-9}\nfig9_labels &lt;-\n  fig9_df |&gt;\n  group_by(rho) |&gt;\n  filter(tau_years == max(tau_years)) |&gt;\n  ungroup()\n\nggplot(fig9_df, aes(x = tau_years, y = futures_volatility, color = factor(rho))) +\n  geom_line(linewidth = 1.0) +\n  geom_text(\n    data = fig9_labels,\n    aes(label = paste0(\"rho=\", rho)),\n    hjust = -0.1,\n    size = 3,\n    show.legend = FALSE\n  ) +\n  scale_color_brewer(palette = \"Dark2\") +\n  scale_y_continuous(labels = percent_format(accuracy = 1)) +\n  labs(\n    title = \"Figure 9: Term structures of futures price volatilities\",\n    x = \"Time to maturity (years)\",\n    y = \"Instantaneous volatility\",\n    color = \"rho\"\n  ) +\n  coord_cartesian(clip = \"off\") +\n  theme(\n    plot.margin = margin(5.5, 60, 5.5, 5.5),\n    legend.position = \"none\"\n  ) +\n  base_theme\n```\n\n\n\n\n\n\n\n\nThe volatility panel isolates correlation sensitivity in the two-factor loading system. For interior maturities, higher \\(\\rho\\) increases the covariance contribution and thus shifts volatility upward, whereas lower \\(\\rho\\) dampens that contribution. This reproduces the expected ordering across the configured \\(\\rho\\) grid.\n\n\nIn this implementation, \\(\\rho \\in \\{1.0, 0.5, 0.0, -0.5\\}\\) and all other volatility parameters are fixed, making Figure 9 a clean one-parameter comparative static."
+  },
+  {
+    "objectID": "posts/2026-05-03-gabillon-model-note/index.html#methodological-limitations-and-reproducibility-boundaries",
+    "href": "posts/2026-05-03-gabillon-model-note/index.html#methodological-limitations-and-reproducibility-boundaries",
+    "title": "Reproducing Gabillon (1991): Model-Implied Term Structures",
+    "section": "Methodological Limitations and Reproducibility Boundaries",
+    "text": "Methodological Limitations and Reproducibility Boundaries\nThis model-only track does not attempt historical calibration, contract roll construction, or reconstruction of the paper’s full empirical environment. Consequently, the report supports qualitative validation of curve families and equation-consistent comparative statics, but not quantitative claims about realized market pricing errors or period-specific dynamics.\nThe boundary checks embedded in the pipeline enforce structural consistency, including \\(F(0)=S\\), long-horizon convergence to \\(L\\), monotonicity in baseline contango/backwardation scenarios, and deterministic section completeness for this report. These gates improve reproducibility and protect against silent drift in the analytical implementation."
+  },
+  {
+    "objectID": "posts/2026-05-03-gabillon-model-note/index.html#conclusion-on-parsimonious-parameterization",
+    "href": "posts/2026-05-03-gabillon-model-note/index.html#conclusion-on-parsimonious-parameterization",
+    "title": "Reproducing Gabillon (1991): Model-Implied Term Structures",
+    "section": "Conclusion on Parsimonious Parameterization",
+    "text": "Conclusion on Parsimonious Parameterization\nThe results show that a compact parameter set is sufficient to reproduce key geometric families of term structures discussed in Gabillon (1991). Without data calibration, the model already captures the principal directional and curvature regimes: baseline contango/backwardation patterns, short-end deformation from non-zero short-term effects, and volatility-shape sensitivity to correlation. This confirms the explanatory value of parsimonious structural parameterization for qualitative futures-curve analysis."
+  },
+  {
+    "objectID": "posts/2025-02-02-peuler2/index.html",
+    "href": "posts/2025-02-02-peuler2/index.html",
+    "title": "Project Euler: Problem 2",
+    "section": "",
+    "text": "The report also available at: Project Euler Problem 2"
+  },
+  {
+    "objectID": "posts/2025-02-02-peuler2/index.html#problem-statement",
+    "href": "posts/2025-02-02-peuler2/index.html#problem-statement",
+    "title": "Project Euler: Problem 2",
+    "section": "Problem Statement",
+    "text": "Problem Statement\nEach new term in the Fibonacci sequence is generated by adding the previous two terms. By starting with \\(1\\) and \\(2\\), the first \\(10\\) terms will be: \\[1, 2, 3, 5, 8, 13, 21, 34, 55, 89, \\dots\\]\nBy considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms(Euler n.d.).\n\nEuler, Project. n.d. Problem 2: Even Fibonacci Numbers. https://projecteuler.net/problem=2."
+  },
+  {
+    "objectID": "posts/2025-02-02-peuler2/index.html#understanding-the-problem",
+    "href": "posts/2025-02-02-peuler2/index.html#understanding-the-problem",
+    "title": "Project Euler: Problem 2",
+    "section": "Understanding the Problem",
+    "text": "Understanding the Problem\nFirst, let us understand the problem structure using recommended structure of Polya (Polya 2014).\n\nPolya, G. 2014. How to Solve It: A New Aspect of Mathematical Method. Princeton Science Library. Princeton University Press.\n\nUnderstanding the problem:\n\nWhat is given?\n\nThe Fibonacci sequence starts with 1 and 2.\nEach subsequent term is the sum of the two preceding ones.\nWe need to consider terms not exceeding 4 million.\n\nWhat is required?\n\nTo find the sum of even-valued terms in this sequence.\n\nWhat are the constraints?\n\nOnly consider terms up to 4 million.\nOnly sum the even-valued terms.\n\nCan we break it down?\n\nGenerate Fibonacci sequence up to 4 million.\nFilter out odd terms.\nSum the remaining even terms.\n\n\n\n\nComputation Code Structure\n\nInputs:\n\nFibonacci sequence starting with terms 1 and 2.\nUpper limit: 4,000,000.\n\n\n\nOutputs:\n\nThe sum of all even-valued terms in the sequence below 4,000,000.\n\n\n\nConstraints:\n\nSequence stops when a term exceeds 4,000,000.\n\n\n\nSteps:\n\nIterate through Fibonacci sequence up to 4,000,000.\nFilter the sequence to keep only even-valued terms.\nCompute the sum of the filtered terms.\nReturn the computed sum.\n\nNote: After some experimentation with different methods to generate the Fibonacci sequence to manage integer overflow and stack overflow errors in recursive formulas, I narrowed down to using Binet’s formula. The Binet implementation is adapted from Jan Vanhove’s blog (Vanhove n.d.).\n\nVanhove, Jan. n.d. Adjusting to Julia: Generating the Fibonacci Sequence. https://www.juliabloggers.com/adjusting-to-julia-generating-the-fibonacci-sequence/."
+  },
+  {
+    "objectID": "posts/2025-02-02-peuler2/index.html#solution",
+    "href": "posts/2025-02-02-peuler2/index.html#solution",
+    "title": "Project Euler: Problem 2",
+    "section": "Solution",
+    "text": "Solution\n\n```{julia}\nusing .Iterators\n\"\"\"\n    fib_binet(n::Integer) -&gt; BigInt\n\nCalculate the nth Fibonacci number using Binet's formula.\n\nThis function uses Binet's formula to compute the nth Fibonacci number.\nIt's more efficient than recursive methods for large n, but may lose\nprecision for very large n due to floating-point arithmetic.\n\nParameters:\n    n::Integer : The index of the Fibonacci number to calculate (n ≥ 0)\n\nReturns:\n    BigInt : The nth Fibonacci number\n\nExamples:\n    julia&gt; fib_binet(10)\n    BigInt(55)\n\n    julia&gt; fib_binet(100)\n    BigInt(354224848179261915075)\n\nNote:\n    This function returns a BigInt to handle large Fibonacci numbers.\n    For very large n, consider using methods that don't rely on floating-point arithmetic.\n\"\"\"\nfunction fib_binet(n::Integer)\n1    φ = (1 + sqrt(5))/2\n    ψ = (1 - sqrt(5))/2\n2    fib_n = 1/sqrt(5) * (φ^n - ψ^n)\n3    return BigInt(round(fib_n))\nend\n\n```\n\n\n1\n\nCalculate the golden ratio (φ) and its conjugate (ψ)\n\n2\n\nApply Binet’s formula to compute the nth Fibonacci number\n\n3\n\nRound the result and convert it to a BigInt for precision\n\n\n\n\nMain.Notebook.fib_binet\n\n\n\n```{julia}\n\"\"\"\n    sum_even_fibonacci(limit::Int) -&gt; BigInt\n\nCalculate the sum of even-valued Fibonacci numbers not exceeding the given limit.\n\nThis function generates Fibonacci numbers using Binet's formula, filters for even terms,\nand sums them up to the specified limit.\n\nParameters:\n    limit::Int : The upper bound for Fibonacci numbers to consider\n\nReturns:\n    BigInt : The sum of even Fibonacci numbers not exceeding the limit\n\nExample:\n    julia&gt; sum_even_fibonacci(4_000_000)\n    BigInt(4613732)\n\"\"\"\nfunction sum_even_fibonacci(limit::Int)\n    # Create an infinite sequence of Fibonacci terms using Binet's formula\n1    fib_sequence = (fib_binet(n) for n in 1:BigInt(typemax(Int)))\n\n    # Take terms until they exceed the limit and collect into an array\n2    filtered_terms = collect(takewhile(x -&gt; x &lt;= limit, fib_sequence))\n\n    # Filter even terms and sum them\n3    even_sum = sum(filter(x -&gt; x % 2 == 0, filtered_terms))\n\n    return even_sum\nend\n```\n\n\n1\n\nGenerate an infinite sequence of Fibonacci numbers using the fib_binet function (assumed to be defined elsewhere).\n\n2\n\nUse takewhile to collect Fibonacci numbers up to the specified limit.\n\n3\n\nFilter the even terms and calculate their sum.\n\n\n\n\nMain.Notebook.sum_even_fibonacci\n\n\nFirst draft of annotation generated with the assistance of Perplexity AI, then edited to enhance language specificity and clarity (Perplexity AI 2025).\n\nPerplexity AI. 2025. Perplexity AI. Https://www.perplexity.ai.\n\nResult\n\n```{julia}\nlimit = 4_000_000\nresult = sum_even_fibonacci(limit)\nprintln(\"The sum of even Fibonacci terms below $limit is: $result\")\n```\n\nThe sum of even Fibonacci terms below 4000000 is: 4613732"
+  },
+  {
+    "objectID": "posts/2026-04-28-excel-formula-mcp/index.html",
+    "href": "posts/2026-04-28-excel-formula-mcp/index.html",
+    "title": "Turning Excel Workbooks into AI-Readable Data with an MCP Server",
+    "section": "",
+    "text": "Excel is still where business logic lives. Pricing models, risk calculations, financial projections: they accumulate over years in workbooks that no single person fully understands anymore. When the time comes to migrate them to Python, you face the same problem every time: the formulas are all there, but the structure, the dependencies, the named ranges, and the computation order is invisible.\nThis post describes excel-formula-mcp, a read-only Model Context Protocol (MCP) server that solves the structural visibility problem by exposing Excel formula analysis as structured, AI-consumable tools.\nThe inspiration to build this came from my own expereince with working with firms, which were trying to migrate there excel models to more systematic R models for automation and efficiency gain as part digitization effort within the firm. So, this is an opinionated MCP tool designed from the perspective of a quantitative analyst with the thinking hat of a forward-development engineer who frequently translates legacy Excel models into systematic Python or R models for automation and efficiency. While enterprise AI copilots have been a great help for my similar tasks, manual copy-pasting into chat is tedious. This tool automates that workflow via MCP, streamlining the process of translating Excel to Python with human-in-the-loop editing. While not a silver bullet, it provides a significant head start for understanding Excel models systematically with minimal prior Excel knowledge."
+  },
+  {
+    "objectID": "posts/2026-04-28-excel-formula-mcp/index.html#the-problem-with-excel-migration",
+    "href": "posts/2026-04-28-excel-formula-mcp/index.html#the-problem-with-excel-migration",
+    "title": "Turning Excel Workbooks into AI-Readable Data with an MCP Server",
+    "section": "The Problem with Excel Migration",
+    "text": "The Problem with Excel Migration\nA typical legacy workbook has:\n\nHundreds of formula cells spread across dozens of columns\nNamed ranges encoding business constants that are never documented\nCross-sheet references that create hidden dependencies\nFormulas that vary row-to-row in subtle ways\n\nYou can open the file in Excel and read the formulas. But reading is not understanding. To migrate faithfully to Python, you need to know:\n\nWhich columns are inputs (constants entered by a user) versus derived (computed from other columns)?\nIn what order must derived columns be computed?\nWhat do the named ranges mean, and which formulas use them?\n\nAnswering those questions manually for a 50-column workbook takes hours. With excel-formula-mcp and GitHub Copilot in agent mode, it takes minutes."
+  },
+  {
+    "objectID": "posts/2026-04-28-excel-formula-mcp/index.html#what-is-mcp",
+    "href": "posts/2026-04-28-excel-formula-mcp/index.html#what-is-mcp",
+    "title": "Turning Excel Workbooks into AI-Readable Data with an MCP Server",
+    "section": "What Is MCP?",
+    "text": "What Is MCP?\nThe Model Context Protocol is an open standard that lets language models call external tools in a structured, discoverable way. An MCP server declares tool schemas (name, description, input parameters). An MCP client (GitHub Copilot, Claude Desktop, or any compatible agent) can discover and call those tools dynamically during a conversation.\nThe key insight is that MCP decouples capability from model. The server knows how to read Excel files; the model knows how to reason about the results. Neither needs to know the internals of the other."
+  },
+  {
+    "objectID": "posts/2026-04-28-excel-formula-mcp/index.html#architecture",
+    "href": "posts/2026-04-28-excel-formula-mcp/index.html#architecture",
+    "title": "Turning Excel Workbooks into AI-Readable Data with an MCP Server",
+    "section": "Architecture",
+    "text": "Architecture\n┌──────────────────────────────────────────────────────┐\n│                    MCP Client                        │\n│         (GitHub Copilot / Claude Desktop)            │\n└─────────────────────┬────────────────────────────────┘\n                      │ stdio (JSON-RPC)\n┌─────────────────────▼────────────────────────────────┐\n│              excel-formula-mcp server                │\n│                  (FastMCP / Python)                  │\n│                                                      │\n│  ┌─────────────────┐   ┌───────────────────────────┐ │\n│  │   excel_loader  │   │     formula_parser        │ │\n│  │  (openpyxl +    │   │  (regex tokeniser for     │ │\n│  │   LRU cache)    │   │   same-sheet, cross-sheet │ │\n│  └────────┬────────┘   │   named range, external   │ │\n│           │            │   refs)                   │ │\n│           │            └──────────────┬────────────┘ │\n│  ┌────────▼────────────────────────────▼───────────┐ │\n│  │            dependency_builder                   │ │\n│  │  (column-level adjacency map + flat graph)      │ │\n│  └─────────────────────────────────────────────────┘ │\n│                                                      │\n│  Tools:                                              │\n│  · excel_analyze_range                               │\n│  · excel_get_column_formulas                         │\n│  · excel_get_dependencies                            │\n│  · excel_get_sheet_dependencies                      │\n│  · excel_get_named_ranges                            │\n└──────────────────────────────────────────────────────┘\nThe server is intentionally layered. The three core modules handle one concern each:\n\nexcel_loader: loads and caches workbooks with openpyxl using an LRU cache (size 5) so repeated tool calls within a session avoid redundant disk reads.\nformula_parser: tokenizes raw formula strings using four compiled regular expressions to extract same-sheet references, cross-sheet references, named ranges, and external workbook references.\ndependency_builder: aggregates parser output across formulas to produce typed dependency details per column, then flattens those into a simple adjacency map for client consumption.\n\nThe five tools are thin wrappers over these modules. They accept Pydantic v2 models for input validation, call the appropriate core functions, and return either JSON or Markdown depending on response_format."
+  },
+  {
+    "objectID": "posts/2026-04-28-excel-formula-mcp/index.html#the-five-tools",
+    "href": "posts/2026-04-28-excel-formula-mcp/index.html#the-five-tools",
+    "title": "Turning Excel Workbooks into AI-Readable Data with an MCP Server",
+    "section": "The Five Tools",
+    "text": "The Five Tools\n\nexcel_analyze_range\nThe workhorse. Given a file path, sheet name, and A1-notation range, it returns a complete column-by-column inventory.\n{\n  \"columns\": {\n    \"D\": {\n      \"header\": \"Revenue\",\n      \"formula_count\": 10,\n      \"unique_templates\": [\"=B{r}*C{r}\"],\n      \"constant_count\": 0,\n      \"empty_count\": 0,\n      \"is_fully_derived\": true,\n      \"named_ranges_used\": [],\n      \"cross_sheet_refs\": []\n    }\n  },\n  \"named_ranges_in_use\": [\"UnitCost\"],\n  \"summary\": {}\n}\nThis single call answers the question: what kind of column is this?\n\n\nexcel_get_column_formulas\nFocused inspection of one column. Returns unique formula templates, formula count, constant count, and a sample of raw cell values.\n\n\nexcel_get_dependencies\nReturns the column-level dependency graph. With include_details: true, each column entry lists four dependency categories:\n\n\n\nCategory\nExample\n\n\n\n\ndepends_on_columns\n[“B”, “C”]\n\n\ndepends_on_sheets\n[“Data!B”]\n\n\ndepends_on_named_ranges\n[“UnitCost”]\n\n\nexternal_references\n[“[Rates.xlsx]”]\n\n\n\nWith include_details: false, it returns a flat adjacency map that is easy to feed into a topological sort.\n\n\nexcel_get_sheet_dependencies\nReturns a workbook-level inter-sheet dependency graph. It scans formula cells across all sheets (or an optional whitelist) and reports direct sheet-to-sheet edges, plus named-range bridges that implicitly connect sheets.\n\n\nexcel_get_named_ranges\nLists every defined name in the workbook. For each name it reports scope, target sheet, target range, and whether it is formula-based rather than a direct range reference."
+  },
+  {
+    "objectID": "posts/2026-04-28-excel-formula-mcp/index.html#design-decisions",
+    "href": "posts/2026-04-28-excel-formula-mcp/index.html#design-decisions",
+    "title": "Turning Excel Workbooks into AI-Readable Data with an MCP Server",
+    "section": "Design Decisions",
+    "text": "Design Decisions\n\nColumn-level granularity, not cell-level\nCell-by-cell dependency graphs for a 500-row workbook are rarely usable for an LLM because they explode in edge count. Column granularity mirrors how analysts reason about spreadsheet models.\n\n\nRead-only by design\nAll five tools carry read-only MCP hints. The server never writes to the workbook, which makes it safe to call repeatedly.\n\n\nLRU-cached workbook loading\nLarge workbook loads are expensive. The LRU cache (keyed by absolute path) avoids repeated parse overhead across tool calls.\n\n\nPydantic v2 input validation\nEach tool uses strict Pydantic models with extra=\"forbid\", and validates A1-range strings before any file I/O happens."
+  },
+  {
+    "objectID": "posts/2026-04-28-excel-formula-mcp/index.html#the-migration-workflow",
+    "href": "posts/2026-04-28-excel-formula-mcp/index.html#the-migration-workflow",
+    "title": "Turning Excel Workbooks into AI-Readable Data with an MCP Server",
+    "section": "The Migration Workflow",
+    "text": "The Migration Workflow\nThe server includes two reusable VS Code prompt templates in .github/prompts.\n\nPhase 1-4: Analysis (/excel-formula-analyze)\n\nexcel_get_named_ranges: establish named constants vocabulary\nexcel_analyze_range: classify columns as input, derived, or mixed\nexcel_get_dependencies (include_details: true): build dependency graph and topological order\nexcel_get_sheet_dependencies: map workbook-level cross-sheet structure\n\nOptionally, save all outputs into:\nreports/&lt;sheet_name&gt;-analysis.md\n\n\nPhase 5: Migration (/excel-formula-migrate)\nThe second prompt reads the analysis report and generates:\n\nConstants mapped from named ranges\nInput schema as a typed dataclass\nOne computation stub per derived column in topological order\nA run_model() orchestrator in dependency order\nA context-sensitive migration checklist\n\nThis split makes analysis reusable and allows iterative migration passes."
+  },
+  {
+    "objectID": "posts/2026-04-28-excel-formula-mcp/index.html#using-the-server-with-vs-code",
+    "href": "posts/2026-04-28-excel-formula-mcp/index.html#using-the-server-with-vs-code",
+    "title": "Turning Excel Workbooks into AI-Readable Data with an MCP Server",
+    "section": "Using the Server with VS Code",
+    "text": "Using the Server with VS Code\nThe repository includes .vscode/mcp.json with a stdio server entry:\n{\n  \"servers\": {\n    \"excel-formula-mcp\": {\n      \"type\": \"stdio\",\n      \"command\": \"${env:VIRTUAL_ENV}/bin/python\",\n      \"args\": [\"-m\", \"excel_formula_mcp.server\"],\n      \"cwd\": \"${workspaceFolder}\",\n      \"env\": {\n        \"PYTHONPATH\": \"${workspaceFolder}/src\"\n      }\n    }\n  }\n}\nWith the environment activated and the server registered, Copilot can call the tools directly from chat.\nUse excel_analyze_range to analyze sheet \"Pricing\" in data/stage/model.xlsx over range A1:H500, then generate a Python implementation plan."
+  },
+  {
+    "objectID": "posts/2026-04-28-excel-formula-mcp/index.html#limitations",
+    "href": "posts/2026-04-28-excel-formula-mcp/index.html#limitations",
+    "title": "Turning Excel Workbooks into AI-Readable Data with an MCP Server",
+    "section": "Limitations",
+    "text": "Limitations\n\n.xls is not supported (openpyxl supports .xlsx and .xlsm)\nNo formula evaluation engine is included\nNo VBA analysis\nNo cross-workbook resolution\nDependency graph is column-level, not cell-level"
+  },
+  {
+    "objectID": "posts/2026-04-28-excel-formula-mcp/index.html#stack",
+    "href": "posts/2026-04-28-excel-formula-mcp/index.html#stack",
+    "title": "Turning Excel Workbooks into AI-Readable Data with an MCP Server",
+    "section": "Stack",
+    "text": "Stack\n\n\n\nComponent\nLibrary\nVersion\n\n\n\n\nMCP server framework\nmcp[cli] (FastMCP)\n&gt;= 1.3.0\n\n\nExcel parsing\nopenpyxl\n&gt;= 3.1.2\n\n\nInput validation\npydantic\n&gt;= 2.7.0\n\n\nCaching\nfunctools.lru_cache\nstdlib\n\n\nTests\npytest + pytest-asyncio\n&gt;= 8.0 / 0.23\n\n\nBuild\nhatchling\n-\n\n\nPython\nPython\n&gt;= 3.11"
+  },
+  {
+    "objectID": "posts/2026-04-28-excel-formula-mcp/index.html#installation",
+    "href": "posts/2026-04-28-excel-formula-mcp/index.html#installation",
+    "title": "Turning Excel Workbooks into AI-Readable Data with an MCP Server",
+    "section": "Installation",
+    "text": "Installation\nGitHub repository: r2rahul/excel-formula-mcp\ngit clone https://github.com/r2rahul/excel-formula-mcp.git\ncd excel-formula-mcp\nuv pip install -e \".[dev]\"\npytest"
+  },
+  {
+    "objectID": "posts/2026-04-28-excel-formula-mcp/index.html#what-is-next",
+    "href": "posts/2026-04-28-excel-formula-mcp/index.html#what-is-next",
+    "title": "Turning Excel Workbooks into AI-Readable Data with an MCP Server",
+    "section": "What Is Next",
+    "text": "What Is Next\n\nAdd optional formula evaluation support\nAdd optional .xls ingestion path\nAdd optional cell-level dependency mode\nAdd Mermaid or DOT graph export support\n\nSource: excel-formula-mcp"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Reproducing Gabillon (1991): Model-Implied Term Structures\n\n\nModel-only reproduction of Figures 5-9\n\n\n\nResearch\n\nR\n\nCommodities\n\nTutorials\n\n\n\n\n\n\n\n\n\nMay 3, 2026\n\n\nRahul\n\n\n\n\n\n\n\n\n\n\n\n\nA Practical Guide to Context Management in LLM Systems\n\n\nUsing Model Context Protocol (MCP) for Better Information Flow\n\n\n\nLLM\n\nAI\n\nMCP\n\nTutorials\n\n\n\n\n\n\n\n\n\nMay 3, 2026\n\n\nRahul\n\n\n\n\n\n\n\n\n\n\n\n\nTurning Excel Workbooks into AI-Readable Data with an MCP Server\n\n\n\n\n\n\nPython\n\nLLM\n\nAI\n\nMCP\n\nTutorials\n\nTeaching\n\n\n\n\n\n\n\n\n\nApr 28, 2026\n\n\nRahul\n\n\n\n\n\n\n\n\n\n\n\n\nSimple Julia Code To Understand Merger Arbitrage Payoff\n\n\n\n\n\n\nJulia\n\nFunctional Programming\n\nTeaching\n\nTutorials\n\n\n\n\n\n\n\n\n\nMar 26, 2025\n\n\nRahul\n\n\n\n\n\n\n\n\n\n\n\n\nProject Euler: Problem 2\n\n\n\n\n\n\nJulia\n\nFunctional Programming\n\nTeaching\n\nTutorials\n\n\n\n\n\n\n\n\n\nMar 14, 2025\n\n\nRahul\n\n\n\n\n\n\n\n\n\n\n\n\nEstimating Pi through Monte Carlo Simualtion\n\n\n\n\n\n\nJulia\n\nFunctional Programming\n\nTeaching\n\nTutorials\n\n\n\n\n\n\n\n\n\nMar 12, 2025\n\n\nRahul\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "field-study-history-of-indian-mathematics.html",
+    "href": "field-study-history-of-indian-mathematics.html",
+    "title": "Field Study in the History of Indian Mathematics",
+    "section": "",
+    "text": "Course\nMeet Days\nMeet Time\nLocation\nInstructor(s)\n\n\n\n\nField Study in the History of Indian Mathematics\n\n\n\nRahul Katyayan"
+  },
+  {
+    "objectID": "field-study-history-of-indian-mathematics.html#class-schedule",
+    "href": "field-study-history-of-indian-mathematics.html#class-schedule",
+    "title": "Field Study in the History of Indian Mathematics",
+    "section": "",
+    "text": "Course\nMeet Days\nMeet Time\nLocation\nInstructor(s)\n\n\n\n\nField Study in the History of Indian Mathematics\n\n\n\nRahul Katyayan"
+  },
+  {
+    "objectID": "field-study-history-of-indian-mathematics.html#instructional-team",
+    "href": "field-study-history-of-indian-mathematics.html#instructional-team",
+    "title": "Field Study in the History of Indian Mathematics",
+    "section": "Instructional Team",
+    "text": "Instructional Team\nInstructor: Rahul Katyayan\nOffice: To be announced\nOffice Hours: To be announced\nGraduate Teaching Assistant: To be announced"
+  },
+  {
+    "objectID": "field-study-history-of-indian-mathematics.html#course-description",
+    "href": "field-study-history-of-indian-mathematics.html#course-description",
+    "title": "Field Study in the History of Indian Mathematics",
+    "section": "Course Description",
+    "text": "Course Description\nA field-study course designed to examine the development of mathematical ideas in the Indian tradition through guided library research, close reading of historical sources, informational interviews with experts and historians, and collaborative report writing. The course emphasizes contextual interpretation, evidence-based historical reasoning, and clear communication of mathematical ideas across disciplinary boundaries."
+  },
+  {
+    "objectID": "field-study-history-of-indian-mathematics.html#learning-outcomes",
+    "href": "field-study-history-of-indian-mathematics.html#learning-outcomes",
+    "title": "Field Study in the History of Indian Mathematics",
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\nBy the end of this course students should be able to:\n\nFoundational Knowledge: describe major themes, texts, and historical settings relevant to the development of Indian mathematics, including institutional and cultural contexts such as Nalanda and the Gupta period.\nApplication: conduct structured library research, build annotated reading notes, and prepare thoughtful informational interviews with subject experts.\nIntegration: connect mathematical ideas, textual evidence, historical interpretation, and scholarly commentary into a coherent research narrative.\nHuman Dimension: work collaboratively, engage respectfully with historians and experts, and learn to ask better questions across disciplinary vocabularies.\nCaring: appreciate the intellectual richness and global significance of the history of Indian mathematics and its place in broader scientific traditions.\nLearning How to Learn: develop durable habits for archival reading, note synthesis, source evaluation, and collaborative academic writing.\n\nTeaching and Learning Practices\nThis course is inquiry-driven in design. Students work through guided reading circles, library research sessions, source-comparison workshops, informational interview preparation, collaborative synthesis exercises, and group writing studios. The learning design emphasizes close reading, reflective interpretation, and repeated refinement of questions, evidence, and argument.\nThere is no required textbook. Readings are organized around curated library materials, historical essays, primary-source excerpts, and expert conversations that support each phase of the field study."
+  },
+  {
+    "objectID": "field-study-history-of-indian-mathematics.html#tentative-class-plan",
+    "href": "field-study-history-of-indian-mathematics.html#tentative-class-plan",
+    "title": "Field Study in the History of Indian Mathematics",
+    "section": "Tentative Class Plan",
+    "text": "Tentative Class Plan\nThis is a tentative course schedule. Minor changes may occur as the course evolves and will be communicated in advance.\n\n\n\n\n\n\n\n\n\nWeek #\nDates\nLecture/Activities PRA\nActivities/Assignments and Due Dates\n\n\n\n\n1\n\nLecture 1: Introduction to the field study, scope, and historical questions. Technique: seminar-style orientation\nActivity: research interest note and initial question inventory\n\n\n1\n\nLecture 2: How to read historical mathematics texts and secondary scholarship. Technique: guided close-reading workshop\nActivity: reading log setup\n\n\n2\n\nLecture 1: Historical periods, institutions, and intellectual traditions in Indian mathematics. Technique: contextual lecture and discussion\nActivity: timeline sketch\n\n\n2\n\nLecture 2: Library orientation, catalog search, and bibliography building. Technique: research methods workshop\nActivity: preliminary bibliography\n\n\n3\n\nLecture 1: Reading primary and secondary sources together. Technique: source-comparison studio\nActivity: annotated reading notes 1\n\n\n3\n\nLecture 2: Themes from Nalanda, scholarly transmission, and mathematical culture. Technique: discussion-led seminar\nActivity: source reflection memo\n\n\n4\n\nLecture 1: The Gupta period and the organization of mathematical knowledge. Technique: lecture with document analysis\nActivity: annotated reading notes 2\n\n\n4\n\nLecture 2: Interpreting evidence, attribution, and historical uncertainty. Technique: critique session\nActivity: evidence table\n\n\n5\n\nLecture 1: Building research questions from reading patterns. Technique: question-framing workshop\nActivity: research question brief\n\n\n5\n\nLecture 2: Reading group discussion on selected historians and interpretive debates. Technique: discussion circle\nActivity: comparative reading response\n\n\n6\n\nLecture 1: Informational interviews as scholarly inquiry. Technique: interview design clinic\nActivity: interview target list\n\n\n6\n\nLecture 2: Writing respectful outreach and preparing interview prompts. Technique: peer review workshop\nActivity: outreach draft and interview guide\n\n\n7\n\nLecture 1: Mock interviews and follow-up questioning. Technique: role-play rehearsal\nActivity: revised interview protocol\n\n\n7\n\nLecture 2: Synthesizing expert input with documentary evidence. Technique: synthesis lab\nActivity: interview preparation memo\n\n\n8\n\nLecture 1: Informational interview week: expert, historian, or librarian conversation. Technique: supervised field engagement\nActivity: interview notes\n\n\n8\n\nLecture 2: Debriefing and extracting themes from expert conversations. Technique: reflective discussion\nActivity: interview reflection\n\n\n9\n\nLecture 1: Expanding the evidence base through targeted library reading. Technique: guided research studio\nActivity: annotated reading notes 3\n\n\n9\n\nLecture 2: Cross-checking claims, references, and interpretations. Technique: verification workshop\nActivity: source verification sheet\n\n\n10\n\nLecture 1: Structuring a group report: argument, evidence, and section design. Technique: writing architecture session\nActivity: group report outline\n\n\n10\n\nLecture 2: Integrating quotations, paraphrase, and historical commentary. Technique: writing workshop\nActivity: section draft 1\n\n\n11\n\nLecture 1: Explaining mathematical ideas for non-specialist readers. Technique: translation and explanation lab\nActivity: explanatory note\n\n\n11\n\nLecture 2: Visual support for historical writing: tables, timelines, and diagrams. Technique: document design workshop\nActivity: figure and timeline draft\n\n\n12\n\nLecture 1: Group writing studio and editorial coordination. Technique: collaborative drafting session\nActivity: section draft 2\n\n\n12\n\nLecture 2: Peer review of argument flow, evidence use, and clarity. Technique: peer critique\nActivity: peer review memo\n\n\n13\n\nLecture 1: Revision strategies for academic group writing. Technique: revision clinic\nActivity: revised group draft\n\n\n13\n\nLecture 2: Citation quality, bibliography cleanup, and consistency checks. Technique: editorial workshop\nActivity: bibliography and notes audit\n\n\n14\n\nLecture 1: Final synthesis and preparing the submission package. Technique: team coaching\nActivity: final report checklist\n\n\n14\n\nLecture 2: Short group briefing on findings and interpretive choices. Technique: presentation forum\nActivity: briefing summary\n\n\n15\n\nLecture 1: Final group report submission. Technique: submission and review session\nActivity: final report submission\n\n\n15\n\nLecture 2: Reflection on research process, evidence, and future study directions. Technique: reflective dialogue\nActivity: final reflection note"
+  },
+  {
+    "objectID": "field-study-history-of-indian-mathematics.html#required-materials-and-technology",
+    "href": "field-study-history-of-indian-mathematics.html#required-materials-and-technology",
+    "title": "Field Study in the History of Indian Mathematics",
+    "section": "Required Materials and Technology",
+    "text": "Required Materials and Technology\n\nReadings\n\nCurated library reading packets on the history of Indian mathematics, including primary-source excerpts and modern historical scholarship.\nSelected readings on Nalanda, the Gupta period, and the transmission of mathematical knowledge in South Asia.\nBackground essays on research methods for historical inquiry, note-taking, interviewing experts, and collaborative academic writing.\nLibrary databases, catalog tools, and citation management software as recommended during the course.\n\n\n\nOther Materials\n\n\n\n\n\n\n\n\n\nItem\nNotes / Comments\nRequired\nTool\n\n\n\n\nLaptop\nUsed for library research, note organization, interviews, and group writing\nRequired\n\n\n\nNotebook or reading journal\nUseful for source notes, interview reflections, and draft planning\nRecommended\nObsidian (Recommended)\n\n\nAccess to library resources\nPrint or digital materials identified through the course research process\nRequired"
+  },
+  {
+    "objectID": "field-study-history-of-indian-mathematics.html#assessments-activities",
+    "href": "field-study-history-of-indian-mathematics.html#assessments-activities",
+    "title": "Field Study in the History of Indian Mathematics",
+    "section": "Assessments & Activities",
+    "text": "Assessments & Activities\n\n\n\n\n\n\n\n\n\nComponent / Activity\nDate or Due Date\nLocation / Submission Method\nWeight (%)\n\n\n\n\nReading Log and Annotated Notes\n\n\n15\n\n\nResearch Question Brief\n\n\n10\n\n\nInformational Interview Preparation\n\n\n10\n\n\nInterview Reflection and Evidence Synthesis\n\n\n15\n\n\nGroup Report Outline and Draft Package\n\n\n15\n\n\nGroup Report Final Submission\n\n\n25\n\n\nFinal Reflection Note\n\n\n10\n\n\n\nAssessment descriptions, due dates, and submission details will be announced.\nPosted assessment descriptions provide general guidelines rather than exhaustive rules. Reading discussions, research workshops, interviews, and writing studios will provide the fuller context for expectations.\nActive attendance and participation are strongly encouraged because much of the learning depends on collaborative inquiry, shared reading, and iterative group writing.\nQuestions, clarification norms, revision opportunities, and any policy on AI-assisted work: to be announced."
+  },
+  {
+    "objectID": "field-study-history-of-indian-mathematics.html#administrative-policy",
+    "href": "field-study-history-of-indian-mathematics.html#administrative-policy",
+    "title": "Field Study in the History of Indian Mathematics",
+    "section": "Administrative Policy",
+    "text": "Administrative Policy\nAdministrative policy details, including late work, revision process, attendance expectations, permitted use of AI tools, accessibility, and use of course materials: to be announced."
+  },
+  {
+    "objectID": "research-statement.html",
+    "href": "research-statement.html",
+    "title": "Research Statement",
+    "section": "",
+    "text": "I develop analytical models to understand and predict complex systems. Across quantitative finance, and scientific modeling of complex systems, the constant theme in my work is the translation of loosely structured, data-rich problems into analytical frameworks that make assumptions explicit, separate structural uncertainty from noise, and support decisions under real operational constraints. This perspective draws on training in applied mathematics, earlier research on co-expression networks and intracellular systems in diabetes and cancer, and current experience with systematic investing.\nMy current research program sits at the intersection of quantitative finance, inverse problems, non-smooth optimization, and computational science. Earlier work in systems biology required me to integrate heterogeneous data sources, formulate mechanistic models, calibrate them against experiments, and test how sensitive conclusions were to parameter and model uncertainty. I now extend those habits to finance by asking whether a new signal genuinely adds value to an existing portfolio process, how interactions among signals change the marginal contribution of information, and how scalable computation can make that evaluation systematic rather than anecdotal."
+  },
+  {
+    "objectID": "research-statement.html#post-doctoral-research-work",
+    "href": "research-statement.html#post-doctoral-research-work",
+    "title": "Research Statement",
+    "section": "Post-Doctoral Research Work",
+    "text": "Post-Doctoral Research Work\nIn my postdoctoral research, I developed a rigorous workflow for aggregating, checking, and integrating metabolomics and gene-expression data into genome-scale metabolic models built through constraint-based reconstruction and analysis. This work combined biological knowledge representation, mathematical optimization, and data-quality assurance to construct tissue-specific models that could be compared systematically against observed cancer-cell behavior. The project required not only model building, but also careful attention to whether the underlying measurements were sufficiently reliable to support downstream inference. Figure Figure 1 summarizes the overall COBRA workflow used to build and analyze the genome-scale metabolic model.\n\n\n\n\n\n\nFigure 1: Constraint-based reconstruction and analysis (COBRA) workflow used in the postdoctoral project. The schematic summarizes the progression from biological knowledge and reaction annotation to genome-scale metabolic model construction, flux constraints, and downstream computational analysis of cancer-cell metabolism.\n\n\n\nThe central modeling task was to begin with a generic genome-scale metabolic model, refine it into a cancer-relevant system, and then interrogate it computationally under biologically meaningful constraints. To do this, I used ModelBorgifier to integrate multiple mouse genome-scale models into a single aggregated representation and then incorporated cancer cell-specific transcriptomic and metabolomic measurements using the iMAT algorithm, which uses expression evidence to favor greater feasible flux through reactions associated with more highly expressed genes while preserving the global stoichiometric constraints of the network. After constraining the model, I ran simulations against NCI-60 cell-line behavior and performed flux variability analysis to identify dysregulated reactions. One of the notable findings was increased activity around lactate dehydrogenase, together with evidence that pyruvate dehydrogenase could not carry all of the glycolytic influx into the tricarboxylic acid cycle, causing flux to be redirected through alternative pathways. Figure Figure 2 highlights the data-quality workflow that supported this integration.\n\n\n\n\n\n\nFigure 2: Data-quality workflow for metabolomics integration in the postdoctoral COBRA pipeline. The figure summarizes the sequence of quality-control, aggregation, and harmonization steps used before transcriptomic and metabolomic measurements were incorporated into the tissue-specific metabolic model."
+  },
+  {
+    "objectID": "research-statement.html#doctoral-research-work",
+    "href": "research-statement.html#doctoral-research-work",
+    "title": "Research Statement",
+    "section": "Doctoral Research Work",
+    "text": "Doctoral Research Work\nIn my doctoral research, I developed a kinetic model of pyruvate cycling pathways in pancreatic \\(\\beta\\)-cells to identify the regulatory mechanisms that influence pyruvate recycling and NADPH production, both of which are implicated in insulin secretion and the development of type 2 diabetes (R. Rahul et al., 2023). This work asked a mechanistic question: when several interconnected biochemical pathways contribute to a clinically important outcome, which components act as true control points and which effects are compensated elsewhere in the system? Figure Figure 3 provides the pathway-level view of the modeled system.\n\n\n\n\n\n\nFigure 3: Model components of the pyruvate recycling network in pancreatic \\(\\beta\\)-cells. The diagram links mitochondrial and cytosolic reactions across the tricarboxylic acid cycle and the pyruvate/malate, pyruvate/citrate, and pyruvate/isocitrate shuttles that were analyzed in the doctoral model.\n\n\n\n\n\n\n\n\n\nFigure 4: Global sensitivity ranking for NADPH production in the doctoral model. The ranking highlights the dominant contribution of transport processes, particularly the dicarboxylate carrier and pyruvate transporter, to variation in the simulated metabolic response.\n\n\n\nThe model represented the tricarboxylic acid cycle together with the pyruvate/malate, pyruvate/citrate, and pyruvate/isocitrate shuttles. It comprised 24 state variables, 31 reaction fluxes, and 129 parameters, most drawn from the literature, with a focused subset estimated by calibration against experimental observations from Ronnebaum and colleagues (Ronnebaum et al., 2006). After validation, I analyzed the system with local and global sensitivity methods, including eFAST and related variance-based approaches for ranking influential parameters (Saltelli et al., 2008), to determine which reactions most strongly controlled the outcomes of interest. The analysis showed that the dicarboxylate carrier and pyruvate transporter were the dominant regulators of pyruvate cycling and NADPH production, while variation in pyruvate carboxylase could be offset by compensatory changes in mitochondrial isocitrate dehydrogenase. Figure Figure 4 reports the resulting sensitivity ranking. These results helped convert a complex mechanistic model into specific experimental hypotheses and intervention targets (R. Rahul et al., 2023).\n\nRonnebaum, S. M., Ilkayeva, O., Burgess, S. C., Joseph, J. W., Lu, D., Stevens, R. D., Becker, T. C., Sherry, A. D., Newgard, C. B., Jensen, M. V., and Odegaard, M. (2006). A pyruvate cycling pathway involving cytosolic NADP-dependent isocitrate dehydrogenase regulates glucose-stimulated insulin secretion. The Journal of Biological Chemistry, 281(41), 30593–30602. https://doi.org/10.1074/jbc.M511908200\n\nRahul, R., Stinchcombe, A. R., Joseph, J. W., and Ingalls, B. (2023). Kinetic modelling of β-cell metabolism reveals control points in the insulin-regulating pyruvate cycling pathways [Article]. IET Systems Biology, 17, 303–315. https://doi.org/10.1049/SYB2.12077"
+  },
+  {
+    "objectID": "research-statement.html#quantitative-decision-systems-and-signal-additivity-in-systematic-portfolios",
+    "href": "research-statement.html#quantitative-decision-systems-and-signal-additivity-in-systematic-portfolios",
+    "title": "Research Statement",
+    "section": "Quantitative Decision Systems and Signal Additivity in Systematic Portfolios",
+    "text": "Quantitative Decision Systems and Signal Additivity in Systematic Portfolios\nThe rapid growth of conventional and alternative data has made alpha generation through new signals increasingly difficult. In practice, portfolio managers often evaluate a candidate signal by adding it to, or removing it from, an existing backtest and then comparing the resulting performance. That workflow is useful as an initial diagnostic, but it does not systematically quantify whether a signal is genuinely additive once interactions with the rest of the signal library, portfolio construction rules, and market uncertainty are taken into account. My proposed research addresses this gap by treating the portfolio as a quantitative decision system in which the value of a new signal depends on its interaction with an already active set of predictors and constraints.\nThe methodological core of the project is an uncertainty-aware additivity framework built around global sensitivity analysis. I propose to represent the portfolio process as a pipeline that maps market states, candidate signals, and portfolio construction rules into realized outcomes, and then use Sobol and eFAST decompositions to quantify both main effects and interaction effects across signals (Saltelli et al., 2008). This design moves beyond one-at-a-time backtesting by asking not only whether a signal improves performance in isolation, but also whether it remains useful across regimes, whether it stabilizes or destabilizes other signals, and whether its apparent contribution disappears once signal interactions are modeled explicitly.\n\nSaltelli, A., Ratto, M., Andres, T., Campolongo, F., Cariboni, J., Gatelli, D., Saisana, M., and Tarantola, S. (2008). Global sensitivity analysis: The primer. John Wiley & Sons.\nThe project makes four related contributions. First, it provides a systematic framework for evaluating signal additivity while respecting uncertainty in market conditions, estimation windows, and portfolio constraints. Second, it offers a principled way to investigate signal interaction terms rather than treating every signal as an isolated contributor. Third, it develops a high-performance implementation in Python with Dask so that the large number of backtests, perturbations, and scenario evaluations required by global sensitivity analysis can be executed reproducibly at scale. Finally, it packages the workflow as an AI agent skill that practitioners, academics, and non-technical users can use to configure experiments, run the framework, and interpret outputs in a disciplined way. The broader aim is to replace ad hoc add/remove testing with a reproducible evaluation framework for deciding whether new information should enter a systematic equity portfolio."
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Python\nR\nMATLAB\nShell Scripting\nBasic Julia\nBasic C++/C\nBasic F#\n\n\n\n\n\n\n\nscikit-learn: http://scikit-learn.org/stable/\nPandas: http://pandas.pydata.org/\nStatsModels: http://statsmodels.sourceforge.net/\nBokeh: http://bokeh.pydata.org/en/latest/\nCVXOPT: http://cvxopt.org/\nCVXPY: http://www.cvxpy.org/en/latest/\n\n\n\n\n\nTidyVerse:http://tidyverse.org/\nCaret: http://caret.r-forge.r-project.org/\nNloptr: https://cran.r-project.org/web/packages/nloptr/index.html\nShiny: https://shiny.rstudio.com/\n\n\n\n\n\n\nPython Visualization Stack\nR Visualization Stack Matlab Plotting\nBokeh: http://bokeh.pydata.org/en/latest/\nShiny: https://shiny.rstudio.com/\nInkscape: http://www.inkscape.org/en/\nXfig: http://www.xfig.org/\nCircos: http://circos.ca/\nBlender: http://www.blender.org/\nVANTED: http://vanted.ipk-gatersleben.de/index.php?file=doc0.html\nVMD: http://www.ks.uiuc.edu/Research/vmd/\n\n\n\n\n\nSBPOP package (Formerly Sbtoolbox2.): http://www.sbtoolbox2.org/main.php\nPotters Wheel: http://www.potterswheel.de/\nSBMLtoolbox: http://sbml.org/Software/SBMLToolbox\nCobrapy: https://github.com/opencobra/cobrapy\nOpen COBRA: http://opencobra.sourceforge.net/openCOBRA/Welcome.html\nFluxMap: http://vanted.ipk-gatersleben.de/addons/fluxmap/\nFbaSimVis: http://fbasimvis.ipk-gatersleben.de/\nClustalw2: http://www.ebi.ac.uk/Tools/msa/clustalw2/\nBLAST: http://blast.ncbi.nlm.nih.gov/Blast.cgi\nMcell (Monte Carlo Cell): http://mcell.org/\n\n\n\n\n\nCVX: http://cvxr.com/cvx/\nCVXPortfolio: https://github.com/cvxgrp/cvxportfolio\nTFOCS: http://cvxr.com/tfocs/\nMATLAB and SBPOP optimization suite\nAdaptive Simulated Annealing (MATLAB mex interface): http://www.ingber.com/\nPSwarm: http://www.norg.uminho.pt/aivaz/pswarm/\nImplicit Filtering and other solvers available from Prof. C. T. Kelly web page: http://www4.ncsu.edu/~ctk/\nDACE: http://www.imm.dtu.dk/~hbni/dace/\nSpace Mapping: http://www.imm.dtu.dk/~kajm/Space_Mapping_Toolbox.html\nSSMGO: http://www.iim.csic.es/~gingproc/ssmGO.html\n\n\n\n\n\nSUNDIALS: http://computation.llnl.gov/casc/sundials/main.html\nXPPAUT: http://www.math.pitt.edu/~bard/xpp/xpp.html\nMATCONT: http://www.matcont.ugent.be/\nRadau5 and other solvers available as a mex interface to MATLAB: https://www-m3.ma.tum.de/Software/ODEHome\n\n\n\n\n\nGit: http://git-scm.com/\nSVN: https://subversion.apache.org/"
+  },
+  {
+    "objectID": "resources.html#programming-languages",
+    "href": "resources.html#programming-languages",
+    "title": "Resources",
+    "section": "",
+    "text": "Python\nR\nMATLAB\nShell Scripting\nBasic Julia\nBasic C++/C\nBasic F#"
+  },
+  {
+    "objectID": "resources.html#data-science-stack",
+    "href": "resources.html#data-science-stack",
+    "title": "Resources",
+    "section": "",
+    "text": "scikit-learn: http://scikit-learn.org/stable/\nPandas: http://pandas.pydata.org/\nStatsModels: http://statsmodels.sourceforge.net/\nBokeh: http://bokeh.pydata.org/en/latest/\nCVXOPT: http://cvxopt.org/\nCVXPY: http://www.cvxpy.org/en/latest/\n\n\n\n\n\nTidyVerse:http://tidyverse.org/\nCaret: http://caret.r-forge.r-project.org/\nNloptr: https://cran.r-project.org/web/packages/nloptr/index.html\nShiny: https://shiny.rstudio.com/"
+  },
+  {
+    "objectID": "resources.html#visualization-tools",
+    "href": "resources.html#visualization-tools",
+    "title": "Resources",
+    "section": "",
+    "text": "Python Visualization Stack\nR Visualization Stack Matlab Plotting\nBokeh: http://bokeh.pydata.org/en/latest/\nShiny: https://shiny.rstudio.com/\nInkscape: http://www.inkscape.org/en/\nXfig: http://www.xfig.org/\nCircos: http://circos.ca/\nBlender: http://www.blender.org/\nVANTED: http://vanted.ipk-gatersleben.de/index.php?file=doc0.html\nVMD: http://www.ks.uiuc.edu/Research/vmd/"
+  },
+  {
+    "objectID": "resources.html#computational-biology-softwares",
+    "href": "resources.html#computational-biology-softwares",
+    "title": "Resources",
+    "section": "",
+    "text": "SBPOP package (Formerly Sbtoolbox2.): http://www.sbtoolbox2.org/main.php\nPotters Wheel: http://www.potterswheel.de/\nSBMLtoolbox: http://sbml.org/Software/SBMLToolbox\nCobrapy: https://github.com/opencobra/cobrapy\nOpen COBRA: http://opencobra.sourceforge.net/openCOBRA/Welcome.html\nFluxMap: http://vanted.ipk-gatersleben.de/addons/fluxmap/\nFbaSimVis: http://fbasimvis.ipk-gatersleben.de/\nClustalw2: http://www.ebi.ac.uk/Tools/msa/clustalw2/\nBLAST: http://blast.ncbi.nlm.nih.gov/Blast.cgi\nMcell (Monte Carlo Cell): http://mcell.org/"
+  },
+  {
+    "objectID": "resources.html#optimization-tools",
+    "href": "resources.html#optimization-tools",
+    "title": "Resources",
+    "section": "",
+    "text": "CVX: http://cvxr.com/cvx/\nCVXPortfolio: https://github.com/cvxgrp/cvxportfolio\nTFOCS: http://cvxr.com/tfocs/\nMATLAB and SBPOP optimization suite\nAdaptive Simulated Annealing (MATLAB mex interface): http://www.ingber.com/\nPSwarm: http://www.norg.uminho.pt/aivaz/pswarm/\nImplicit Filtering and other solvers available from Prof. C. T. Kelly web page: http://www4.ncsu.edu/~ctk/\nDACE: http://www.imm.dtu.dk/~hbni/dace/\nSpace Mapping: http://www.imm.dtu.dk/~kajm/Space_Mapping_Toolbox.html\nSSMGO: http://www.iim.csic.es/~gingproc/ssmGO.html"
+  },
+  {
+    "objectID": "resources.html#differential-equations-solvers",
+    "href": "resources.html#differential-equations-solvers",
+    "title": "Resources",
+    "section": "",
+    "text": "SUNDIALS: http://computation.llnl.gov/casc/sundials/main.html\nXPPAUT: http://www.math.pitt.edu/~bard/xpp/xpp.html\nMATCONT: http://www.matcont.ugent.be/\nRadau5 and other solvers available as a mex interface to MATLAB: https://www-m3.ma.tum.de/Software/ODEHome"
+  },
+  {
+    "objectID": "resources.html#version-control-tools",
+    "href": "resources.html#version-control-tools",
+    "title": "Resources",
+    "section": "",
+    "text": "Git: http://git-scm.com/\nSVN: https://subversion.apache.org/"
+  },
+  {
+    "objectID": "resources.html#general-problem-solving-skills",
+    "href": "resources.html#general-problem-solving-skills",
+    "title": "Resources",
+    "section": "General Problem Solving Skills",
+    "text": "General Problem Solving Skills\n\nPolya, G. How to Solve It: A New Aspect of Mathematical Method. Princeton University Press, 2014.\nBurger, Edward B., and Michael Starbird. The 5 Elements of Effective Thinking. Princeton University Press, 2012.\nWilder, R. L. “The Role of Intuition.” Science 156, no. 3775 (May 5, 1967): 605–10.\nDevlin, Keith J. Introduction to Mathematical Thinking. Keith Devlin, 2012.\nDweck, Carol. Mindset: The New Psychology of Success. Random House Publishing Group, 2006.\nLockhart, Paul. A Mathematician’s Lament. Bellevue Literary Press, 2009.\nGhose, Aurobindo. A System of Nation"
+  },
+  {
+    "objectID": "resources.html#computing-skill",
+    "href": "resources.html#computing-skill",
+    "title": "Resources",
+    "section": "Computing Skill",
+    "text": "Computing Skill\n\nSoftware-Carpentry: http://software-carpentry.org/\nCode Academy: http://www.codecademy.com/\nMassive Open Online Courses:\n\nHigh Performance Scientific Computing: https://www.coursera.org/course/scicomp\nIntroduction to Linux: https://www.edx.org/course/linuxfoundationx/linuxfoundationx-lfs101x-introduction-1621#.VCoV0vldV-4"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "I have a keen interest in designing programs that integrate technology—such as Clickers, Virtual Reality, and AI assistants—to promote active and experiential learning. I hold a Certificate in University Teaching from the University of Waterloo.\nMy interest focus on designing classroom activities that foster resilience, empathy, and first principle problem solving thinking in students—critical skills for success in an ever-evolving workplace environment.\nPlease refer to my Teaching Dossier for a comprehensive overview of my teaching philosophy and educational methods."
+  },
+  {
+    "objectID": "teaching.html#teaching-design-workflow",
+    "href": "teaching.html#teaching-design-workflow",
+    "title": "Teaching",
+    "section": "Teaching Design Workflow",
+    "text": "Teaching Design Workflow\nMy teaching design follows the same principle as my professional work: begin by contextualizing the problem, identify the abstractions students need, and use technology only where it sharpens reasoning rather than replacing it.\n\n\n\n\n\nflowchart LR\n  A[\"Contextualize&lt;br/&gt;the problem\"] --&gt; B[\"Decompose into&lt;br/&gt;first principles\"]\n  B --&gt; C[\"Choose representations&lt;br/&gt;and tools\"]\n  C --&gt; D[\"Structured&lt;br/&gt;practice\"]\n  D --&gt; E[\"Feedback and&lt;br/&gt;reflection\"]\n  E --&gt; F[\"Transfer to&lt;br/&gt;unfamiliar problems\"]\n\n\n\n\n\n\nThis workflow informs how I use clickers, visual demonstrations, and AI assistants in the classroom: the tools support contextualization, but the teaching objective remains durable problem solving and transfer.\nBuilding on my industry experience and university teaching background, I aim to create a course on both core and elective topics like:\n\nCore Courses: Linear Algebra, Calculus, Optimization, Machine Learning, Deep Learning, Natural Language Processing, Data Visualization.\nElective Courses or Bridge Courses:\n\nElements of Forward-Deployed Engineer. This course will provide a structured framework for developing innovative solutions to real-world business challenges. Course Outline1\nField Study in the History of Indian Mathematics. This course uses structured library reading, informational interviews with experts and historians, and collaborative report writing to study mathematical developments associated with Nalanda University and the Gupta Empire. Course Outline2"
+  },
+  {
+    "objectID": "teaching.html#teaching-roles",
+    "href": "teaching.html#teaching-roles",
+    "title": "Teaching",
+    "section": "Teaching Roles",
+    "text": "Teaching Roles\n\nVisiting Lecturer\n\nBRIDGE School of Management, India in collaboration with Northwestern University, USA:\n\nCourse: Introduction to machine learning and advance modeling methods\n\n\n\n\nUniversity Teaching\nAt the University of Waterloo, I worked as a teaching assistant and sessional lecturer. I taught following courses in the Department of Applied Mathematics at the University of Waterloo:\n\nCalculus III for Honours Mathematics\nCalculus I for Engineers\nCalculus II for Sciences\n\nSelected Courses where I worked as a Teaching Assistant:\n\nComputational Cell Biology (Graduate Course)\nEnvironmental Informatics (Graduate Course)\nCalculus I, II, III for Engineers\nIntroduction to differential equations\nLinear Algebra I\nCalculus I, II, III for Honours Mathematics\n\n\n\nTeaching Research\n\nRahul (2012). A Survey of Wiki Based Collaborative Learning Environments for the Interdisciplinary Training of the Students in Maths and Biology. [Poster presentation]. Opportunities and New Directions Conference, Centre of Teaching Excellence, University of Waterloo, Waterloo, Canada\nCTE Dissertation title: Wiki as a Teaching Tool for the Systems Biology Class.\n\n\n\nTeaching Demonstrations\nPlease find different visual presentations, which I developed in MUPAD (MATLAB’s symbolic interface.) on my Github repository: https://github.com/r2rahul/teachingdemo\nReference: Crouch, Catherine, Adam P. Fagen, J. Paul Callan, and Eric Mazur. “Classroom Demonstrations: Learning Tools or Entertainment?” American Journal of Physics 72, no. 6 (June 1, 2004): 835–38.\n\n\n\n\n\n\nLevel Curve\n\n\n\n\n\n\n\nRiemann Sum\n\n\n\n\n\nOther Teaching Resources: Teaching Demonstrations and Materials"
+  },
+  {
+    "objectID": "teaching.html#teaching-resources",
+    "href": "teaching.html#teaching-resources",
+    "title": "Teaching",
+    "section": "Teaching Resources",
+    "text": "Teaching Resources\n\nEducational Tools\n\nTools that I frequently used while teaching:\n\nInteractive White Board Software Open Board (formerly Open Sankore:) https://openboard.ch/download.en.html\nAudience Response System, iClicker: http://www1.iclicker.com/\nYed Graph editor tool used to build Concept Maps: http://www.yworks.com/en/products_yed_about.html\n\n\n\n\nMassive Open Online Courses (MOOC):\n\nEDUC115N How to Learn Math: https://class.stanford.edu/courses/Education/EDUC115N/How_to_Learn_Math/about\nEDUC115-S How to Learn Math: For Students: https://class.stanford.edu/courses/Education/EDUC115-S/Spring2014/about\nEffective Thinking Through Mathematics: https://www.edx.org/course/utaustinx/utaustinx-ut-9-01x-effective-thinking-1178#.VCnfG_ldV-4\nIntroduction to Mathematical Thinking: https://www.coursera.org/course/maththink\nLearning How to Learn: https://www.coursera.org/course/learning\nTeaching College-Level Science and Engineering: http://ocw.mit.edu/courses/chemistry/5-95j-teaching-college-level-science-and-engineering-spring-2009/\n\n\n\nArticles and Books\n\nShors, Tracey J. “Saving New Brain Cells.” Scientific American 300, no. 3 (March 1, 2009): 46–54.\nPolya, G. How to Solve It: A New Aspect of Mathematical Method. Princeton University Press, 2014.\nLockhart, Paul. A Mathematician’s Lament. Bellevue Literary Press, 2009.\nBurger, Edward B., and Michael Starbird. The 5 Elements of Effective Thinking. Princeton University Press, 2012.\nDweck, Carol. Mindset: The New Psychology of Success. Random House Publishing Group, 2006.\nWilder, R. L. “The Role of Intuition.” Science 156, no. 3775 (May 5, 1967): 605–10.\nDevlin, Keith J. Introduction to Mathematical Thinking. Keith Devlin, 2012.\nEric Mazur, “The Problem with Problems,” Optics & Photonics News 7(6), 59-60 (1996)\nNorman, Marie K. How Learning Works: Seven Research-Based Principles for Smart Teaching. 1 edition. San Francisco, CA: Jossey-Bass, 2010.\nCenter for Teaching Excellence at the University of Waterloo has great resources for teaching with technology and other useful articles: https://uwaterloo.ca/centre-for-teaching-excellence/resources/educational-technologies"
+  },
+  {
+    "objectID": "teaching.html#footnotes",
+    "href": "teaching.html#footnotes",
+    "title": "Teaching",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis course outline was prepared with the help of GitHub Copilot.↩︎\nThis course outline was prepared with the help of GitHub Copilot.↩︎"
+  }
+]

@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Rahul Katyayan, PhD</title>
+<link>https://r2rahul.github.io/r2rahul/blog.html#category=Python</link>
+<atom:link href="https://r2rahul.github.io/r2rahul/blog-python.xml" rel="self" type="application/rss+xml"/>
+<description>Technology, Mathematics, AI/ML and Finance</description>
+<generator>quarto-1.9.36</generator>
+<lastBuildDate>Mon, 27 Apr 2026 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Turning Excel Workbooks into AI-Readable Data with an MCP Server</title>
+  <dc:creator>Rahul </dc:creator>
+  <link>https://r2rahul.github.io/r2rahul/posts/2026-04-28-excel-formula-mcp/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Excel is still where business logic lives. Pricing models, risk calculations, financial projections: they accumulate over years in workbooks that no single person fully understands anymore. When the time comes to migrate them to Python, you face the same problem every time: the formulas are all there, but the structure, the dependencies, the named ranges, and the computation order is invisible.</p>
+<p>This post describes <code>excel-formula-mcp</code>, a read-only <a href="https://modelcontextprotocol.io">Model Context Protocol (MCP)</a> server that solves the structural visibility problem by exposing Excel formula analysis as structured, AI-consumable tools.</p>
+<p>The inspiration to build this came from my own expereince with working with firms, which were trying to migrate there excel models to more systematic R models for automation and efficiency gain as part digitization effort within the firm. So, this is an <strong>opinionated</strong> MCP tool designed from the perspective of a quantitative analyst with the thinking hat of a forward-development engineer who frequently translates legacy Excel models into systematic Python or R models for automation and efficiency. While enterprise AI copilots have been a great help for my similar tasks, manual copy-pasting into chat is tedious. This tool automates that workflow via MCP, streamlining the process of translating Excel to Python with human-in-the-loop editing. While not a silver bullet, it provides a significant head start for understanding Excel models systematically with minimal prior Excel knowledge.</p>
+<section id="the-problem-with-excel-migration" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem-with-excel-migration">The Problem with Excel Migration</h2>
+<p>A typical legacy workbook has:</p>
+<ul>
+<li>Hundreds of formula cells spread across dozens of columns</li>
+<li>Named ranges encoding business constants that are never documented</li>
+<li>Cross-sheet references that create hidden dependencies</li>
+<li>Formulas that vary row-to-row in subtle ways</li>
+</ul>
+<p>You can open the file in Excel and read the formulas. But reading is not understanding. To migrate faithfully to Python, you need to know:</p>
+<ol type="1">
+<li>Which columns are inputs (constants entered by a user) versus derived (computed from other columns)?</li>
+<li>In what order must derived columns be computed?</li>
+<li>What do the named ranges mean, and which formulas use them?</li>
+</ol>
+<p>Answering those questions manually for a 50-column workbook takes hours. With <code>excel-formula-mcp</code> and GitHub Copilot in agent mode, it takes minutes.</p>
+</section>
+<section id="what-is-mcp" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-mcp">What Is MCP?</h2>
+<p>The Model Context Protocol is an open standard that lets language models call external tools in a structured, discoverable way. An MCP server declares tool schemas (name, description, input parameters). An MCP client (GitHub Copilot, Claude Desktop, or any compatible agent) can discover and call those tools dynamically during a conversation.</p>
+<p>The key insight is that MCP decouples capability from model. The server knows how to read Excel files; the model knows how to reason about the results. Neither needs to know the internals of the other.</p>
+</section>
+<section id="architecture" class="level2">
+<h2 class="anchored" data-anchor-id="architecture">Architecture</h2>
+<pre class="text"><code>┌──────────────────────────────────────────────────────┐
+│                    MCP Client                        │
+│         (GitHub Copilot / Claude Desktop)            │
+└─────────────────────┬────────────────────────────────┘
+                      │ stdio (JSON-RPC)
+┌─────────────────────▼────────────────────────────────┐
+│              excel-formula-mcp server                │
+│                  (FastMCP / Python)                  │
+│                                                      │
+│  ┌─────────────────┐   ┌───────────────────────────┐ │
+│  │   excel_loader  │   │     formula_parser        │ │
+│  │  (openpyxl +    │   │  (regex tokeniser for     │ │
+│  │   LRU cache)    │   │   same-sheet, cross-sheet │ │
+│  └────────┬────────┘   │   named range, external   │ │
+│           │            │   refs)                   │ │
+│           │            └──────────────┬────────────┘ │
+│  ┌────────▼────────────────────────────▼───────────┐ │
+│  │            dependency_builder                   │ │
+│  │  (column-level adjacency map + flat graph)      │ │
+│  └─────────────────────────────────────────────────┘ │
+│                                                      │
+│  Tools:                                              │
+│  · excel_analyze_range                               │
+│  · excel_get_column_formulas                         │
+│  · excel_get_dependencies                            │
+│  · excel_get_sheet_dependencies                      │
+│  · excel_get_named_ranges                            │
+└──────────────────────────────────────────────────────┘</code></pre>
+<p>The server is intentionally layered. The three core modules handle one concern each:</p>
+<ul>
+<li><code>excel_loader</code>: loads and caches workbooks with <code>openpyxl</code> using an LRU cache (size 5) so repeated tool calls within a session avoid redundant disk reads.</li>
+<li><code>formula_parser</code>: tokenizes raw formula strings using four compiled regular expressions to extract same-sheet references, cross-sheet references, named ranges, and external workbook references.</li>
+<li><code>dependency_builder</code>: aggregates parser output across formulas to produce typed dependency details per column, then flattens those into a simple adjacency map for client consumption.</li>
+</ul>
+<p>The five tools are thin wrappers over these modules. They accept Pydantic v2 models for input validation, call the appropriate core functions, and return either JSON or Markdown depending on <code>response_format</code>.</p>
+</section>
+<section id="the-five-tools" class="level2">
+<h2 class="anchored" data-anchor-id="the-five-tools">The Five Tools</h2>
+<section id="excel_analyze_range" class="level3">
+<h3 class="anchored" data-anchor-id="excel_analyze_range">excel_analyze_range</h3>
+<p>The workhorse. Given a file path, sheet name, and A1-notation range, it returns a complete column-by-column inventory.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb2-2">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"columns"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb2-3">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"D"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb2-4">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"header"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Revenue"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb2-5">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"formula_count"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb2-6">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"unique_templates"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"=B{r}*C{r}"</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">]</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb2-7">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"constant_count"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb2-8">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"empty_count"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb2-9">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"is_fully_derived"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">true</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb2-10">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"named_ranges_used"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[]</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb2-11">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"cross_sheet_refs"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[]</span></span>
+<span id="cb2-12">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb2-13">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">},</span></span>
+<span id="cb2-14">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"named_ranges_in_use"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"UnitCost"</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">]</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb2-15">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"summary"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{}</span></span>
+<span id="cb2-16"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div></div>
+<p>This single call answers the question: what kind of column is this?</p>
+</section>
+<section id="excel_get_column_formulas" class="level3">
+<h3 class="anchored" data-anchor-id="excel_get_column_formulas">excel_get_column_formulas</h3>
+<p>Focused inspection of one column. Returns unique formula templates, formula count, constant count, and a sample of raw cell values.</p>
+</section>
+<section id="excel_get_dependencies" class="level3">
+<h3 class="anchored" data-anchor-id="excel_get_dependencies">excel_get_dependencies</h3>
+<p>Returns the column-level dependency graph. With <code>include_details: true</code>, each column entry lists four dependency categories:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>depends_on_columns</td>
+<td>[“B”, “C”]</td>
+</tr>
+<tr class="even">
+<td>depends_on_sheets</td>
+<td>[“Data!B”]</td>
+</tr>
+<tr class="odd">
+<td>depends_on_named_ranges</td>
+<td>[“UnitCost”]</td>
+</tr>
+<tr class="even">
+<td>external_references</td>
+<td>[“[Rates.xlsx]”]</td>
+</tr>
+</tbody>
+</table>
+<p>With <code>include_details: false</code>, it returns a flat adjacency map that is easy to feed into a topological sort.</p>
+</section>
+<section id="excel_get_sheet_dependencies" class="level3">
+<h3 class="anchored" data-anchor-id="excel_get_sheet_dependencies">excel_get_sheet_dependencies</h3>
+<p>Returns a workbook-level inter-sheet dependency graph. It scans formula cells across all sheets (or an optional whitelist) and reports direct sheet-to-sheet edges, plus named-range bridges that implicitly connect sheets.</p>
+</section>
+<section id="excel_get_named_ranges" class="level3">
+<h3 class="anchored" data-anchor-id="excel_get_named_ranges">excel_get_named_ranges</h3>
+<p>Lists every defined name in the workbook. For each name it reports scope, target sheet, target range, and whether it is formula-based rather than a direct range reference.</p>
+</section>
+</section>
+<section id="design-decisions" class="level2">
+<h2 class="anchored" data-anchor-id="design-decisions">Design Decisions</h2>
+<section id="column-level-granularity-not-cell-level" class="level3">
+<h3 class="anchored" data-anchor-id="column-level-granularity-not-cell-level">Column-level granularity, not cell-level</h3>
+<p>Cell-by-cell dependency graphs for a 500-row workbook are rarely usable for an LLM because they explode in edge count. Column granularity mirrors how analysts reason about spreadsheet models.</p>
+</section>
+<section id="read-only-by-design" class="level3">
+<h3 class="anchored" data-anchor-id="read-only-by-design">Read-only by design</h3>
+<p>All five tools carry read-only MCP hints. The server never writes to the workbook, which makes it safe to call repeatedly.</p>
+</section>
+<section id="lru-cached-workbook-loading" class="level3">
+<h3 class="anchored" data-anchor-id="lru-cached-workbook-loading">LRU-cached workbook loading</h3>
+<p>Large workbook loads are expensive. The LRU cache (keyed by absolute path) avoids repeated parse overhead across tool calls.</p>
+</section>
+<section id="pydantic-v2-input-validation" class="level3">
+<h3 class="anchored" data-anchor-id="pydantic-v2-input-validation">Pydantic v2 input validation</h3>
+<p>Each tool uses strict Pydantic models with <code>extra="forbid"</code>, and validates A1-range strings before any file I/O happens.</p>
+</section>
+</section>
+<section id="the-migration-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="the-migration-workflow">The Migration Workflow</h2>
+<p>The server includes two reusable VS Code prompt templates in <code>.github/prompts</code>.</p>
+<section id="phase-1-4-analysis-excel-formula-analyze" class="level3">
+<h3 class="anchored" data-anchor-id="phase-1-4-analysis-excel-formula-analyze">Phase 1-4: Analysis (/excel-formula-analyze)</h3>
+<ol type="1">
+<li><code>excel_get_named_ranges</code>: establish named constants vocabulary</li>
+<li><code>excel_analyze_range</code>: classify columns as input, derived, or mixed</li>
+<li><code>excel_get_dependencies</code> (<code>include_details: true</code>): build dependency graph and topological order</li>
+<li><code>excel_get_sheet_dependencies</code>: map workbook-level cross-sheet structure</li>
+</ol>
+<p>Optionally, save all outputs into:</p>
+<pre class="text"><code>reports/&lt;sheet_name&gt;-analysis.md</code></pre>
+</section>
+<section id="phase-5-migration-excel-formula-migrate" class="level3">
+<h3 class="anchored" data-anchor-id="phase-5-migration-excel-formula-migrate">Phase 5: Migration (/excel-formula-migrate)</h3>
+<p>The second prompt reads the analysis report and generates:</p>
+<ul>
+<li>Constants mapped from named ranges</li>
+<li>Input schema as a typed dataclass</li>
+<li>One computation stub per derived column in topological order</li>
+<li>A <code>run_model()</code> orchestrator in dependency order</li>
+<li>A context-sensitive migration checklist</li>
+</ul>
+<p>This split makes analysis reusable and allows iterative migration passes.</p>
+</section>
+</section>
+<section id="using-the-server-with-vs-code" class="level2">
+<h2 class="anchored" data-anchor-id="using-the-server-with-vs-code">Using the Server with VS Code</h2>
+<p>The repository includes <code>.vscode/mcp.json</code> with a stdio server entry:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb4-2">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"servers"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb4-3">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"excel-formula-mcp"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb4-4">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"type"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"stdio"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-5">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"command"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"${env:VIRTUAL_ENV}/bin/python"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-6">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"args"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"-m"</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">,</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"excel_formula_mcp.server"</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">]</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-7">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"cwd"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"${workspaceFolder}"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-8">      <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"env"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb4-9">        <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"PYTHONPATH"</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"${workspaceFolder}/src"</span></span>
+<span id="cb4-10">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb4-11">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb4-12">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb4-13"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div></div>
+<p>With the environment activated and the server registered, Copilot can call the tools directly from chat.</p>
+<pre class="text"><code>Use excel_analyze_range to analyze sheet "Pricing" in data/stage/model.xlsx over range A1:H500, then generate a Python implementation plan.</code></pre>
+</section>
+<section id="limitations" class="level2">
+<h2 class="anchored" data-anchor-id="limitations">Limitations</h2>
+<ul>
+<li><code>.xls</code> is not supported (<code>openpyxl</code> supports <code>.xlsx</code> and <code>.xlsm</code>)</li>
+<li>No formula evaluation engine is included</li>
+<li>No VBA analysis</li>
+<li>No cross-workbook resolution</li>
+<li>Dependency graph is column-level, not cell-level</li>
+</ul>
+</section>
+<section id="stack" class="level2">
+<h2 class="anchored" data-anchor-id="stack">Stack</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Library</th>
+<th>Version</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>MCP server framework</td>
+<td><code>mcp[cli]</code> (FastMCP)</td>
+<td>&gt;= 1.3.0</td>
+</tr>
+<tr class="even">
+<td>Excel parsing</td>
+<td><code>openpyxl</code></td>
+<td>&gt;= 3.1.2</td>
+</tr>
+<tr class="odd">
+<td>Input validation</td>
+<td><code>pydantic</code></td>
+<td>&gt;= 2.7.0</td>
+</tr>
+<tr class="even">
+<td>Caching</td>
+<td><code>functools.lru_cache</code></td>
+<td>stdlib</td>
+</tr>
+<tr class="odd">
+<td>Tests</td>
+<td><code>pytest</code> + <code>pytest-asyncio</code></td>
+<td>&gt;= 8.0 / 0.23</td>
+</tr>
+<tr class="even">
+<td>Build</td>
+<td><code>hatchling</code></td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>Python</td>
+<td>Python</td>
+<td>&gt;= 3.11</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="installation" class="level2">
+<h2 class="anchored" data-anchor-id="installation">Installation</h2>
+<p>GitHub repository: <a href="https://github.com/r2rahul/excel-formula-mcp">r2rahul/excel-formula-mcp</a></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> clone https://github.com/r2rahul/excel-formula-mcp.git</span>
+<span id="cb6-2"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">cd</span> excel-formula-mcp</span>
+<span id="cb6-3"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">uv</span> pip install <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-e</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">".[dev]"</span></span>
+<span id="cb6-4"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">pytest</span></span></code></pre></div></div>
+</section>
+<section id="what-is-next" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-next">What Is Next</h2>
+<ul>
+<li>Add optional formula evaluation support</li>
+<li>Add optional <code>.xls</code> ingestion path</li>
+<li>Add optional cell-level dependency mode</li>
+<li>Add Mermaid or DOT graph export support</li>
+</ul>
+<p>Source: <a href="https://github.com/r2rahul/excel-formula-mcp">excel-formula-mcp</a></p>
+
+
+</section>
+
+ ]]></description>
+  <category>Python</category>
+  <category>LLM</category>
+  <category>AI</category>
+  <category>MCP</category>
+  <category>Tutorials</category>
+  <category>Teaching</category>
+  <guid>https://r2rahul.github.io/r2rahul/posts/2026-04-28-excel-formula-mcp/</guid>
+  <pubDate>Mon, 27 Apr 2026 22:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

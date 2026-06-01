@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Rahul Katyayan, PhD</title>
+<link>https://r2rahul.github.io/r2rahul/blog.html#category=R</link>
+<atom:link href="https://r2rahul.github.io/r2rahul/blog-r.xml" rel="self" type="application/rss+xml"/>
+<description>Technology, Mathematics, AI/ML and Finance</description>
+<generator>quarto-1.9.36</generator>
+<lastBuildDate>Sat, 02 May 2026 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Reproducing Gabillon (1991): Model-Implied Term Structures</title>
+  <dc:creator>Rahul </dc:creator>
+  <link>https://r2rahul.github.io/r2rahul/posts/2026-05-03-gabillon-model-note/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="motivation" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="motivation">Motivation</h2>
+<p>The paper by Gabillon (1991) <span class="citation" data-cites="gabillon1991">(Gabillon 1991)</span> presents a structural model of commodity futures prices that generates a rich variety of term-structure shapes and dynamics. A practical application of this model is critical for a Risk desk, much like the implementation I developed for the Trafigura Oil Trading desk while working under the Chief Risk Officer. Risk management teams require these models to accurately value complex volatile commodity derivatives, stress-test portfolios against term-structure deformations (like backwardation and contango shifts), and calculate reliable Value-at-Risk (VaR) metrics by capturing the distinct behaviors of short- and long-term price dynamics.</p>
+<div class="no-row-height column-margin column-container"></div><p>Because I am intimately familiar with the model and the code required to reproduce it, I designed this project as a practical exercise in AI-assisted coding. My focus was on building the implementation plan and guiding the agent if it deviated from the set path. With minimal assistance, GitHub Copilot successfully reproduced the complex model figures purely from the analytical equations and parameter values reported in the paper.</p>
+<p>It took me roughly 2-3 hours to plan the architecture and guide Copilot to produce the complete pipeline and report. Without an AI assistant, writing the boilerplate, pipeline orchestration, and analytical code manually would likely have taken 10-12 hours. This serves as a strong example of how AI can save substantial time and effort, acting as a powerful force multiplier that makes domain experts significantly more efficient in their work.</p>
+</section>
+<section id="study-objective-and-reconstruction-scope" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="study-objective-and-reconstruction-scope">Study Objective and Reconstruction Scope</h2>
+<p>In this note, I reproduce the model-implied term-structure figures that can be generated directly from the analytical system and the fixed parameter values reported by Gabillon (1991) <span class="citation" data-cites="gabillon1991">(Gabillon 1991)</span>. The scope is intentionally restricted to Figures 5-9, because these panels are determined by structural equations and parameterized scenarios rather than by historical market reconstruction.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-gabillon1991" class="csl-entry">
+Gabillon, Jacques. 1991. <span>“The Term Structure of Oil Futures Prices.”</span> <em>Oxford Institute for Energy Studies Working Paper</em>.
+</div></div><p>Taken together, the figures provide a compact visual summary of the model’s main economic behaviors: Figures 5 and 6 isolate the baseline contango and backwardation regimes, Figures 7 and 8 show how short-term effects deform the front end of the curve, and Figure 9 shifts attention to the maturity profile of volatility. In practice, such figure-based intuition is useful in commodity derivatives work, including calendar-spread option analysis.</p>
+<p>The reconstruction therefore emphasizes comparative statics and the geometric properties of the futures curves rather than empirical fit to dated contracts. That boundary is deliberate for a personal technical blog: the objective is to preserve an academic style of exposition while keeping the exercise fully reproducible from deterministic inputs stored in the project configuration files.</p>
+</section>
+<section id="model-specification-summary" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="model-specification-summary">Model Specification Summary</h2>
+<p>Let <img src="https://latex.codecogs.com/png.latex?%5Ctau%20=%20T%20-%20t"> denote time to maturity. The constant-parameter representation (Equation 26) is implemented as:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AF_%7B26%7D(t,%20T)%20=%20A(%5Ctau)%20S%5E%7BB(%5Ctau)%7D%20L%5E%7B1%20-%20B(%5Ctau)%7D,%0A"></p>
+<p>with</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AB(%5Ctau)%20=%20e%5E%7B-%5Cbeta%20%5Ctau%7D,%0A%5Cquad%0AA(%5Ctau)%20=%20%5Cexp%5Cleft(%5Cfrac%7Bv%7D%7B4%5Cbeta%7D%5Cleft(e%5E%7B-%5Cbeta%20%5Ctau%7D%20-%20e%5E%7B-2%5Cbeta%20%5Ctau%7D%5Cright)%5Cright).%0A"></p>
+<p>The short-term effect specification (Equation 28) is implemented as:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AF_%7B28%7D(t,%20T)%20=%20%5Cexp%5Cleft(%5Cfrac%7Bv%7D%7B4%5Cbeta%7D%5Cleft(e%5E%7B-%5Cbeta%20%5Ctau%7D%20-%20e%5E%7B-2%5Cbeta%20%5Ctau%7D%5Cright)%20-%20%5Cfrac%7B%5Ctheta%7D%7B%5Cbeta%20-%20q%7D%20e%5E%7B-qT%7D%5Cleft(1%20-%20e%5E%7B-(%5Cbeta%20-%20q)%5Ctau%7D%5Cright)%5Cright)%20S%5E%7BB(%5Ctau)%7D%20L%5E%7B1%20-%20B(%5Ctau)%7D.%0A"></p>
+<p>For volatility term structures (Equation 23-consistent form), the instantaneous futures volatility is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Csigma_F(%5Ctau)%20=%20%5Csqrt%7B(%5Csigma_s%20B(%5Ctau))%5E2%20+%20(%5Csigma_l(1-B(%5Ctau)))%5E2%20+%202%5Crho%5Csigma_s%5Csigma_l%20B(%5Ctau)(1-B(%5Ctau))%20%7D.%0A"></p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>Parameter roles: <img src="https://latex.codecogs.com/png.latex?S"> and <img src="https://latex.codecogs.com/png.latex?L"> govern short- and long-run price anchors, <img src="https://latex.codecogs.com/png.latex?%5Cbeta"> controls mean-reversion speed, <img src="https://latex.codecogs.com/png.latex?v"> scales convexity, while <img src="https://latex.codecogs.com/png.latex?(%5Ctheta,%20q)"> govern local short-term deformation in Equation 28.</p>
+</div></div><div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">```{r setup}</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tidyverse)</span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(scales)</span>
+<span id="cb1-4"></span>
+<span id="cb1-5">candidate_paths <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(</span>
+<span id="cb1-6">  params<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>report_data_path,</span>
+<span id="cb1-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">file.path</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"output"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"model_only_report_inputs.rds"</span>)</span>
+<span id="cb1-8">)</span>
+<span id="cb1-9"></span>
+<span id="cb1-10">resolved_path <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> candidate_paths[<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">file.exists</span>(candidate_paths)][<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>]</span>
+<span id="cb1-11"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> (<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">is.na</span>(resolved_path)) {</span>
+<span id="cb1-12">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">stop</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Could not locate model_only_report_inputs.rds for report rendering."</span>)</span>
+<span id="cb1-13">}</span>
+<span id="cb1-14"></span>
+<span id="cb1-15">report_inputs <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">readRDS</span>(resolved_path)</span>
+<span id="cb1-16">fig5_df <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> report_inputs<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>fig5_df</span>
+<span id="cb1-17">fig6_df <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> report_inputs<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>fig6_df</span>
+<span id="cb1-18">fig7_df <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> report_inputs<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>fig7_df</span>
+<span id="cb1-19">fig8_df <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> report_inputs<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>fig8_df</span>
+<span id="cb1-20">fig9_df <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> report_inputs<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>fig9_df</span>
+<span id="cb1-21">cfg <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> report_inputs<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>cfg</span>
+<span id="cb1-22"></span>
+<span id="cb1-23">base_theme <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">base_size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb1-24">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(</span>
+<span id="cb1-25">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">panel.grid.minor =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_blank</span>(),</span>
+<span id="cb1-26">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.title.position =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"plot"</span></span>
+<span id="cb1-27">  )</span>
+<span id="cb1-28"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">```</span></span></code></pre></div></div>
+</div>
+</section>
+<section id="figure-by-figure-interpretation" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="figure-by-figure-interpretation">Figure-by-Figure Interpretation</h2>
+<section id="figure-5-and-figure-6-no-short-term-effect" class="level3">
+<h3 class="anchored" data-anchor-id="figure-5-and-figure-6-no-short-term-effect">Figure 5 and Figure 6: No Short-Term Effect</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">```{r figure-5}</span></span>
+<span id="cb2-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(fig5_df, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> tau_years, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> futures_price)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb2-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_line</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">linewidth =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.1</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#1B4965"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb2-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(</span>
+<span id="cb2-5">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Figure 5: Backwardation without short-term effect"</span>,</span>
+<span id="cb2-6">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Time to maturity (years)"</span>,</span>
+<span id="cb2-7">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Futures price"</span></span>
+<span id="cb2-8">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb2-9">  base_theme</span>
+<span id="cb2-10"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">```</span></span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://r2rahul.github.io/r2rahul/posts/2026-05-03-gabillon-model-note/index_files/figure-html/figure-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">```{r figure-6}</span></span>
+<span id="cb3-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(fig6_df, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> tau_years, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> futures_price)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb3-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_line</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">linewidth =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.1</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#5A7D7C"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb3-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(</span>
+<span id="cb3-5">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Figure 6: Contango without short-term effect"</span>,</span>
+<span id="cb3-6">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Time to maturity (years)"</span>,</span>
+<span id="cb3-7">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Futures price"</span></span>
+<span id="cb3-8">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb3-9">  base_theme</span>
+<span id="cb3-10"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">```</span></span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://r2rahul.github.io/r2rahul/posts/2026-05-03-gabillon-model-note/index_files/figure-html/figure-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Under Equation 26, the sign of <img src="https://latex.codecogs.com/png.latex?(S-L)"> determines the global slope family. When <img src="https://latex.codecogs.com/png.latex?S%20%3E%20L"> (Figure 5), the curve declines toward the long-run anchor, producing classical backwardation. When <img src="https://latex.codecogs.com/png.latex?S%20%3C%20L"> (Figure 6), the curve increases toward <img src="https://latex.codecogs.com/png.latex?L">, yielding contango. In both cases, convexity reflects finite <img src="https://latex.codecogs.com/png.latex?v"> and exponential loading through <img src="https://latex.codecogs.com/png.latex?%5Cbeta">.</p>
+</section>
+<section id="figure-7-and-figure-8-non-zero-theta-and-q" class="level3">
+<h3 class="anchored" data-anchor-id="figure-7-and-figure-8-non-zero-theta-and-q">Figure 7 and Figure 8: Non-Zero <img src="https://latex.codecogs.com/png.latex?%5Ctheta"> and <img src="https://latex.codecogs.com/png.latex?q"></h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">```{r figure-7}</span></span>
+<span id="cb4-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(fig7_df, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> tau_years, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> futures_price)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_line</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">linewidth =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.1</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#A44A3F"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(</span>
+<span id="cb4-5">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Figure 7: Backwardation with short-term effect"</span>,</span>
+<span id="cb4-6">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Time to maturity (years)"</span>,</span>
+<span id="cb4-7">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Futures price"</span></span>
+<span id="cb4-8">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-9">  base_theme</span>
+<span id="cb4-10"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">```</span></span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://r2rahul.github.io/r2rahul/posts/2026-05-03-gabillon-model-note/index_files/figure-html/figure-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">```{r figure-8}</span></span>
+<span id="cb5-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(fig8_df, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> tau_years, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> futures_price)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb5-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_line</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">linewidth =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.1</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#B07D3C"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb5-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(</span>
+<span id="cb5-5">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Figure 8: Contango with short-term effect"</span>,</span>
+<span id="cb5-6">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Time to maturity (years)"</span>,</span>
+<span id="cb5-7">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Futures price"</span></span>
+<span id="cb5-8">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb5-9">  base_theme</span>
+<span id="cb5-10"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">```</span></span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://r2rahul.github.io/r2rahul/posts/2026-05-03-gabillon-model-note/index_files/figure-html/figure-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Allowing non-zero <img src="https://latex.codecogs.com/png.latex?(%5Ctheta,%20q)"> introduces localized near-maturity deformation relative to the baseline Equation 26 shape. Figure 7 shows this perturbation within a backwardated regime, while Figure 8 shows the corresponding effect under contango-type parameters. The primary qualitative effect is curvature adjustment close to the short end, while long-end anchoring remains governed by <img src="https://latex.codecogs.com/png.latex?L"> and <img src="https://latex.codecogs.com/png.latex?%5Cbeta">.</p>
+</section>
+<section id="figure-9-volatility-term-structures-by-correlation-rho" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="figure-9-volatility-term-structures-by-correlation-rho">Figure 9: Volatility Term Structures by Correlation <img src="https://latex.codecogs.com/png.latex?%5Crho"></h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">```{r figure-9}</span></span>
+<span id="cb6-2">fig9_labels <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span></span>
+<span id="cb6-3">  fig9_df <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb6-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">group_by</span>(rho) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb6-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(tau_years <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">max</span>(tau_years)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb6-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ungroup</span>()</span>
+<span id="cb6-7"></span>
+<span id="cb6-8"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(fig9_df, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> tau_years, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> futures_volatility, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">factor</span>(rho))) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb6-9">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_line</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">linewidth =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.0</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb6-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_text</span>(</span>
+<span id="cb6-11">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> fig9_labels,</span>
+<span id="cb6-12">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">label =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">paste0</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"rho="</span>, rho)),</span>
+<span id="cb6-13">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">hjust =</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.1</span>,</span>
+<span id="cb6-14">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>,</span>
+<span id="cb6-15">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">show.legend =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span></span>
+<span id="cb6-16">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb6-17">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_color_brewer</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">palette =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Dark2"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb6-18">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_y_continuous</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">labels =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">percent_format</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">accuracy =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb6-19">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(</span>
+<span id="cb6-20">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Figure 9: Term structures of futures price volatilities"</span>,</span>
+<span id="cb6-21">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Time to maturity (years)"</span>,</span>
+<span id="cb6-22">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Instantaneous volatility"</span>,</span>
+<span id="cb6-23">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"rho"</span></span>
+<span id="cb6-24">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb6-25">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">coord_cartesian</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">clip =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"off"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb6-26">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(</span>
+<span id="cb6-27">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.margin =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">margin</span>(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5.5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">60</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5.5</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5.5</span>),</span>
+<span id="cb6-28">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">legend.position =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"none"</span></span>
+<span id="cb6-29">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb6-30">  base_theme</span>
+<span id="cb6-31"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">```</span></span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://r2rahul.github.io/r2rahul/posts/2026-05-03-gabillon-model-note/index_files/figure-html/figure-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The volatility panel isolates correlation sensitivity in the two-factor loading system. For interior maturities, higher <img src="https://latex.codecogs.com/png.latex?%5Crho"> increases the covariance contribution and thus shifts volatility upward, whereas lower <img src="https://latex.codecogs.com/png.latex?%5Crho"> dampens that contribution. This reproduces the expected ordering across the configured <img src="https://latex.codecogs.com/png.latex?%5Crho"> grid.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>In this implementation, <img src="https://latex.codecogs.com/png.latex?%5Crho%20%5Cin%20%5C%7B1.0,%200.5,%200.0,%20-0.5%5C%7D"> and all other volatility parameters are fixed, making Figure 9 a clean one-parameter comparative static.</p>
+</div></div></section>
+</section>
+<section id="methodological-limitations-and-reproducibility-boundaries" class="level2">
+<h2 class="anchored" data-anchor-id="methodological-limitations-and-reproducibility-boundaries">Methodological Limitations and Reproducibility Boundaries</h2>
+<p>This model-only track does not attempt historical calibration, contract roll construction, or reconstruction of the paper’s full empirical environment. Consequently, the report supports qualitative validation of curve families and equation-consistent comparative statics, but not quantitative claims about realized market pricing errors or period-specific dynamics.</p>
+<p>The boundary checks embedded in the pipeline enforce structural consistency, including <img src="https://latex.codecogs.com/png.latex?F(0)=S">, long-horizon convergence to <img src="https://latex.codecogs.com/png.latex?L">, monotonicity in baseline contango/backwardation scenarios, and deterministic section completeness for this report. These gates improve reproducibility and protect against silent drift in the analytical implementation.</p>
+</section>
+<section id="conclusion-on-parsimonious-parameterization" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-on-parsimonious-parameterization">Conclusion on Parsimonious Parameterization</h2>
+<p>The results show that a compact parameter set is sufficient to reproduce key geometric families of term structures discussed in Gabillon (1991). Without data calibration, the model already captures the principal directional and curvature regimes: baseline contango/backwardation patterns, short-end deformation from non-zero short-term effects, and volatility-shape sensitivity to correlation. This confirms the explanatory value of parsimonious structural parameterization for qualitative futures-curve analysis.</p>
+
+
+
+</section>
+
+ ]]></description>
+  <category>Research</category>
+  <category>R</category>
+  <category>Commodities</category>
+  <category>Tutorials</category>
+  <guid>https://r2rahul.github.io/r2rahul/posts/2026-05-03-gabillon-model-note/</guid>
+  <pubDate>Sat, 02 May 2026 22:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
