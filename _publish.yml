@@ -1,4 +1,4 @@
 - source: project
-  quarto-pub:
-    - id: da5480af-55e2-4154-9bb4-aaccd9eef4c9
-      url: https://r2rahul.quarto.pub/r2rahul
+  gh-pages:
+    - id: gh-pages
+      url: https://r2rahul.github.io/r2rahul/

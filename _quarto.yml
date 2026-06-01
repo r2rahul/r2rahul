@@ -8,7 +8,7 @@ execute:
   freeze: auto
 website:
   title: "Rahul Katyayan, PhD"
-  site-url: https://r2rahul.quarto.pub/r2rahul/
+  site-url: https://r2rahul.github.io/r2rahul/
   description: "Technology, Mathematics, AI/ML and Finance"
   navbar:
     left:
