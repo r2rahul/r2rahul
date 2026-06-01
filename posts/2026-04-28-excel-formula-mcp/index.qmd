@@ -1,0 +1,256 @@
+---
+title: "Turning Excel Workbooks into AI-Readable Data with an MCP Server"
+date: "2026-04-28"
+date-modified: "2026-04-28"
+categories: ["Python", "LLM", "AI", "MCP", "Tutorials", "Teaching"]
+author:
+  - name: Rahul
+    id: r2rahul
+    orcid: 0000-0002-0144-1022
+format:
+    html:
+      self-contained: true
+      toc: true
+      grid:
+        margin-width: 350px
+execute:
+  echo: fenced
+  message: false
+  warnings: false
+  freeze: auto
+---
+
+Excel is still where business logic lives. Pricing models, risk calculations, financial projections: they accumulate over years in workbooks that no single person fully understands anymore. When the time comes to migrate them to Python, you face the same problem every time: the formulas are all there, but the structure, the dependencies, the named ranges, and the computation order is invisible.
+
+This post describes `excel-formula-mcp`, a read-only [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server that solves the structural visibility problem by exposing Excel formula analysis as structured, AI-consumable tools.
+
+The inspiration to build this came from my own expereince with working with firms, which were trying to migrate there excel models to more systematic R models for automation and efficiency gain as part digitization effort within the firm. So, this is an **opinionated** MCP tool designed from the perspective of a quantitative analyst with the thinking hat of a forward-development engineer who frequently translates legacy Excel models into systematic Python or R models for automation and efficiency. While enterprise AI copilots have been a great help for my similar tasks, manual copy-pasting into chat is tedious. This tool automates that workflow via MCP, streamlining the process of translating Excel to Python with human-in-the-loop editing. While not a silver bullet, it provides a significant head start for understanding Excel models systematically with minimal prior Excel knowledge. 
+
+## The Problem with Excel Migration
+
+A typical legacy workbook has:
+
+- Hundreds of formula cells spread across dozens of columns
+- Named ranges encoding business constants that are never documented
+- Cross-sheet references that create hidden dependencies
+- Formulas that vary row-to-row in subtle ways
+
+You can open the file in Excel and read the formulas. But reading is not understanding. To migrate faithfully to Python, you need to know:
+
+1. Which columns are inputs (constants entered by a user) versus derived (computed from other columns)?
+2. In what order must derived columns be computed?
+3. What do the named ranges mean, and which formulas use them?
+
+Answering those questions manually for a 50-column workbook takes hours. With `excel-formula-mcp` and GitHub Copilot in agent mode, it takes minutes.
+
+## What Is MCP?
+
+The Model Context Protocol is an open standard that lets language models call external tools in a structured, discoverable way. An MCP server declares tool schemas (name, description, input parameters). An MCP client (GitHub Copilot, Claude Desktop, or any compatible agent) can discover and call those tools dynamically during a conversation.
+
+The key insight is that MCP decouples capability from model. The server knows how to read Excel files; the model knows how to reason about the results. Neither needs to know the internals of the other.
+
+## Architecture
+
+```text
+┌──────────────────────────────────────────────────────┐
+│                    MCP Client                        │
+│         (GitHub Copilot / Claude Desktop)            │
+└─────────────────────┬────────────────────────────────┘
+                      │ stdio (JSON-RPC)
+┌─────────────────────▼────────────────────────────────┐
+│              excel-formula-mcp server                │
+│                  (FastMCP / Python)                  │
+│                                                      │
+│  ┌─────────────────┐   ┌───────────────────────────┐ │
+│  │   excel_loader  │   │     formula_parser        │ │
+│  │  (openpyxl +    │   │  (regex tokeniser for     │ │
+│  │   LRU cache)    │   │   same-sheet, cross-sheet │ │
+│  └────────┬────────┘   │   named range, external   │ │
+│           │            │   refs)                   │ │
+│           │            └──────────────┬────────────┘ │
+│  ┌────────▼────────────────────────────▼───────────┐ │
+│  │            dependency_builder                   │ │
+│  │  (column-level adjacency map + flat graph)      │ │
+│  └─────────────────────────────────────────────────┘ │
+│                                                      │
+│  Tools:                                              │
+│  · excel_analyze_range                               │
+│  · excel_get_column_formulas                         │
+│  · excel_get_dependencies                            │
+│  · excel_get_sheet_dependencies                      │
+│  · excel_get_named_ranges                            │
+└──────────────────────────────────────────────────────┘
+```
+
+The server is intentionally layered. The three core modules handle one concern each:
+
+- `excel_loader`: loads and caches workbooks with `openpyxl` using an LRU cache (size 5) so repeated tool calls within a session avoid redundant disk reads.
+- `formula_parser`: tokenizes raw formula strings using four compiled regular expressions to extract same-sheet references, cross-sheet references, named ranges, and external workbook references.
+- `dependency_builder`: aggregates parser output across formulas to produce typed dependency details per column, then flattens those into a simple adjacency map for client consumption.
+
+The five tools are thin wrappers over these modules. They accept Pydantic v2 models for input validation, call the appropriate core functions, and return either JSON or Markdown depending on `response_format`.
+
+## The Five Tools
+
+### excel_analyze_range
+
+The workhorse. Given a file path, sheet name, and A1-notation range, it returns a complete column-by-column inventory.
+
+```json
+{
+  "columns": {
+    "D": {
+      "header": "Revenue",
+      "formula_count": 10,
+      "unique_templates": ["=B{r}*C{r}"],
+      "constant_count": 0,
+      "empty_count": 0,
+      "is_fully_derived": true,
+      "named_ranges_used": [],
+      "cross_sheet_refs": []
+    }
+  },
+  "named_ranges_in_use": ["UnitCost"],
+  "summary": {}
+}
+```
+
+This single call answers the question: what kind of column is this?
+
+### excel_get_column_formulas
+
+Focused inspection of one column. Returns unique formula templates, formula count, constant count, and a sample of raw cell values.
+
+### excel_get_dependencies
+
+Returns the column-level dependency graph. With `include_details: true`, each column entry lists four dependency categories:
+
+| Category | Example |
+|---|---|
+| depends_on_columns | ["B", "C"] |
+| depends_on_sheets | ["Data!B"] |
+| depends_on_named_ranges | ["UnitCost"] |
+| external_references | ["[Rates.xlsx]"] |
+
+With `include_details: false`, it returns a flat adjacency map that is easy to feed into a topological sort.
+
+### excel_get_sheet_dependencies
+
+Returns a workbook-level inter-sheet dependency graph. It scans formula cells across all sheets (or an optional whitelist) and reports direct sheet-to-sheet edges, plus named-range bridges that implicitly connect sheets.
+
+### excel_get_named_ranges
+
+Lists every defined name in the workbook. For each name it reports scope, target sheet, target range, and whether it is formula-based rather than a direct range reference.
+
+## Design Decisions
+
+### Column-level granularity, not cell-level
+
+Cell-by-cell dependency graphs for a 500-row workbook are rarely usable for an LLM because they explode in edge count. Column granularity mirrors how analysts reason about spreadsheet models.
+
+### Read-only by design
+
+All five tools carry read-only MCP hints. The server never writes to the workbook, which makes it safe to call repeatedly.
+
+### LRU-cached workbook loading
+
+Large workbook loads are expensive. The LRU cache (keyed by absolute path) avoids repeated parse overhead across tool calls.
+
+### Pydantic v2 input validation
+
+Each tool uses strict Pydantic models with `extra="forbid"`, and validates A1-range strings before any file I/O happens.
+
+## The Migration Workflow
+
+The server includes two reusable VS Code prompt templates in `.github/prompts`.
+
+### Phase 1-4: Analysis (/excel-formula-analyze)
+
+1. `excel_get_named_ranges`: establish named constants vocabulary
+2. `excel_analyze_range`: classify columns as input, derived, or mixed
+3. `excel_get_dependencies` (`include_details: true`): build dependency graph and topological order
+4. `excel_get_sheet_dependencies`: map workbook-level cross-sheet structure
+
+Optionally, save all outputs into:
+
+```text
+reports/<sheet_name>-analysis.md
+```
+
+### Phase 5: Migration (/excel-formula-migrate)
+
+The second prompt reads the analysis report and generates:
+
+- Constants mapped from named ranges
+- Input schema as a typed dataclass
+- One computation stub per derived column in topological order
+- A `run_model()` orchestrator in dependency order
+- A context-sensitive migration checklist
+
+This split makes analysis reusable and allows iterative migration passes.
+
+## Using the Server with VS Code
+
+The repository includes `.vscode/mcp.json` with a stdio server entry:
+
+```json
+{
+  "servers": {
+    "excel-formula-mcp": {
+      "type": "stdio",
+      "command": "${env:VIRTUAL_ENV}/bin/python",
+      "args": ["-m", "excel_formula_mcp.server"],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      }
+    }
+  }
+}
+```
+
+With the environment activated and the server registered, Copilot can call the tools directly from chat.
+
+```text
+Use excel_analyze_range to analyze sheet "Pricing" in data/stage/model.xlsx over range A1:H500, then generate a Python implementation plan.
+```
+
+## Limitations
+
+- `.xls` is not supported (`openpyxl` supports `.xlsx` and `.xlsm`)
+- No formula evaluation engine is included
+- No VBA analysis
+- No cross-workbook resolution
+- Dependency graph is column-level, not cell-level
+
+## Stack
+
+| Component | Library | Version |
+|---|---|---|
+| MCP server framework | `mcp[cli]` (FastMCP) | >= 1.3.0 |
+| Excel parsing | `openpyxl` | >= 3.1.2 |
+| Input validation | `pydantic` | >= 2.7.0 |
+| Caching | `functools.lru_cache` | stdlib |
+| Tests | `pytest` + `pytest-asyncio` | >= 8.0 / 0.23 |
+| Build | `hatchling` | - |
+| Python | Python | >= 3.11 |
+
+## Installation
+
+GitHub repository: [r2rahul/excel-formula-mcp](https://github.com/r2rahul/excel-formula-mcp)
+
+```bash
+git clone https://github.com/r2rahul/excel-formula-mcp.git
+cd excel-formula-mcp
+uv pip install -e ".[dev]"
+pytest
+```
+
+## What Is Next
+
+- Add optional formula evaluation support
+- Add optional `.xls` ingestion path
+- Add optional cell-level dependency mode
+- Add Mermaid or DOT graph export support
+
+Source: [excel-formula-mcp](https://github.com/r2rahul/excel-formula-mcp)

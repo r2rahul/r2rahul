@@ -1,0 +1,40 @@
+project:
+  type: website
+render:
+  - "!stage/"
+  - "!.ai/"
+  - "!posts/**/*.qmd"
+execute:
+  freeze: auto
+website:
+  title: "Rahul Katyayan, PhD"
+  site-url: https://r2rahul.quarto.pub/r2rahul/
+  description: "Technology, Mathematics, AI/ML and Finance"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.html
+      - text: "Research"
+        href: research.html                 
+      - text: "Teaching"
+        href: teaching.html 
+      - text: "Resources"
+        href: resources.html       
+      - text: "Blog"
+        href: blog.html
+    right:
+      - icon: rss
+        href: blog.xml       
+  page-footer:
+    left: "© Copyright 2025 Rahul. Except where otherwise noted, all text and images licensed CC-BY-NC 4.0."
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+    link-external-newwindow: true
+    include-after-body: external-links.html
+
+

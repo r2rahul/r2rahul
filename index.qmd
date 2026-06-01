@@ -1,0 +1,70 @@
+---
+title: "Rahul Katyayan, PhD"
+image: fig/rahul.jpeg
+about:
+  template: trestles
+  links:
+    - text: LinkedIn
+      icon: linkedin
+      url: "https://linkedin.com/in/r2rahul"
+    - text: GitHub
+      icon: github
+      url: "https://github.com/r2rahul"
+    - text: "{{< ai orcid >}} ORCID 0000-0002-0144-1022"
+      url: https://orcid.org/0000-0002-0144-1022
+    - text: "Blog"
+      icon: bi-pencil-square
+      url: https://r2rahul.quarto.pub/r2rahul/blog.html
+comments: false
+execute: 
+  freeze: true
+---
+
+## Bio
+
+![I am an applied mathematician working at the intersection of *mathematics*, *AI/ML*, and *quantitative finance*. I hold a PhD in [Applied Mathematics](https://uwaterloo.ca/applied-mathematics/) and a [Certificate in University Teaching](https://uwaterloo.ca/centre-for-teaching-excellence/) from the [University of Waterloo, Canada](https://uwaterloo.ca/).](fig/front-sketch.png){#fig-front-pageinfo2}
+
+My academic research centers on developing analytical models to understand and predict complex systems, with particular emphasis on *Inverse Problems (Hyper-Parameter Optimization)*, *non-smooth optimization*, *network analysis*, and *computational science*. My previous work examined co-expression networks and the behavior of intracellular networks in type 2 diabetes and cancer cells. For details see my [Research Page](research.qmd)
+
+My industry work focuses on developing trading & investment signals, risk models, and quantitative portfolio management across asset classes including equities, fixed income, foreign exchange (FX), and commodities. A central theme of this work is the translation of business problems into structured analytical frameworks that generate long-term value for the organization. This process incorporates domain expertise, enabling data, models, and analytical infrastructure to operate from a shared set of assumptions while being adapted into *AI-agentic* workflows. In practice, this approach produces reusable agent artifacts analogous to [Visual Studio Code Agent Plugins](https://code.visualstudio.com/docs/copilot/customization/agent-plugins), with the broader objective of generating organizational value more efficiently. For additional details, see the [Professional](#professional) section.
+
+### Example Method
+
+![Workflow schematic for the contextual engineering method. One method I use to structure complex work distinguishes among three components. The first is automation, which covers tasks that can be fully systematized. The second is the explicit structuring of manual knowledge through artifacts such as [data contracts](https://github.com/npelikan/positconf2024-datacontracts/), [configuration files](https://github.com/rstudio/config), and [standardized templates](https://github.com/r2rahul/shinytmpl). The third is domain expertise, which remains necessary for interpreting uncertainty, handling exceptions, and responding to genuinely novel situations.
+Source: Author's illustration.](fig/g18.png){#fig-contextual-workflow}
+
+$$
+\mathrm{Contextual\ Engineering\ Workflow} = \text{Automation} + \text{Structured Manual Knowledge} + \epsilon
+$$
+
+In this formulation, $\epsilon$ denotes the irreducible domain uncertainty that still requires expert interpretation. Figure @fig-contextual-workflow summarizes the method schematically and highlights why resilient analytical processes must accommodate exceptional events, including systemic disruptions such as the COVID-19 pandemic.
+
+## Professional {#professional}
+
+I currently work at [Commerzbank AG, Frankfurt, Germany](https://www.commerzbank.com/) as a Data Scientist with a *forward development engineering* mandate within the AI team in Sales Analytics. My work is organized around two related objectives: 
+
+- Identifying information anomalies in market data for trading-signal development
+- Translating current trading processes, together with both legacy and newly developed models, into AI-agent-based workflows. 
+
+Currently, working with the commodities and FX desks, I focus on converting legacy analytical processes into reusable agent-based systems and on connecting trading-signal generation to in-house quantitative infrastructure. The role combines:
+
+- Business-logic formalization with the translation of expert judgment into reusable context for AI agents. 
+- It also involves integrating AI agent outputs into trading practices and aligning to institutional constraints to improve analytical efficiency and support higher-value decision-making. 
+
+Some specific examples of my work include:
+
+-   Translating legacy Excel based trading models (like natural gas forward curves) into LLM-understandable context files and validation-ready artifacts ([Excel MCP](https://r2rahul.quarto.pub/r2rahul/posts/2026-04-28-excel-formula-mcp/)).
+
+    -   Developed Model Context Protocol (MCP) tooling so agent workflows can reason over structured business context rather than opaque spreadsheets to speed up the model conversion process ([MCP blog](https://r2rahul.quarto.pub/r2rahul/posts/2026-05-03-mcp-context-management/)).
+
+    -   Reducing conversion effort from many weeks to roughly one week by standardizing contextual mappings using MCP, review steps, and reusable prompts.
+
+-   Developing in-house AI agent skills for KDB+/q, semantic search, and proprietary-codebase MCP/search tooling supported by indexing and AST-based structure.
+
+-   Building the production infrastructure on a [Google Cloud Platform](https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview) for scalable internal deployment.
+
+### Previous Experience
+
+My previous industry experience spans asset management, systematic equity investing, and commodity trading. At [Finance in Motion](https://www.finance-in-motion.com/), I worked as a quantitative analyst, where I developed risk-adjusted asset-allocation approaches for bond portfolios and built an internal credit-risk model based on the CreditMetrics methodology. At [PineBridge Investments](https://www.pinebridge.com/), I worked in systematic equity strategy, focusing on portfolio management, investment-platform development, and factor-based investment-signal generation using machine learning. At [Trafigura](https://www.trafigura.com/), I worked with the liquefied natural gas (LNG) desk, developing hedging strategies and proprietary methods for identifying cointegrated time series. At [BlackRock](https://www.blackrock.com/), I worked in systematic equity strategy with a focus on machine-learning-based factor signal generation and investment-platform development.
+
+My earlier academic work spans systems and computational biology, electronic sciences, and applied environmental modeling. This portfolio includes research on conducting polymers for solar energy harvesting, as well as meteorological analysis conducted in collaboration with the [Indian Meteorological Department](https://mausam.imd.gov.in/), where I developed a regression framework to examine how temperature and pressure influence humidity-sensor response.

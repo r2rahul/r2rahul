@@ -1,0 +1,175 @@
+---
+title: "Resources"
+execute: 
+  freeze: true
+---
+
+# The Catalog of Computational Resources
+
+## Programming Languages
+
+-   Python
+-   R
+-   MATLAB
+-   Shell Scripting
+-   Basic Julia
+-   Basic C++/C
+-   Basic F#
+
+## Data Science Stack
+
+### Python
+
+-   scikit-learn: http://scikit-learn.org/stable/
+
+-   Pandas: http://pandas.pydata.org/
+
+-   StatsModels: http://statsmodels.sourceforge.net/
+
+-   Bokeh: http://bokeh.pydata.org/en/latest/
+
+-   CVXOPT: http://cvxopt.org/
+
+-   CVXPY: http://www.cvxpy.org/en/latest/
+
+### R
+
+-   TidyVerse:http://tidyverse.org/
+
+-   Caret: http://caret.r-forge.r-project.org/
+
+-   Nloptr: https://cran.r-project.org/web/packages/nloptr/index.html
+
+-   Shiny: https://shiny.rstudio.com/
+
+## Visualization Tools
+
+-   Python Visualization Stack
+
+-   R Visualization Stack Matlab Plotting
+
+-   Bokeh: http://bokeh.pydata.org/en/latest/
+
+-   Shiny: https://shiny.rstudio.com/
+
+-   Inkscape: http://www.inkscape.org/en/
+
+-   Xfig: http://www.xfig.org/
+
+-   Circos: http://circos.ca/
+
+-   Blender: http://www.blender.org/
+
+-   VANTED: http://vanted.ipk-gatersleben.de/index.php?file=doc0.html
+
+-   VMD: http://www.ks.uiuc.edu/Research/vmd/
+
+## Computational Biology Software’s
+
+-   SBPOP package (Formerly Sbtoolbox2.): http://www.sbtoolbox2.org/main.php
+
+-   Potters Wheel: http://www.potterswheel.de/
+
+-   SBMLtoolbox: http://sbml.org/Software/SBMLToolbox
+
+-   Cobrapy: https://github.com/opencobra/cobrapy
+
+-   Open COBRA: http://opencobra.sourceforge.net/openCOBRA/Welcome.html
+
+-   FluxMap: http://vanted.ipk-gatersleben.de/addons/fluxmap/
+
+-   FbaSimVis: http://fbasimvis.ipk-gatersleben.de/
+
+-   Clustalw2: http://www.ebi.ac.uk/Tools/msa/clustalw2/
+
+-   BLAST: http://blast.ncbi.nlm.nih.gov/Blast.cgi
+
+-   Mcell (Monte Carlo Cell): http://mcell.org/
+
+## Optimization Tools
+
+-   CVX: http://cvxr.com/cvx/
+
+-   CVXPortfolio: <https://github.com/cvxgrp/cvxportfolio>
+
+-   TFOCS: http://cvxr.com/tfocs/
+
+-   MATLAB and SBPOP optimization suite
+
+-   Adaptive Simulated Annealing (MATLAB mex interface): http://www.ingber.com/
+
+-   PSwarm: http://www.norg.uminho.pt/aivaz/pswarm/
+
+-   Implicit Filtering and other solvers available from Prof. C. T. Kelly web page: http://www4.ncsu.edu/\~ctk/
+
+-   DACE: http://www.imm.dtu.dk/\~hbni/dace/
+
+-   Space Mapping: http://www.imm.dtu.dk/\~kajm/Space_Mapping_Toolbox.html
+
+-   SSMGO: http://www.iim.csic.es/\~gingproc/ssmGO.html
+
+## Differential Equations Solvers
+
+-   SUNDIALS: http://computation.llnl.gov/casc/sundials/main.html
+
+-   XPPAUT: http://www.math.pitt.edu/\~bard/xpp/xpp.html
+
+-   MATCONT: http://www.matcont.ugent.be/
+
+-   Radau5 and other solvers available as a mex interface to MATLAB: https://www-m3.ma.tum.de/Software/ODEHome
+
+## Version Control Tools:
+
+-   Git: http://git-scm.com/
+
+-   SVN: https://subversion.apache.org/
+
+# Writing Resources
+
+-   I found this article very inspiring and useful: Murray, D. “Teach Writing as a Process Not Product.” Leaflet 71.3 (1972): 11.
+
+-   Writing Commons: <http://writingcommons.org/>
+
+-   Purdue Owl: <https://owl.english.purdue.edu/owl/>
+
+-   Chicago Manual of Style: <http://www.chicagomanualofstyle.org/home.html>
+
+# Scientific Visualization and Communication
+
+I have found following materials useful:
+
+-   Points of View Series on Visualization: <http://blogs.nature.com/methagora/2013/07/data-visualization-points-of-view.html>
+
+-   IBM article on color selection: <http://www.research.ibm.com/people/l/lloydt/color/color.HTM>
+
+-   Colour Brewer: <http://colorbrewer2.org/>
+
+-   Scientific visualization Resources on Web Page: <http://mkweb.bcgsc.ca/>
+
+-   BBC Flatmates series <http://www.bbc.co.uk/worldservice/learningenglish/flatmates/>
+
+# Thinking and Computational Skills
+
+## General Problem Solving Skills
+
+-   Polya, G. How to Solve It: A New Aspect of Mathematical Method. Princeton University Press, 2014.
+
+-   Burger, Edward B., and Michael Starbird. The 5 Elements of Effective Thinking. Princeton University Press, 2012.
+
+-   Wilder, R. L. “The Role of Intuition.” Science 156, no. 3775 (May 5, 1967): 605–10.
+
+-   Devlin, Keith J. Introduction to Mathematical Thinking. Keith Devlin, 2012.
+
+-   Dweck, Carol. Mindset: The New Psychology of Success. Random House Publishing Group, 2006.
+
+-   Lockhart, Paul. A Mathematician’s Lament. Bellevue Literary Press, 2009.
+
+-   Ghose, Aurobindo. A System of Nation
+
+## Computing Skill
+
+-   Software-Carpentry: http://software-carpentry.org/
+-   Code Academy: http://www.codecademy.com/
+-   Massive Open Online Courses:
+    -   High Performance Scientific Computing: https://www.coursera.org/course/scicomp
+    -   Introduction to Linux: https://www.edx.org/course/linuxfoundationx/linuxfoundationx-lfs101x-introduction-1621#.VCoV0vldV-4

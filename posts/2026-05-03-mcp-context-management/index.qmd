@@ -1,0 +1,93 @@
+---
+title: "A Practical Guide to Context Management in LLM Systems"
+subtitle: "Using Model Context Protocol (MCP) for Better Information Flow"
+date: "2026-05-03"
+date-modified: "2026-05-03"
+categories: ["LLM", "AI", "MCP", "Tutorials"]
+author:
+  - name: Rahul
+    id: r2rahul
+    orcid: 0000-0002-0144-1022
+format:
+  html:
+    self-contained: true
+    toc: true
+    grid:
+      margin-width: 350px
+execute:
+  echo: false
+  message: false
+  warnings: false
+  freeze: auto
+---
+
+When an LLM answers a question, quality depends on what context it receives and when it receives it. Too little context leads to weak answers. Too much context leads to noisy reasoning. Model Context Protocol (MCP) provides a clean way to manage this tradeoff by exposing external capabilities as tools that the model can discover and call on demand.
+
+## Information Flow with MCP
+
+```{mermaid}
+sequenceDiagram
+    participant User
+    participant AppServer as App Server
+    participant MCPClient as MCP Client
+    participant MCPServer as MCP Server
+    participant LLM
+    participant DataSystem as Data System
+
+    Note over User,DataSystem: Context should be delivered only when needed
+    User->>AppServer: "What repositories do I have?"
+    AppServer->>MCPClient: Request available tools
+    MCPClient->>MCPServer: ListToolsRequest
+    MCPServer->>MCPClient: ListToolsResult
+    MCPClient->>AppServer: Tool list
+    AppServer->>LLM: Query + tool schemas
+    LLM->>AppServer: ToolUse request
+    AppServer->>MCPClient: Execute selected tool
+    MCPClient->>MCPServer: CallToolRequest
+    MCPServer->>DataSystem: Fetch data
+    DataSystem->>MCPServer: Response
+    MCPServer->>MCPClient: CallToolResult
+    MCPClient->>AppServer: Tool result
+    AppServer->>LLM: toolResult
+    LLM->>User: Final answer
+```
+
+## Why This Matters
+
+MCP improves reliability because the model does not need every document upfront. It can ask for exactly what it needs at the moment it needs it.
+
+Key idea: context should be staged, not dumped.
+
+- Stage 1: user intent and minimal prompt instructions.
+- Stage 2: tool discovery and capability selection.
+- Stage 3: focused tool execution with scoped inputs.
+- Stage 4: response synthesis from verified outputs.
+
+This is often more controllable than building a broad retrieval layer that pushes large context windows into every request.
+
+## Step-by-Step Reading of the Diagram
+
+1. A user asks a question through an application server.
+2. The server asks the MCP layer what tools are available.
+3. The model receives the user query and tool schemas, then decides whether to call a tool.
+4. The selected tool is executed through MCP against an external data system.
+5. The tool result returns to the model.
+6. The model produces a grounded final answer for the user.
+
+## Link to a Concrete Example
+
+For a production-style implementation of this workflow, see my post on Excel model analysis with MCP:
+
+[Turning Excel Workbooks into AI-Readable Data with an MCP Server](../2026-04-28-excel-formula-mcp/index.qmd)
+
+That article shows how MCP tools can expose formula structure, dependencies, and named ranges so an LLM can migrate legacy spreadsheet logic into maintainable Python code.
+
+## Practical Takeaway
+
+If you are building LLM applications, treat MCP as your context routing layer:
+
+- keep tool inputs narrow,
+- return structured outputs,
+- and only provide supplemental information when a tool call proves it is necessary.
+
+This approach yields better answers, lower token waste, and more predictable behavior.

@@ -1,0 +1,118 @@
+---
+title: "Field Study in the History of Indian Mathematics"
+---
+
+## Class Schedule
+
+| Course | Meet Days | Meet Time | Location | Instructor(s) |
+| --- | --- | --- | --- | --- |
+| Field Study in the History of Indian Mathematics |  |  |  | Rahul Katyayan |
+
+## Instructional Team
+
+**Instructor:** Rahul Katyayan
+
+Office: To be announced
+
+Office Hours: To be announced
+
+**Graduate Teaching Assistant:** To be announced
+
+## Course Description
+
+A field-study course designed to examine the development of mathematical ideas in the Indian tradition through guided library research, close reading of historical sources, informational interviews with experts and historians, and collaborative report writing. The course emphasizes contextual interpretation, evidence-based historical reasoning, and clear communication of mathematical ideas across disciplinary boundaries.
+
+## Learning Outcomes
+
+By the end of this course students should be able to:
+
+- **Foundational Knowledge:** describe major themes, texts, and historical settings relevant to the development of Indian mathematics, including institutional and cultural contexts such as Nalanda and the Gupta period.
+- **Application:** conduct structured library research, build annotated reading notes, and prepare thoughtful informational interviews with subject experts.
+- **Integration:** connect mathematical ideas, textual evidence, historical interpretation, and scholarly commentary into a coherent research narrative.
+- **Human Dimension:** work collaboratively, engage respectfully with historians and experts, and learn to ask better questions across disciplinary vocabularies.
+- **Caring:** appreciate the intellectual richness and global significance of the history of Indian mathematics and its place in broader scientific traditions.
+- **Learning How to Learn:** develop durable habits for archival reading, note synthesis, source evaluation, and collaborative academic writing.
+
+**Teaching and Learning Practices**
+
+This course is inquiry-driven in design. Students work through guided reading circles, library research sessions, source-comparison workshops, informational interview preparation, collaborative synthesis exercises, and group writing studios. The learning design emphasizes close reading, reflective interpretation, and repeated refinement of questions, evidence, and argument.
+
+There is no required textbook. Readings are organized around curated library materials, historical essays, primary-source excerpts, and expert conversations that support each phase of the field study.
+
+## Tentative Class Plan
+
+This is a tentative course schedule. Minor changes may occur as the course evolves and will be communicated in advance.
+
+| Week # | Dates | Lecture/Activities PRA | Activities/Assignments and Due Dates |
+| --- | --- | --- | --- |
+| 1 |  | Lecture 1: Introduction to the field study, scope, and historical questions. Technique: seminar-style orientation | Activity: research interest note and initial question inventory |
+| 1 |  | Lecture 2: How to read historical mathematics texts and secondary scholarship. Technique: guided close-reading workshop | Activity: reading log setup |
+| 2 |  | Lecture 1: Historical periods, institutions, and intellectual traditions in Indian mathematics. Technique: contextual lecture and discussion | Activity: timeline sketch |
+| 2 |  | Lecture 2: Library orientation, catalog search, and bibliography building. Technique: research methods workshop | Activity: preliminary bibliography |
+| 3 |  | Lecture 1: Reading primary and secondary sources together. Technique: source-comparison studio | Activity: annotated reading notes 1 |
+| 3 |  | Lecture 2: Themes from Nalanda, scholarly transmission, and mathematical culture. Technique: discussion-led seminar | Activity: source reflection memo |
+| 4 |  | Lecture 1: The Gupta period and the organization of mathematical knowledge. Technique: lecture with document analysis | Activity: annotated reading notes 2 |
+| 4 |  | Lecture 2: Interpreting evidence, attribution, and historical uncertainty. Technique: critique session | Activity: evidence table |
+| 5 |  | Lecture 1: Building research questions from reading patterns. Technique: question-framing workshop | Activity: research question brief |
+| 5 |  | Lecture 2: Reading group discussion on selected historians and interpretive debates. Technique: discussion circle | Activity: comparative reading response |
+| 6 |  | Lecture 1: Informational interviews as scholarly inquiry. Technique: interview design clinic | Activity: interview target list |
+| 6 |  | Lecture 2: Writing respectful outreach and preparing interview prompts. Technique: peer review workshop | Activity: outreach draft and interview guide |
+| 7 |  | Lecture 1: Mock interviews and follow-up questioning. Technique: role-play rehearsal | Activity: revised interview protocol |
+| 7 |  | Lecture 2: Synthesizing expert input with documentary evidence. Technique: synthesis lab | Activity: interview preparation memo |
+| 8 |  | Lecture 1: Informational interview week: expert, historian, or librarian conversation. Technique: supervised field engagement | Activity: interview notes |
+| 8 |  | Lecture 2: Debriefing and extracting themes from expert conversations. Technique: reflective discussion | Activity: interview reflection |
+| 9 |  | Lecture 1: Expanding the evidence base through targeted library reading. Technique: guided research studio | Activity: annotated reading notes 3 |
+| 9 |  | Lecture 2: Cross-checking claims, references, and interpretations. Technique: verification workshop | Activity: source verification sheet |
+| 10 |  | Lecture 1: Structuring a group report: argument, evidence, and section design. Technique: writing architecture session | Activity: group report outline |
+| 10 |  | Lecture 2: Integrating quotations, paraphrase, and historical commentary. Technique: writing workshop | Activity: section draft 1 |
+| 11 |  | Lecture 1: Explaining mathematical ideas for non-specialist readers. Technique: translation and explanation lab | Activity: explanatory note |
+| 11 |  | Lecture 2: Visual support for historical writing: tables, timelines, and diagrams. Technique: document design workshop | Activity: figure and timeline draft |
+| 12 |  | Lecture 1: Group writing studio and editorial coordination. Technique: collaborative drafting session | Activity: section draft 2 |
+| 12 |  | Lecture 2: Peer review of argument flow, evidence use, and clarity. Technique: peer critique | Activity: peer review memo |
+| 13 |  | Lecture 1: Revision strategies for academic group writing. Technique: revision clinic | Activity: revised group draft |
+| 13 |  | Lecture 2: Citation quality, bibliography cleanup, and consistency checks. Technique: editorial workshop | Activity: bibliography and notes audit |
+| 14 |  | Lecture 1: Final synthesis and preparing the submission package. Technique: team coaching | Activity: final report checklist |
+| 14 |  | Lecture 2: Short group briefing on findings and interpretive choices. Technique: presentation forum | Activity: briefing summary |
+| 15 |  | Lecture 1: Final group report submission. Technique: submission and review session | Activity: final report submission |
+| 15 |  | Lecture 2: Reflection on research process, evidence, and future study directions. Technique: reflective dialogue | Activity: final reflection note |
+
+## Required Materials and Technology
+
+### Readings
+
+- Curated library reading packets on the history of Indian mathematics, including primary-source excerpts and modern historical scholarship.
+- Selected readings on Nalanda, the Gupta period, and the transmission of mathematical knowledge in South Asia.
+- Background essays on research methods for historical inquiry, note-taking, interviewing experts, and collaborative academic writing.
+- Library databases, catalog tools, and citation management software as recommended during the course.
+
+### Other Materials
+
+| Item | Notes / Comments | Required | Tool |
+| --- | --- | --- | --- |
+| Laptop | Used for library research, note organization, interviews, and group writing | Required |  |
+| Notebook or reading journal | Useful for source notes, interview reflections, and draft planning | Recommended | Obsidian (Recommended) |
+| Access to library resources | Print or digital materials identified through the course research process | Required |  |
+
+## Assessments & Activities
+
+| Component / Activity | Date or Due Date | Location / Submission Method | Weight (%) |
+| --- | --- | --- | --- |
+| Reading Log and Annotated Notes |  |  | 15 |
+| Research Question Brief |  |  | 10 |
+| Informational Interview Preparation |  |  | 10 |
+| Interview Reflection and Evidence Synthesis |  |  | 15 |
+| Group Report Outline and Draft Package |  |  | 15 |
+| Group Report Final Submission |  |  | 25 |
+| Final Reflection Note |  |  | 10 |
+
+Assessment descriptions, due dates, and submission details will be announced.
+
+Posted assessment descriptions provide general guidelines rather than exhaustive rules. Reading discussions, research workshops, interviews, and writing studios will provide the fuller context for expectations.
+
+Active attendance and participation are strongly encouraged because much of the learning depends on collaborative inquiry, shared reading, and iterative group writing.
+
+Questions, clarification norms, revision opportunities, and any policy on AI-assisted work: to be announced.
+
+## Administrative Policy
+
+Administrative policy details, including late work, revision process, attendance expectations, permitted use of AI tools, accessibility, and use of course materials: to be announced.

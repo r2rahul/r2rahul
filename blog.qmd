@@ -1,0 +1,21 @@
+
+---
+title: "Blog"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  feed: 
+    categories: ["R", "Teaching", "Python", "MATLAB", "Julia", "F#", "Tutorials"]
+page-layout: full
+title-block-banner: false
+execute: 
+  freeze: true
+---
+
+::: {.column-page}
+
+:::

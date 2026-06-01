@@ -1,0 +1,118 @@
+---
+title: "Elements of Forward-Deployed Engineer"
+---
+
+## Class Schedule
+
+| Course | Meet Days | Meet Time | Location | Instructor(s) |
+| --- | --- | --- | --- | --- |
+| Elements of Forward-Deployed Engineer |  |  |  | Rahul Katyayan |
+
+## Instructional Team
+
+**Instructor:** Rahul Katyayan
+
+Office: To be announced
+
+Office Hours: To be announced
+
+**Graduate Teaching Assistant:** To be announced
+
+## Course Description
+
+A capstone-style course designed to integrate design thinking, operational immersion, quantitative reasoning, and visual communication for the purpose of enabling learners to frame ambiguous problems and develop deployable solutions in real-world business and organizational settings.
+
+## Learning Outcomes
+
+By the end of this course students should be able to:
+
+- **Foundational Knowledge:** explain the role of operational immersion, context engineering, and interdisciplinary reasoning in forward-deployed work.
+- **Application:** use design thinking, rough-order quantitative analysis, and rapid prototyping to structure and test solution ideas.
+- **Integration:** connect field observations, business constraints, data flows, and technical capabilities into a coherent deployment plan.
+- **Human Dimension:** collaborate with technical and non-technical stakeholders, translate across vocabularies, and lead conversations under ambiguity.
+- **Caring:** value responsible deployment, evidence-based judgment, and clear communication as core parts of engineering practice.
+- **Learning How to Learn:** build repeatable habits for framing unfamiliar problems, seeking feedback, and learning new tools quickly.
+
+**Teaching and Learning Practices**
+
+This course is experiential in design. Students move between studio workshops, field observation, case discussions, quantitative drills, critique sessions, and presentation rehearsals. The teaching design emphasizes operational immersion, reflective practice, and iterative improvement so that learners develop transferable habits for real-world problem framing and deployment.
+
+There is no required textbook. Optional readings and software resources are provided to deepen weekly work and support independent practice.
+
+## Tentative Class Plan
+
+This is a tentative course schedule. Minor changes may occur as the course evolves and will be communicated in advance.
+
+| Week # | Dates | Lecture/Activities PRA | Activities/Assignments and Due Dates |
+| --- | --- | --- | --- |
+| 1 |  | Lecture 1: What is forward-deployed engineering? Operational immersion and problem context. Technique: interactive lecture and reverse briefing | Activity: stakeholder map and problem inventory. Optional reading: Dan Heath and Chip Heath, *Made to Stick: Why some ideas take hold and others come unstuck* |
+| 1 |  | Lecture 2: Observation, shadowing, and empathy interviews. Technique: paired interview lab | Activity: field-note protocol and interview guide |
+| 2 |  | Lecture 1: Problem framing, job stories, and needs statements. Technique: guided design studio | Activity: problem framing brief |
+| 2 |  | Lecture 2: Journey maps, service blueprints, and systems boundaries. Technique: collaborative mapping workshop | Activity: system map critique |
+| 3 |  | Lecture 1: Divergent ideation and concept generation under constraints. Technique: timed design sprint | Activity: idea portfolio and concept clustering |
+| 3 |  | Lecture 2: Rapid prototyping for workflows, agents, and decision support. Technique: critique-based studio | Activity: low-fidelity prototype review |
+| 4 |  | Lecture 1: User testing, iteration loops, and evidence from feedback. Technique: structured peer testing | Activity: test script and observation log |
+| 4 |  | Lecture 2: Design synthesis and handoff to quantitative reasoning. Technique: retrospective discussion | Activity: design sprint reflection. Optional reading: Dan Heath and Chip Heath, *Made to Stick: Why some ideas take hold and others come unstuck* |
+| 5 |  | Lecture 1: Fermi estimates and back-of-the-envelope reasoning. Technique: blackboard walkthrough | Activity: estimation drills. Optional reading: Sanjoy Mahajan, *Street-Fighting Mathematics* |
+| 5 |  | Lecture 2: Units, assumptions, and sanity checks. Technique: whiteboard clinic | Activity: quantitative decision note 1 |
+| 6 |  | Lecture 1: Capacity, throughput, and queueing in operational systems. Technique: case-based problem solving | Activity: operations sketch and bottleneck analysis |
+| 6 |  | Lecture 2: Probability, uncertainty, and expected value in decisions. Technique: worked-example workshop | Activity: scenario comparison worksheet |
+| 7 |  | Lecture 1: Optimization under business and technical constraints. Technique: paired modeling session | Activity: tradeoff table and recommendation draft |
+| 7 |  | Lecture 2: Sensitivity analysis and model critique. Technique: debate and peer review | Activity: quantitative decision note 2 |
+| 8 |  | Lecture 1: Communicating numbers to decision-makers. Technique: executive briefing rehearsal | Activity: briefing deck outline |
+| 8 |  | Lecture 2: From rough math to deployment choices. Technique: synthesis workshop | Activity: problem-solving memo. Optional reading: Sanjoy Mahajan, selected chapters |
+| 9 |  | Lecture 1: Narrative arcs for technical and business audiences. Technique: storyboard workshop | Activity: audience map and story outline. Optional reading: Edward Tufte, *The Visual Display of Quantitative Information* |
+| 9 |  | Lecture 2: Slide architecture, sequencing, and visual rhythm. Technique: live teardown and rebuild | Activity: storyboard critique |
+| 10 |  | Lecture 1: Writing for decisions, not just documentation. Technique: writing workshop | Activity: one-page decision brief draft |
+| 10 |  | Lecture 2: Revision, editing, and signaling uncertainty clearly. Technique: peer editing lab | Activity: revision memo and line edit review |
+| 11 |  | Lecture 1: Visual hierarchy, annotation, and chart choice. Technique: critique-driven seminar | Activity: visualization draft |
+| 11 |  | Lecture 2: Common visualization failures and ethical presentation. Technique: gallery walk | Activity: visualization redesign |
+| 12 |  | Lecture 1: Vector graphics workflow with Inkscape or Adobe Illustrator. Technique: software demonstration studio | Activity: visual explainer build |
+| 12 |  | Lecture 2: Integrating memo, figure, and verbal pitch. Technique: communication sprint | Activity: visual story package. Optional reading: Tufte and selected Nature visualization essays |
+| 13 |  | Lecture 1: Capstone scoping and field study design. Technique: project clinic | Activity: capstone proposal and stakeholder plan |
+| 13 |  | Lecture 2: Evidence collection, ethics, and risk logging. Technique: guided workshop | Activity: field study checklist |
+| 14 |  | Lecture 1: Capstone studio: synthesis, prototype refinement, and decision logic. Technique: team coaching | Activity: field study check-in |
+| 14 |  | Lecture 2: Executive narrative, evidence selection, and recommendation design. Technique: rehearsal and critique | Activity: draft presentation deck |
+| 15 |  | Lecture 1: Final capstone presentations. Technique: presentation forum | Activity: final presentation |
+| 15 |  | Lecture 2: Postmortem, transfer plan, and portfolio reflection. Technique: reflective dialogue | Activity: capstone reflection and next-step plan |
+
+## Required Materials and Technology
+
+### Readings
+
+- Optional reading for Weeks 1-4: Dan Heath and Chip Heath, <em>Made to Stick: Why some ideas take hold and others come unstuck</em>.
+- Optional reading for Weeks 5-8: Sanjoy Mahajan, <em>[Street-Fighting Mathematics: The Art of Educated Guessing and Opportunistic Problem Solving](http://streetfightingmath.com/)</em>.
+- Optional reading for Weeks 9-12: Edward Tufte, <em>The Visual Display of Quantitative Information</em> and <em>Envisioning Information</em>; selected Nature visualization essays and points-of-visualization articles.
+- Software: Inkscape or Adobe Illustrator for diagramming and visual storytelling.
+
+### Other Materials
+
+| Item | Notes / Comments | Required | Tool |
+| --- | --- | --- | --- |
+| Laptop | Used for workshop exercises, field notes, and presentation development | Required |  |
+| Notebook or sketchbook | Useful for observation logs, system sketches, and storyboard drafts | Recommended | Obsidian (Recommended) |
+
+## Assessments & Activities
+
+| Component / Activity | Date or Due Date | Location / Submission Method | Weight (%) |
+| --- | --- | --- | --- |
+| Problem Framing Brief |  |  | 10 |
+| Design Sprint Reflection |  |  | 10 |
+| Quantitative Decision Notes (2 x 10%) |  |  | 20 |
+| Executive Briefing |  |  | 10 |
+| Visual Story Package |  |  | 15 |
+| Capstone Proposal |  |  | 10 |
+| Capstone Field Study and Prototype |  |  | 10 |
+| Final Presentation and Reflection |  |  | 15 |
+
+Assessment descriptions, due dates, and submission details will be announced.
+
+Posted assessment descriptions provide general guidelines rather than exhaustive rules. Lectures, critiques, workshops, and field activities will provide the fuller context for expectations.
+
+Active attendance and participation are strongly encouraged because much of the learning happens through studio discussion, peer feedback, and field-based observation.
+
+Questions, clarification norms, revision opportunities, and any policy on AI-assisted work: to be announced.
+
+## Administrative Policy
+
+Administrative policy details, including late work, revision process, attendance expectations, permitted use of AI tools, accessibility, and use of course materials: to be announced.

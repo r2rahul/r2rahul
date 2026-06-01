@@ -1,0 +1,33 @@
+---
+title: "Publications"
+---
+
+## Journal Publications
+
+- Kavita Singh, Awantika Joshi, Nikhil, Srinivasapura Venkateshmurthy, **Rahul Rahul**, Mark D Huffman, Nikhil Tandon, Dorairaj Prabhakaran (2023). A Delphi Study to Prioritize Evidence-Based Strategies for Cardiovascular Disease Care in India. *Global Implementation Research and Applications 2023 3:3*, *3*, 272-283.
+- **Rahul Rahul**, Adam R. Stinchcombe, Jamie W. Joseph, Brian Ingalls (2023). Kinetic modelling of β-cell metabolism reveals control points in the insulin-regulating pyruvate cycling pathways. *IET systems biology*, *17*, 303-315.
+- Parimal Samir, Christopher M. Browne, **Rahul**, Ming Sun, Bingxin Shen, Wen Li, Joachim Frank, Andrew J. Link (2018). Identification of Changing Ribosome Protein Compositions using Mass Spectrometry. *PROTEOMICS*, *18*, 1800217.
+- Parimal Samir, **Rahul**, James C. Slaughter, Andrew J. Link (2015). Environmental Interactions and Epistasis Are Revealed in the Proteomic Responses to Complex Stimuli. *PLoS ONE*, *10*(8), e0134099.
+
+## Presentations
+
+- Parimal Samir, & **Rahul**, & Andrew Link (2015). Quantitative proteomic analysis reveals environmental interaction and epistasis in the responses to complex stimuli in Saccharomyces cerevisiae. [Paper presentation]. 63rd ASMS Conference on Mass Spectrometry and Allied Topics, St. Louis, Missouri, USA
+- **Rahul**, & Adam Stinchcombe, & Jamie Joseph, & Brian Ingalls (2012). Kinetic Modelling of Pyruvate Recycling Pathways in Pancreatic
+$\beta$-Cells.. [Paper presentation]. The 8$^{\text{th}}$ International Conference on Differential
+Equations and Dynamical Systems, Waterloo, Canada
+- **Rahul**, & Adam Stinchcombe, & Jamie Joseph, & Brian Ingalls (2011). Dynamic Modelling of Metabolism in Pancreatic $\beta$-Cells.. [Paper presentation]. The International Conference on Applied Mathematics, Modelling and Computational
+Science (AMMCS), Waterloo, Canada
+
+## Posters
+
+- **Rahul**, & Fanny Dupuy, & Sébastien Tabariès, & Nicholas Bertos, & Daina Z. Avizonis, & Morag Park, & Peter Siegel, & Uri D. Akavia (2014). A computational method to integrate gene expression and metabolomics data to identify metabolic adaptations in cancer. [Poster presentation]. Mechanisms \& Models of Cancer Conference, Cold Spring Harbor, USA
+- **Rahul**, & Brian Ingalls (2013). Optimal parameter estimation of kinetic models using the surrogate-modelling framework. [Poster presentation]. RECOMB/ISCB Conference, Toronto, Canada
+- **Rahul**, & Adam Stinchcombe, & Jamie Joseph, & Brian Ingalls (2012). Dynamic Modelling of Pyruvate Recycling Pathways in Pancreatic $\beta$-cells. [Poster presentation]. 13$^{\text{th}}$ International Conference on System Biology, Toronto, Toronto, Canada
+- **Rahul**, & Adam Stinchcombe, & Jamie Joseph, & Brian Ingalls (2011). Dynamic Modelling of Metabolism in Pancreatic $\beta$-Cells. [Poster presentation]. Graduate Student Conference, Waterloo, Canada
+- **Rahul**, & Adam Stinchcombe, & Jamie Joseph, & Brian Ingalls (2009). Dynamic Modelling of Metabolism in Pancreatic $\beta$-Cells. [Poster presentation]. Chemical Biophysics Symposium, Toronto, Canada
+
+## Teaching
+
+- **Rahul** (2012). A Survey of Wiki Based Collaborative Learning Environments for the Interdisciplinary Training of the Students in Maths and
+Biology. [Poster presentation]. Opportunities and New Directions Conference, Centre of Teaching Excellence, University of Waterloo, Waterloo, Canada
+

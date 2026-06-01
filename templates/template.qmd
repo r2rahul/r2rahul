@@ -1,0 +1,27 @@
+---
+title: "Publications"
+---
+
+## Journal Publications
+
+{{#journal_publications}}
+- {{{.}}}
+{{/journal_publications}}
+
+## Presentations
+
+{{#presentations}}
+- {{{.}}}
+{{/presentations}}
+
+## Posters
+
+{{#posters}}
+- {{{.}}}
+{{/posters}}
+
+## Teaching
+
+{{#teaching}}
+- {{{.}}}
+{{/teaching}}
