@@ -1,7 +1,7 @@
 project:
   type: website
 render:
-  - "!stage/"
+  - "!stage/**"
   - "!.ai/"
   - "!posts/**/*.qmd"
 execute:

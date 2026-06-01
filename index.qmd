@@ -14,7 +14,7 @@ about:
       url: https://orcid.org/0000-0002-0144-1022
     - text: "Blog"
       icon: bi-pencil-square
-      url: https://r2rahul.quarto.pub/r2rahul/blog.html
+      url: https://r2rahul.github.io/r2rahul/blog.html
 comments: false
 execute: 
   freeze: true
