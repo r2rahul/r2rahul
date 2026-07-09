@@ -10,7 +10,60 @@
 <atom:link href="https://r2rahul.github.io/r2rahul/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Technology, Mathematics, AI/ML and Finance</description>
 <generator>quarto-1.9.36</generator>
-<lastBuildDate>Sat, 02 May 2026 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 08 Jul 2026 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>The Notes I Did Not Want to Lose, while writing analysis code</title>
+  <dc:creator>Rahul </dc:creator>
+  <link>https://r2rahul.github.io/r2rahul/posts/2026-07-09-wiki-code-space/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="why-this-started" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="why-this-started">Why This Started</h2>
+<p>I began coding with a paper lab notebook beside me. In my first scientific computing exercise (a Fortran 77 bisection program), the code handled computation, but the notebook held the important reasoning: why relative error was better than absolute error in one case, why an iteration cap was necessary, and what assumptions made results trustworthy. That context made the work understandable.</p>
+<p>Today, AI agents can write code quickly, but the same old problem remains: rationale gets scattered across prompts, plans, and specs. I kept losing decisions in file sprawls of prompts and agent planning docs, including simple but important choices like default parameter values and why they were chosen. I did not need more notes. I needed better links between ideas, code, and decisions <span class="citation" data-cites="karpathy_llm_wiki_2026 ond">(Karpathy 2026; Rahul 2012)</span>.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-karpathy_llm_wiki_2026" class="csl-entry">
+Karpathy, Andrej. 2026. <em>LLM Wiki</em>. GitHub Gist. <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f">https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f</a>.
+</div><div id="ref-ond" class="csl-entry">
+Rahul. 2012. <em>A Survey of Wiki Based Collaborative Learning Environments for the Interdisciplinary Training of the Students in Maths and Biology</em>. Teaching. Waterloo, Canada.
+</div></div></section>
+<section id="how-i-built-it" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="how-i-built-it">How I Built It</h2>
+<p><code>wiki_code_space</code> is my practical answer. It uses a lightweight wiki, semantic links, and repeatable update steps so reasoning stays close to implementation.</p>
+<p>The wiki is plain Markdown in an Obsidian-friendly structure, versioned with the code, and readable by both humans and agents. It is a living layer that evolves with implementation, so context does not drift away from code over time. The prompts are designed to capture information that Graphify can interpret easily for semantic relationship inference, which supports token efficiency and faster workspace navigation in my quantitative research workflow. Because these prompts live in the wiki folder, they can be tuned to project-specific needs <span class="citation" data-cites="graphify_labs_graphify_2026">(Graphify Labs 2026)</span>.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-graphify_labs_graphify_2026" class="csl-entry">
+Graphify Labs. 2026. <em>Graphify</em>. GitHub repository. <a href="https://github.com/Graphify-Labs/graphify">https://github.com/Graphify-Labs/graphify</a>.
+</div></div><p>The wiki-code-space is a reusable template for agent-first quantitative analysis code development. So, that work becomes more reproducible, understandable, and maintainable for both <em>humans and AI agents</em>.</p>
+<p>GitHub repository: https://github.com/r2rahul/wiki-code-space <sup>1</sup></p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;The repository contains a template for a wiki-code-space project, adaptable to user specific needs.</p></div></div></section>
+<section id="what-i-learned" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="what-i-learned">What I Learned</h2>
+<p>The idea is simple: when relationships are explicit, both humans and agents work better. The idea that is conveyed is to treat code as living memory, not just execution. The workflow is similar to how we do git commits: as one unit of work is completed in our coding workflow, the wiki is similarly LLM maintained update as one unit of conceptual decisions <sup>2</sup> is made.</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;The conceptual update is guided by the prompt with deterministic set of instructions to LLM, capturing what, why and where with other user specifications</p></div></div><hr>
+</section>
+<section id="acknowledgements" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>Code development and blog writing were assisted by Posit AI <span class="citation" data-cites="posit_ai_2026">(Posit PBC 2026)</span> and OpenAI Codex <span class="citation" data-cites="openai_codex_2021">(OpenAI 2021)</span>.</p>
+
+
+<div class="no-row-height column-margin column-container"><div id="ref-posit_ai_2026" class="csl-entry">
+Posit PBC. 2026. <em>Posit <span>AI</span></em>. Web. <a href="https://posit.ai/">https://posit.ai/</a>.
+</div><div id="ref-openai_codex_2021" class="csl-entry">
+OpenAI. 2021. <em><span>OpenAI Codex</span></em>. Web. <a href="https://openai.com/codex/">https://openai.com/codex/</a>.
+</div></div>
+</section>
+
+
+ ]]></description>
+  <category>LLM</category>
+  <category>AI</category>
+  <category>MCP</category>
+  <category>Tutorials</category>
+  <guid>https://r2rahul.github.io/r2rahul/posts/2026-07-09-wiki-code-space/</guid>
+  <pubDate>Wed, 08 Jul 2026 22:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Reproducing Gabillon (1991): Model-Implied Term Structures</title>
   <dc:creator>Rahul </dc:creator>

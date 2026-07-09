@@ -246,7 +246,7 @@ window.Quarto = {
 <section id="post-doctoral-research-work" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="post-doctoral-research-work">Post-Doctoral Research Work</h2>
 <p>In my postdoctoral research, I developed a rigorous workflow for aggregating, checking, and integrating metabolomics and gene-expression data into genome-scale metabolic models built through constraint-based reconstruction and analysis. This work combined biological knowledge representation, mathematical optimization, and data-quality assurance to construct tissue-specific models that could be compared systematically against observed cancer-cell behavior. The project required not only model building, but also careful attention to whether the underlying measurements were sufficiently reliable to support downstream inference. Figure <a href="#fig-cobra" class="quarto-xref">Figure&nbsp;1</a> summarizes the overall COBRA workflow used to build and analyze the genome-scale metabolic model.</p>
-<div id="fig-cobra" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center" data-cap-location="margin">
+<div id="fig-cobra" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-cap-location="margin" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure page-columns page-full">
 <div aria-describedby="fig-cobra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="fig/g3136.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-cap-location="margin">
@@ -257,7 +257,7 @@ Figure&nbsp;1: Constraint-based reconstruction and analysis (COBRA) workflow use
 </figure>
 </div>
 <p>The central modeling task was to begin with a generic genome-scale metabolic model, refine it into a cancer-relevant system, and then interrogate it computationally under biologically meaningful constraints. To do this, I used ModelBorgifier to integrate multiple mouse genome-scale models into a single aggregated representation and then incorporated cancer cell-specific transcriptomic and metabolomic measurements using the iMAT algorithm, which uses expression evidence to favor greater feasible flux through reactions associated with more highly expressed genes while preserving the global stoichiometric constraints of the network. After constraining the model, I ran simulations against NCI-60 cell-line behavior and performed flux variability analysis to identify dysregulated reactions. One of the notable findings was increased activity around lactate dehydrogenase, together with evidence that pyruvate dehydrogenase could not carry all of the glycolytic influx into the tricarboxylic acid cycle, causing flux to be redirected through alternative pathways. Figure <a href="#fig-metaquality" class="quarto-xref">Figure&nbsp;2</a> highlights the data-quality workflow that supported this integration.</p>
-<div id="fig-metaquality" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center" data-cap-location="margin">
+<div id="fig-metaquality" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-cap-location="margin" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure page-columns page-full">
 <div aria-describedby="fig-metaquality-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="fig/metabolomicssummary.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:82.0%" data-cap-location="margin">
@@ -271,7 +271,7 @@ Figure&nbsp;2: Data-quality workflow for metabolomics integration in the postdoc
 <section id="doctoral-research-work" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="doctoral-research-work">Doctoral Research Work</h2>
 <p>In my doctoral research, I developed a kinetic model of pyruvate cycling pathways in pancreatic <span class="math inline">\(\beta\)</span>-cells to identify the regulatory mechanisms that influence pyruvate recycling and NADPH production, both of which are implicated in insulin secretion and the development of type 2 diabetes <span class="citation" data-cites="Rahul2023">(<a href="#ref-Rahul2023" role="doc-biblioref">R. Rahul et al., 2023</a>)</span>. This work asked a mechanistic question: when several interconnected biochemical pathways contribute to a clinically important outcome, which components act as true control points and which effects are compensated elsewhere in the system? Figure <a href="#fig-pyruvate-model" class="quarto-xref">Figure&nbsp;3</a> provides the pathway-level view of the modeled system.</p>
-<div class="no-row-height column-margin column-container"></div><div id="fig-pyruvate-model" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center" data-cap-location="margin">
+<div class="no-row-height column-margin column-container"></div><div id="fig-pyruvate-model" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-cap-location="margin" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure page-columns page-full">
 <div aria-describedby="fig-pyruvate-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="fig/modelakg.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:78.0%" data-cap-location="margin">
@@ -281,7 +281,7 @@ Figure&nbsp;3: Model components of the pyruvate recycling network in pancreatic 
 </figcaption>
 </figure>
 </div>
-<div id="fig-nadph-sensitivity" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center" data-cap-location="margin">
+<div id="fig-nadph-sensitivity" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-cap-location="margin" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure page-columns page-full">
 <div aria-describedby="fig-nadph-sensitivity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="fig/nadphsen.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:72.0%" data-cap-location="margin">
@@ -315,7 +315,7 @@ Saltelli, A., Ratto, M., Andres, T., Campolongo, F., Cariboni, J., Gatelli, D., 
 <div class="no-row-height column-margin column-container"><div id="ref-ond" class="csl-entry" role="listitem">
 Rahul. (2012). <em>A survey of wiki based collaborative learning environments for the interdisciplinary training of the students in maths and biology</em> [Teaching].
 </div></div><p>In future teaching, I would continue developing demonstrations that make abstract ideas visible, especially in courses involving calculus, linear algebra, optimization, machine learning, and quantitative modeling. I am particularly interested in collaborative environments in which students co-develop question banks, annotated solutions, and short conceptual explanations. A wiki-style or shared-course-notes workflow is well suited to this goal because it turns students from passive recipients into contributors who must explain why a method works, where it fails, and how a concept transfers to a new setting. This approach also aligns with the broader objective of building durable first-principles reasoning rather than short-lived procedural fluency. Figure <a href="#fig-riemann-demo" class="quarto-xref">Figure&nbsp;5</a> shows one example of the demonstration style I use to make numerical approximation and convergence visually explicit.</p>
-<div id="fig-riemann-demo" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-fig-align="center" data-cap-location="margin">
+<div id="fig-riemann-demo" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-cap-location="margin" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure page-columns page-full">
 <div aria-describedby="fig-riemann-demo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="fig/rie2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:74.0%" data-cap-location="margin">

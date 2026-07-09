@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://r2rahul.github.io/r2rahul/templates/template.html</loc>
+    <loc>https://r2rahul.github.io/r2rahul/conversation-export.html</loc>
+    <lastmod>2026-06-04T19:05:40.541Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2rahul.github.io/r2rahul/teaching.html</loc>
     <lastmod>2026-06-01T19:52:12.201Z</lastmod>
   </url>
   <url>
@@ -21,15 +25,11 @@
     <lastmod>2026-06-01T19:52:12.199Z</lastmod>
   </url>
   <url>
-    <loc>https://r2rahul.github.io/r2rahul/posts/2026-04-28-excel-formula-mcp/index.html</loc>
+    <loc>https://r2rahul.github.io/r2rahul/posts/2026-05-03-mcp-context-management/index.html</loc>
     <lastmod>2026-06-01T19:52:12.200Z</lastmod>
   </url>
   <url>
-    <loc>https://r2rahul.github.io/r2rahul/posts/2025-02-02-peuler2/index.html</loc>
-    <lastmod>2026-06-01T19:52:12.200Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2rahul.github.io/r2rahul/posts/2026-05-03-gabillon-model-note/index.html</loc>
+    <loc>https://r2rahul.github.io/r2rahul/posts/2025-03-26-merger/index.html</loc>
     <lastmod>2026-06-01T19:52:12.200Z</lastmod>
   </url>
   <url>
@@ -37,12 +37,20 @@
     <lastmod>2026-06-01T19:52:12.199Z</lastmod>
   </url>
   <url>
-    <loc>https://r2rahul.github.io/r2rahul/posts/2025-03-26-merger/index.html</loc>
+    <loc>https://r2rahul.github.io/r2rahul/posts/2026-05-03-gabillon-model-note/index.html</loc>
     <lastmod>2026-06-01T19:52:12.200Z</lastmod>
   </url>
   <url>
-    <loc>https://r2rahul.github.io/r2rahul/posts/2026-05-03-mcp-context-management/index.html</loc>
+    <loc>https://r2rahul.github.io/r2rahul/posts/2025-02-02-peuler2/index.html</loc>
     <lastmod>2026-06-01T19:52:12.200Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2rahul.github.io/r2rahul/posts/2026-04-28-excel-formula-mcp/index.html</loc>
+    <lastmod>2026-06-01T19:52:12.200Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2rahul.github.io/r2rahul/posts/2026-07-09-wiki-code-space/index.html</loc>
+    <lastmod>2026-07-09T07:57:41.422Z</lastmod>
   </url>
   <url>
     <loc>https://r2rahul.github.io/r2rahul/elements-of-forward-deployed-engineer.html</loc>
@@ -50,14 +58,18 @@
   </url>
   <url>
     <loc>https://r2rahul.github.io/r2rahul/index.html</loc>
-    <lastmod>2026-06-01T19:58:43.861Z</lastmod>
+    <lastmod>2026-07-09T07:44:56.294Z</lastmod>
   </url>
   <url>
     <loc>https://r2rahul.github.io/r2rahul/research.html</loc>
     <lastmod>2026-06-01T19:52:12.200Z</lastmod>
   </url>
   <url>
-    <loc>https://r2rahul.github.io/r2rahul/teaching.html</loc>
+    <loc>https://r2rahul.github.io/r2rahul/stage/publications.html</loc>
+    <lastmod>2026-06-01T19:52:12.201Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2rahul.github.io/r2rahul/templates/template.html</loc>
     <lastmod>2026-06-01T19:52:12.201Z</lastmod>
   </url>
 </urlset>
